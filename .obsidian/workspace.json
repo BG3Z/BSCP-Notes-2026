@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "d97772aaf7aee00b",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf9831155c97ad9c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "690b732336206e6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "9 - HTTP Smuggling"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8cbe83b79073d858",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b4abf152f7ff2b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b0476300aead93d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "1d6223de99572ab3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "8af5cfd91dc33338",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 284.5
+  },
+  "right": {
+    "id": "71ffc2173e6a708f",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa6e804b0648f486",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5987ddec30b541ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 0 - Exam Tips"
+            }
+          },
+          {
+            "id": "c07edd6bca7cfb61",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de 0 - Exam Tips"
+            }
+          },
+          {
+            "id": "ebf86ea3576f94b7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "5200f3283a75ad51",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "aaf8776c458e0857",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 0 - Exam Tips"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "690b732336206e6e",
+  "lastOpenFiles": [
+    "Pasted image 20260703184101.png",
+    "Pasted image 20260703184001.png",
+    "Pasted image 20260703183635.png",
+    "Pasted image 20260703181030.png",
+    "Port Swigger - Cheat List/29 - LLM.md",
+    "Port Swigger - Cheat List/Mistery Labs.md",
+    "Pasted image 20260620204754.png",
+    "Pasted image 20260619172919.png",
+    "Pasted image 20260618135354.png",
+    "Pasted image 20260618135344.png",
+    "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
+    "Port Swigger - Cheat List/8 - SSRF.md",
+    "Port Swigger - Cheat List/7 - XXE Injection.md",
+    "Port Swigger - Cheat List/6 - CORS Cross-origin resource sharing.md",
+    "Port Swigger - Cheat List/5 - DOM Vulnerabilities.md",
+    "Port Swigger - Cheat List/4 - Click-jacking.md",
+    "Port Swigger - Cheat List/3 - CSRF.md",
+    "Pasted image 20260628121815.png",
+    "Port Swigger - Cheat List/2 - XSS.md",
+    "Pasted image 20260623010134.png",
+    "Pasted image 20260623005325.png",
+    "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
+    "blindTimeDelay.py~",
+    "4913",
+    "blindTimeDelay.py",
+    "blindOracle.py~",
+    "blindOracle.py",
+    "blind.pz~",
+    "blind.py~",
+    "blind.py",
+    "Port Swigger - Cheat List/0 - Exam Tips.md"
+  ]
+}

