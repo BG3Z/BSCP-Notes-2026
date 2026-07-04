@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
+                "file": "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9 - HTTP Smuggling"
+              "title": "1 - SQL Injections Cheat List"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
+    "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Pasted image 20260703184101.png",
     "Pasted image 20260703184001.png",
     "Pasted image 20260703183635.png",
@@ -196,7 +197,6 @@
     "Pasted image 20260619172919.png",
     "Pasted image 20260618135354.png",
     "Pasted image 20260618135344.png",
-    "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Port Swigger - Cheat List/8 - SSRF.md",
     "Port Swigger - Cheat List/7 - XXE Injection.md",
     "Port Swigger - Cheat List/6 - CORS Cross-origin resource sharing.md",
@@ -206,7 +206,6 @@
     "Pasted image 20260628121815.png",
     "Port Swigger - Cheat List/2 - XSS.md",
     "Pasted image 20260623010134.png",
-    "Pasted image 20260623005325.png",
     "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
     "blindTimeDelay.py~",
     "4913",
