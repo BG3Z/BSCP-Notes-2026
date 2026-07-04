@@ -6,6 +6,7 @@
  1. **CL.TE** -> Front-end usa #CL y Backe-nd usa #TE
  2. **TE.CL** -> Front-end usa #TE (chunked) y Back-end usa #CL
  3. **TE.TE** -> Ambos admiten #TE pero se puede inducir a uno de ellos a no procesarlo obfuscando el header de alguna forma
+PRUEBA
 
 ![[Pasted image 20260703184001.png]]
 
