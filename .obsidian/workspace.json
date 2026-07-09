@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
+                "file": "Port Swigger - Cheat List/12 - Path Traversal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - SQL Injections Cheat List"
+              "title": "12 - Path Traversal"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
+    "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
     "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Pasted image 20260703184101.png",
     "Pasted image 20260703184001.png",
@@ -206,7 +207,6 @@
     "Pasted image 20260628121815.png",
     "Port Swigger - Cheat List/2 - XSS.md",
     "Pasted image 20260623010134.png",
-    "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
     "blindTimeDelay.py~",
     "4913",
     "blindTimeDelay.py",
