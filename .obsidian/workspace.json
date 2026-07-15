@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/12 - Path Traversal.md",
+                "file": "Port Swigger - Cheat List/2 - XSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12 - Path Traversal"
+              "title": "2 - XSS"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
+    "Port Swigger - Cheat List/12 - Path Traversal.md",
     "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
     "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Pasted image 20260703184101.png",
