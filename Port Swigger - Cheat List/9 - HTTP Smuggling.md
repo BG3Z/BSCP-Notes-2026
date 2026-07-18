@@ -28,8 +28,8 @@ CL.TE Cookie Stealer:
 ![[Pasted image 20260718195704.png]]
 ![[Pasted image 20260718195716.png]]
 
-
-
+CL.TE + XSS:
+![[Pasted image 20260718202358.png]]
 
 
 Tests CL.TE
