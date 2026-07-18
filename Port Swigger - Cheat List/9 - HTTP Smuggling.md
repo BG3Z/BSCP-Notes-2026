@@ -12,6 +12,26 @@ PRUEBA
 
 ![[Pasted image 20260703184101.png]]
 
+TE.CL por respuestas diferenciales:
+![[Pasted image 20260718183952.png]]
+
+CL.TE:
+![[Pasted image 20260718185538.png]]
+
+TE.CL Frontend:
+![[Pasted image 20260718193951.png]]
+
+CL.TE Custom Header:
+![[Pasted image 20260718193941.png]]
+
+CL.TE Cookie Stealer:
+![[Pasted image 20260718195704.png]]
+![[Pasted image 20260718195716.png]]
+
+
+
+
+
 Tests CL.TE
 ```
 Content-Length: 35
