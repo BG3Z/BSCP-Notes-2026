@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CUSTOM LINUX.md",
+                "file": "CUSTOM LINUX (Kitty).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CUSTOM LINUX"
+              "title": "CUSTOM LINUX (Kitty)"
             }
           }
         ],
@@ -207,10 +207,10 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "9d11ce4bd17dd486",
+  "active": "fc37bb94c7370536",
   "lastOpenFiles": [
     "Pasted image 20260618135334.png",
-    "CUSTOM LINUX.md",
+    "CUSTOM LINUX (Kitty).md",
     "Custom Linux Commands",
     "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Pasted image 20260718202358.png",
