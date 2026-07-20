@@ -31,6 +31,40 @@ CL.TE Cookie Stealer:
 CL.TE + XSS:
 ![[Pasted image 20260718202358.png]]
 
+H2.TE:
+- H2 -> EL frontend usa HTTP2 pero a la hora de comunicarse con el backend hace un downgrade a HTTP1
+
+CRLF Injection: 
+- CR -> \r 
+- LF ->\n    
+- La peticion debe ser la de buscar (la que tiene el parametro 'search'), que es donde se inyecta la informacion de la solciitud de la victima
+![[Pasted image 20260720173438.png]]
+![[Pasted image 20260720175003.png]]
+![[Pasted image 20260720175054.png]]
+
+Req Splitting via CRLF Injection: 
+![[Pasted image 20260720194022.png]]
+![[Pasted image 20260720194034.png]]
+![[Pasted image 20260720194039.png]]
+
+CL.0:
+![[Pasted image 20260720200037.png]]
+
+CL.TE GPOST:
+![[Pasted image 20260720201049.png]]
+![[Pasted image 20260720201055.png]]
+
+TE.CL GPOST:
+![[Pasted image 20260720201829.png]]
+![[Pasted image 20260720201834.png]]
+
+Obfuscating TE Header:
+- Duplicamos la cabecera TE, colocando una invalida detras, el Frontend lee ambas y se queda con la correcta, en cambio el backend se queda con la ultima que lee, que, al ser invalida le obliga a tirar de CL (con esto hemos cambiado de TE.TE a TE.CL y ya explotamos como siempre).
+![[Pasted image 20260720202643.png]]
+![[Pasted image 20260720202648.png]]
+
+
+-------------------------------------------------------------
 
 Tests CL.TE
 ```
