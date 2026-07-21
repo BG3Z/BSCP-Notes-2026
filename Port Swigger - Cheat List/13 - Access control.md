@@ -2,13 +2,30 @@ Checks:
 ```
 robots.txt
 
-/admin route in javascript source code ctr+shift+i
+/admin route in javascript source code ctr+shift+C
 
 cookie modification to become admin
 
-roleid can be modified in some request to become admin role (ex: {"email":"wiener@admin-user.net","roleid":2})
+4 - roleid can be modified in some request to become admin role (ex: {"email":"wiener@admin-user.net","roleid":2})
 
-userid can be controlled by a request parameter (ex: /my-account?id=carlos)
+5 - userid can be controlled by a request parameter (ex: /my-account?id=carlos)
+(Cambiando el id del usuario en la url)
+
+6 - Hovering para descubrir el # unpredictable id de carlos mediante un post suyo
+
+7 - Contraseña en placeholder con tipo 'password'
+
+8 - Descargar el transcript de un live chat, lo mandamos en repeater, follow redirect y vemos que descarga el archivo X.txt, empezando en 2 (asi que descargamos el 1.txt que será el de carlos)
+
+9 - Use X-Original-URL to bypass /admin acces denied:
+GET / HTTP 1.1
+X-Original-URL: /admin
+
+10 - Take admin req, wiener cookie and change request method to POST or GET with parameters to upgrade users with wiener session
+
+11 - Lo mismo pero con una confirmacion entre medias (la confirmacion te dejaba hacerlo con la cookie de wiener)
+
+12 - Referer token validated being present
 
 unpredictable user Id exposed somewhere (ex: comment href=https://0a5500a803cc582c811df86a00d40076.web-security-academy.net/blogs?userId=9cbae210-99d3-49ea-97c5-4887f8d9b73f)
 
@@ -16,15 +33,31 @@ Information disclosure in a redirection when changing parameters of a request (e
 
 Directo Object references (ex: /download-transcript/X.txt)
 
-Use X-Original-URL to bypass /admin acces denied:
-GET / HTTP 1.1
-X-Original-URL: /admin
-
-Change request method to POSTX or GET with parameters ?
-
-Referer token validated being present
-
 ```
+
+4:
+![[Pasted image 20260721190704.png]]
+
+6:
+![[Pasted image 20260721191619.png]]
+
+8:
+![[Pasted image 20260721193236.png]]
+![[Pasted image 20260721193257.png]]
+![[Pasted image 20260721193314.png]]
+
+9:
+![[Pasted image 20260721194214.png]]
+
+10:
+![[Pasted image 20260721194630.png]]
+
+12:
+![[Pasted image 20260721195631.png]]
+
+
+-----------------------------------------------------------------------
+
 ##### X-Original-URL
 ```
 Try to load /admin and observe that you get blocked. Notice that the response is very plain, suggesting it may originate from a front-end system.

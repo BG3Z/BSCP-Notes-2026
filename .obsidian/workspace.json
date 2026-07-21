@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
+                "file": "Port Swigger - Cheat List/14 - Authorization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9 - HTTP Smuggling"
+              "title": "14 - Authorization"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 259.5
   },
   "right": {
     "id": "71ffc2173e6a708f",
@@ -118,12 +118,27 @@
             }
           },
           {
+            "id": "aaf8776c458e0857",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Port Swigger - Cheat List/14 - Authorization.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 14 - Authorization"
+            }
+          },
+          {
             "id": "5987ddec30b541ee",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
+                "file": "Port Swigger - Cheat List/14 - Authorization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +148,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 9 - HTTP Smuggling"
+              "title": "Enlaces entrantes de 14 - Authorization"
             }
           },
           {
@@ -151,21 +166,6 @@
             }
           },
           {
-            "id": "aaf8776c458e0857",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Esquema de 0 - Exam Tips"
-            }
-          },
-          {
             "id": "fc37bb94c7370536",
             "type": "leaf",
             "state": {
@@ -180,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,17 +197,20 @@
   },
   "active": "3c9cb27cc442b31b",
   "lastOpenFiles": [
-    "Pasted image 20260720202648.png",
-    "Pasted image 20260720202643.png",
-    "Pasted image 20260720201834.png",
-    "Pasted image 20260720201829.png",
-    "Pasted image 20260720201055.png",
-    "Pasted image 20260720201049.png",
-    "Pasted image 20260720200037.png",
-    "Pasted image 20260720194039.png",
-    "Pasted image 20260720194034.png",
-    "Pasted image 20260720194022.png",
-    "Pasted image 20260720175054.png",
+    "Port Swigger - Cheat List/13 - Access control.md",
+    "Pasted image 20260721195631.png",
+    "Pasted image 20260721194630.png",
+    "Pasted image 20260721194214.png",
+    "Pasted image 20260721193314.png",
+    "Pasted image 20260721193257.png",
+    "Pasted image 20260721193236.png",
+    "Pasted image 20260721191619.png",
+    "Pasted image 20260721190704.png",
+    "Pasted image 20260721190651.png",
+    "Port Swigger - Cheat List/12 - Path Traversal.md",
+    "Port Swigger - Cheat List/11 - SSTI.md",
+    "Port Swigger - Cheat List/10 - Command Injection.md",
+    "Pasted image 20260721135538.png",
     "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "CUSTOM LINUX (Kitty).md",
     "Custom Linux Commands",

@@ -1,3 +1,7 @@
+1. Bruteforce con Intruder y las listas de user:pass por default de portswigger
+2. 2FA, metes codigo y te redirige a /my-account, intentas entrar como carlos y pones en la url directamente /my-account y te saltas el 2FA
+3. Password reset te manda un correo, y en el link de reseteo, al capturar ves que viaja el id, lo cambias a 'carlos' y ya estaría
+
 ```
 Brute force username enumeration with burp (user grep extract to notice differences)
 
@@ -5,7 +9,7 @@ Brute force username with Pitchfork attack, X-Forwarded-For: 1-100 and really lo
 
 Bypass IP restriction by aleterating with a valid login (wiener/carlos/wiener/carlos... passwords=peter/fake1/peter/fake2...) Pitchfork resource pool 1
 
-Bypass 2FA by loading /my-account instead of entering a code tu the user
+Bypass 2FA by loading /my-account instead of entering a code to the user
 
 2FA is sent depending on a parameter that you can change (ex: change verify parameter to carlos, send the GET request, and brute force 4 digits 2FA the POST req)
 

