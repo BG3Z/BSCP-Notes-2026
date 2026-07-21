@@ -89,25 +89,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5987ddec30b541ee",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 0 - Exam Tips"
-            }
-          },
-          {
             "id": "c07edd6bca7cfb61",
             "type": "leaf",
             "state": {
@@ -134,6 +115,25 @@
               },
               "icon": "lucide-tags",
               "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "5987ddec30b541ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 9 - HTTP Smuggling"
             }
           },
           {
@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
