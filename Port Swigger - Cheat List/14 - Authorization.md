@@ -1,6 +1,41 @@
 1. Bruteforce con Intruder y las listas de user:pass por default de portswigger
 2. 2FA, metes codigo y te redirige a /my-account, intentas entrar como carlos y pones en la url directamente /my-account y te saltas el 2FA
 3. Password reset te manda un correo, y en el link de reseteo, al capturar ves que viaja el id, lo cambias a 'carlos' y ya estaría
+4. El mensaje cambia un poco dependiendo de si el usuario existe o no, usamos 'grep-extract':
+![[Pasted image 20260723130413.png]]
+5. Si nos meten timeout entre solicitudes fallidas, usamos la siguiente cabecera:
+![[Pasted image 20260723131634.png]]
+
+6. Cada 2 login incorrectos nos bloquea hasta que hacemos un login valido, asi que sacamos un payload para users y otro para passwords:
+```python
+for i in range (0,200):
+	if i % 3 == 0:
+		print("wiener")
+	else:
+		print("carlos")
+```
+
+```python
+with open("burp_pass") as f:
+	lines = f.readlines()
+
+i = 0
+for line in lines:
+	if i % 3 == 0:
+		print("peter")
+	else:
+		print(line.strip())
+	i++
+
+```
+
+7. Bruteforce del 2FA von ?verify=carlos y un ataque Sniper de 0000 a 9999, y robando su cookie
+8. La cookie de sesion ('stay-loged-in') se crafteaba haciendo 'username:pass' siendo la pass un hash md5 y luego encodeada en base 64, entonces definimos lo siguiente y probamos cada contraseña:
+![[Pasted image 20260723142532.png]]
+![[Pasted image 20260723143117.png]]
+9. Lo mismo que antes con la cookie pero la passwd no está en la wordlist. Pero tenemos un XSS en un comentario, cogemos la cookie de 'stay-logged-in' con ese XSS mandandonoslo al exploit-server, pillamos la cookie del Access-Log y hacemos decrypt :)
+10. 
+
 
 ```
 Brute force username enumeration with burp (user grep extract to notice differences)
