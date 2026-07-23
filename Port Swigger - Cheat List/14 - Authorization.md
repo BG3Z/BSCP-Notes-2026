@@ -34,8 +34,18 @@ for line in lines:
 ![[Pasted image 20260723142532.png]]
 ![[Pasted image 20260723143117.png]]
 9. Lo mismo que antes con la cookie pero la passwd no está en la wordlist. Pero tenemos un XSS en un comentario, cogemos la cookie de 'stay-logged-in' con ese XSS mandandonoslo al exploit-server, pillamos la cookie del Access-Log y hacemos decrypt :)
-10. 
+10. La cabecera X-Forwarded-Host te cambia la url desde donde viene la solicitud, por tanto podemos redirigir a nuestro exploit server:
+![[Pasted image 20260723201032.png]]
+![[Pasted image 20260723201059.png]]
+![[Pasted image 20260723201116.png]]
 
+11. Campo de 'forgotten passwd' si pones una passwd distinta en ambos para confirmar la nueva sale un error distinto que si pones la contraseña original erroneamente:
+![[Pasted image 20260723202243.png]]
+![[Pasted image 20260723202257.png|177]]
+![[Pasted image 20260723202340.png]]
+![[Pasted image 20260723202330.png]]
+
+--------------------------------------------------------------------------
 
 ```
 Brute force username enumeration with burp (user grep extract to notice differences)
