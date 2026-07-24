@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/14 - Authorization.md",
+                "file": "Port Swigger - Cheat List/RESOURCES/CheatsSheets & Add-Ons.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14 - Authorization"
+              "title": "CheatsSheets & Add-Ons"
             }
           }
         ]
@@ -197,6 +197,15 @@
   },
   "active": "3c9cb27cc442b31b",
   "lastOpenFiles": [
+    "Port Swigger - Cheat List/EXAM/NOTES 2.md",
+    "Port Swigger - Cheat List/RESOURCES/CheatsSheets & Add-Ons.md",
+    "Port Swigger - Cheat List/EXAM/NOTES 1.md",
+    "Port Swigger - Cheat List/EXAM/APP 2.md",
+    "Port Swigger - Cheat List/EXAM/APP 1.md",
+    "Port Swigger - Cheat List/EXAM/differences.md",
+    "Port Swigger - Cheat List/0 - Exam Tips.md",
+    "Port Swigger - Cheat List/14 - Authorization.md",
+    "Port Swigger - Cheat List/RESOURCES",
     "Pasted image 20260723202340.png",
     "Pasted image 20260723202330.png",
     "Pasted image 20260723202257.png",
@@ -207,7 +216,6 @@
     "Pasted image 20260723143117.png",
     "Pasted image 20260723142532.png",
     "Pasted image 20260723131634.png",
-    "Pasted image 20260723130413.png",
     "Port Swigger - Cheat List/13 - Access control.md",
     "Port Swigger - Cheat List/12 - Path Traversal.md",
     "Port Swigger - Cheat List/11 - SSTI.md",
@@ -233,7 +241,6 @@
     "blindOracle.py",
     "blind.pz~",
     "blind.py~",
-    "blind.py",
-    "Port Swigger - Cheat List/0 - Exam Tips.md"
+    "blind.py"
   ]
 }
