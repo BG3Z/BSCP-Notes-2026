@@ -8,6 +8,9 @@ X-Forwarded-For: 1.1.1.1 to bypass IP restrictions and ofuscate xss
 <img src=1 oNeRrOr=alert`1`>
 
 ```
+![[Pasted image 20260724130225.png]]
+
+
 Template:
 ```js
 <script>
