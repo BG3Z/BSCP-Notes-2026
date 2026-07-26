@@ -1,5 +1,33 @@
 Burp Scan Is gotty : )
 
+ParamMiner (Guess Header):
+![[Pasted image 20260726124451.png]]
+
+3. 
+![[Pasted image 20260726125343.png]]
+
+4. 
+![[Pasted image 20260726132700.png]]
+
+5. VARY
+![[Pasted image 20260726134546.png]]
+
+6. UNKEYED STRING
+![[Pasted image 20260726135224.png]]
+
+7. ParamMiner --> Guess Query Params
+![[Pasted image 20260726140137.png]]
+
+8. CLOAKING (Esconder parametros que el servidor ignora pero el sistema cache les considera como parte unica del recurso)
+![[Pasted image 20260726141707.png]]
+
+9. Fat GET Req (accepts `GET` requests that have a body, but does not include the body in the cache key)
+![[Pasted image 20260726141912.png]]
+
+10. 9. XSS vulnerability that is not directly exploitable due to browser URL-encoding. Take advantage of the cache's normalization process to exploit this vulnerability -> GET /random</p><script>alert(1)</script><p>foo
+	1. Copy URL when cache hits, send to victim
+
+
 Checklist:
 ```
 Poison to leak cookie:

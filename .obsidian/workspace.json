@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1c2c2910e4707a9e",
+        "id": "bf9831155c97ad9c",
         "type": "tabs",
         "children": [
           {
-            "id": "3c9cb27cc442b31b",
+            "id": "690b732336206e6e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 284.5
   },
   "right": {
     "id": "71ffc2173e6a708f",
@@ -88,6 +88,25 @@
         "id": "fa6e804b0648f486",
         "type": "tabs",
         "children": [
+          {
+            "id": "5987ddec30b541ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 0 - Exam Tips"
+            }
+          },
           {
             "id": "c07edd6bca7cfb61",
             "type": "leaf",
@@ -118,40 +137,6 @@
             }
           },
           {
-            "id": "aaf8776c458e0857",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Port Swigger - Cheat List/14 - Authorization.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Esquema de 14 - Authorization"
-            }
-          },
-          {
-            "id": "5987ddec30b541ee",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Port Swigger - Cheat List/14 - Authorization.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 14 - Authorization"
-            }
-          },
-          {
             "id": "5200f3283a75ad51",
             "type": "leaf",
             "state": {
@@ -166,17 +151,21 @@
             }
           },
           {
-            "id": "fc37bb94c7370536",
+            "id": "aaf8776c458e0857",
             "type": "leaf",
             "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "type": "outline",
+              "state": {
+                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 0 - Exam Tips"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -195,41 +184,29 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "3c9cb27cc442b31b",
+  "active": "690b732336206e6e",
   "lastOpenFiles": [
-    "Port Swigger - Cheat List/15 - CWSH (WebSockets).md",
-    "Pasted image 20260724130225.png",
-    "Port Swigger - Cheat List/14 - Authorization.md",
-    "Port Swigger - Cheat List/RESOURCES/CheatsSheets & Add-Ons.md",
-    "Port Swigger - Cheat List/EXAM/NOTES 2.md",
-    "Port Swigger - Cheat List/EXAM/NOTES 1.md",
-    "Port Swigger - Cheat List/EXAM/APP 2.md",
-    "Port Swigger - Cheat List/EXAM/APP 1.md",
-    "Port Swigger - Cheat List/EXAM/differences.md",
-    "Port Swigger - Cheat List/0 - Exam Tips.md",
-    "Port Swigger - Cheat List/RESOURCES",
-    "Pasted image 20260723202340.png",
-    "Pasted image 20260723202330.png",
-    "Pasted image 20260723202257.png",
-    "Pasted image 20260723202243.png",
-    "Pasted image 20260723201116.png",
-    "Pasted image 20260723201059.png",
-    "Pasted image 20260723201032.png",
-    "Pasted image 20260723143117.png",
-    "Pasted image 20260723142532.png",
-    "Port Swigger - Cheat List/13 - Access control.md",
-    "Port Swigger - Cheat List/12 - Path Traversal.md",
-    "Port Swigger - Cheat List/11 - SSTI.md",
-    "Port Swigger - Cheat List/10 - Command Injection.md",
-    "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
-    "CUSTOM LINUX (Kitty).md",
-    "Custom Linux Commands",
+    "Pasted image 20260726141912.png",
+    "Pasted image 20260726141707.png",
+    "Pasted image 20260726140137.png",
+    "Pasted image 20260726135224.png",
+    "Pasted image 20260726134546.png",
+    "Pasted image 20260726132700.png",
+    "Pasted image 20260726125343.png",
+    "Pasted image 20260726124451.png",
+    "Port Swigger - Cheat List/8 - SSRF.md",
     "Port Swigger - Cheat List/2 - XSS.md",
-    "conflict-files-obsidian-git.md",
+    "Port Swigger - Cheat List/RESOURCES/CheatsSheets & Add-Ons.md",
+    "Port Swigger - Cheat List/RESOURCES",
+    "Pasted image 20260723142532.png",
+    "Pasted image 20260723131634.png",
+    "Pasted image 20260723130413.png",
+    "CUSTOM LINUX (Kitty).md",
+    "Port Swigger - Cheat List/12 - Path Traversal.md",
     "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
+    "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Port Swigger - Cheat List/29 - LLM.md",
     "Port Swigger - Cheat List/Mistery Labs.md",
-    "Port Swigger - Cheat List/8 - SSRF.md",
     "Port Swigger - Cheat List/7 - XXE Injection.md",
     "Port Swigger - Cheat List/6 - CORS Cross-origin resource sharing.md",
     "Port Swigger - Cheat List/5 - DOM Vulnerabilities.md",
@@ -242,6 +219,7 @@
     "blindOracle.py",
     "blind.pz~",
     "blind.py~",
-    "blind.py"
+    "blind.py",
+    "Port Swigger - Cheat List/0 - Exam Tips.md"
   ]
 }
