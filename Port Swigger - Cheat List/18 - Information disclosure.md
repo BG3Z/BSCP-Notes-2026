@@ -12,6 +12,7 @@ Notice X-Custom-IP-Authorization: 81.33.215.45 is being reflected
 add X-Custom-IP-Authorization: with 127.0.0.1
 GET /admin/delete?username=carlos
 
+![[Pasted image 20260728164724.png]]
 ##### git exposed
 /ffuf -c -w /usr/share/seclists/Discovery/Web-Content/big.txt -u https://0af200f8048145328134cb5100bb00a3.web-security-academy.net/FUZZ -fc 404
 .git found

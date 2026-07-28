@@ -1,3 +1,10 @@
+1. Cambiar el precio a la hora de añadir item al carrito y se refleja en la compra
+2. Añadir articulos random en negativo para restarle precio al total del articulo que queremos comprar
+3. Hay un mensaje que indica 'si trabajas para X, ponte un email X@dominio.com', te creas una cuenta random y en el apartado de UpdateEmail le cambias el dominio al de admin
+4. Se pueden aplicar varios codigos de descuento. La web solo valida con un historial de 1 elemento que no introduzcas dos veces el ultimo introducido. entonces vas alternando entre ambos y consigues el producto por 0€
+
+
+
 ```
 email registration has maximun length to 255 for example, it truncates the rest, you can register a company user:
 -> very-long-string@dontwannacry.com.YOUR-EMAIL-ID.web-security-academy.net (Make sure that the very-long-string is the right number of characters so that the "m" at the end of @dontwannacry.com is character 255 exactly.)
