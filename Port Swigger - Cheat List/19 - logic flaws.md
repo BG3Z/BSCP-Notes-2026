@@ -11,7 +11,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ![[Pasted image 20260730142953.png]]
 8. Al comprar un producto te encuentras :![[Pasted image 20260730143603.png]]
 - Introduciendo otro producto al carrito, y mandando de nuevo esta solicitud de confirmacion de pedido, nos saltamos el pago
-
+7. La maquina de estados era : 1. Credenciales, 2. Eleccion de Rol, 3. Login Exitoso. Si vamos capturando cada solicitud y dropeamos la de `rol select`, se aplica el valor default por detras (que en este caso es `administrator`)
 
 ```
 email registration has maximun length to 255 for example, it truncates the rest, you can register a company user:
