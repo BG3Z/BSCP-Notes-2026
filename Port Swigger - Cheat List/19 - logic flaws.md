@@ -2,7 +2,15 @@
 2. Añadir articulos random en negativo para restarle precio al total del articulo que queremos comprar
 3. Hay un mensaje que indica 'si trabajas para X, ponte un email X@dominio.com', te creas una cuenta random y en el apartado de UpdateEmail le cambias el dominio al de admin
 4. Se pueden aplicar varios codigos de descuento. La web solo valida con un historial de 1 elemento que no introduzcas dos veces el ultimo introducido. entonces vas alternando entre ambos y consigues el producto por 0€
-
+5. Al aumentar los items del carrito, y llegar al limite del int, comienza de nuevo desde los negativos, conseguimos llegar a 0 en la segunda vuelta y nos llevamos el articulo gratis
+6. En la parte de crear correo tiene un limite de 255 caracteres, si pasamos ese limite te deja crear el correo pero lo interpreta por detras:
+```
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@dontwannacry.com.exploit-0a3d0072041095fa82402d7d01b2005b.exploit-server.net
+```
+7. En el apartado de cambiar contraseña, si borramos el argumento de `current_password`, no lo valida por detras y podemos cambiar la de cualquier usuario
+![[Pasted image 20260730142953.png]]
+8. Al comprar un producto te encuentras :![[Pasted image 20260730143603.png]]
+- Introduciendo otro producto al carrito, y mandando de nuevo esta solicitud de confirmacion de pedido, nos saltamos el pago
 
 
 ```
