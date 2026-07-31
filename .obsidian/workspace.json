@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/20 - HTTP Host Header Attacks.md",
+                "file": "Port Swigger - Cheat List/RESOURCES/Real Exam.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20 - HTTP Host Header Attacks"
+              "title": "Real Exam"
             }
           }
         ]
@@ -188,13 +188,16 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
-    "Port Swigger - Cheat List/RESOURCES/CheatsSheets & Add-Ons.md",
+    "Port Swigger - Cheat List/RESOURCES/BSCP Reviews & Roadmaps.md",
+    "Port Swigger - Cheat List/RESOURCES/Real Exam.md",
+    "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
     "Port Swigger - Cheat List/0 - Exam Tips.md",
+    "Port Swigger - Cheat List/EXAM/APP 1.md",
+    "Port Swigger - Cheat List/20 - HTTP Host Header Attacks.md",
     "CUSTOM LINUX (Kitty).md",
     "Port Swigger - Cheat List/Mistery Labs.md",
     "Pasted image 20260618135334.png",
     "Port Swigger - Cheat List/29 - LLM.md",
-    "Port Swigger - Cheat List/EXAM/APP 1.md",
     "Port Swigger - Cheat List/EXAM/NOTES 2.md",
     "Port Swigger - Cheat List/EXAM/NOTES 1.md",
     "Port Swigger - Cheat List/EXAM/differences.md",
@@ -206,7 +209,6 @@
     "Pasted image 20260731173856.png",
     "Pasted image 20260731173742.png",
     "Pasted image 20260731173735.png",
-    "Port Swigger - Cheat List/20 - HTTP Host Header Attacks.md",
     "Pasted image 20260731172716.png",
     "Pasted image 20260731172705.png",
     "Pasted image 20260731172652.png",
@@ -223,7 +225,6 @@
     "Port Swigger - Cheat List/12 - Path Traversal.md",
     "Port Swigger - Cheat List/9 - HTTP Smuggling.md",
     "Port Swigger - Cheat List/7 - XXE Injection.md",
-    "Port Swigger - Cheat List/6 - CORS Cross-origin resource sharing.md",
     "blindTimeDelay.py~",
     "4913",
     "blindTimeDelay.py",
