@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/RESOURCES/BSCP Reviews & Roadmaps.md",
+                "file": "Port Swigger - Cheat List/6 - CORS Cross-origin resource sharing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BSCP Reviews & Roadmaps"
+              "title": "6 - CORS Cross-origin resource sharing"
             }
           }
         ]
@@ -188,9 +188,9 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
+    "Port Swigger - Cheat List/RESOURCES/BSCP Reviews & Roadmaps.md",
     "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
     "Port Swigger - Cheat List/RESOURCES/Real Exam.md",
-    "Port Swigger - Cheat List/RESOURCES/BSCP Reviews & Roadmaps.md",
     "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
     "Port Swigger - Cheat List/0 - Exam Tips.md",
     "Port Swigger - Cheat List/EXAM/APP 1.md",
