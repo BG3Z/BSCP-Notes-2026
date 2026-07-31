@@ -3,8 +3,12 @@
 🡆 https://github.com/DingyShark/BurpSuiteCertifiedPractitioner
 
 --- 
-- EXTENSIONES IMPORTANTES:
+- **EXTENSIONES** Importantes!!!:
 🡆 HackVertor
 🡆 ParamMiner
 🡆 Http Smuggler
 🡆 InQL
+
+---
+- **HERRAMIENTAS** Importantes!!!
+🡆 SQLMap
