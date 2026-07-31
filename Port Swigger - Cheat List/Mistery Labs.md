@@ -109,8 +109,6 @@ H2.TE to intruder each 10 seconds
 Check always just in case .git, or discover content at the beggining
 
 Check every thing possible with each param dumbass
-
-
 ```
 
 

@@ -1,3 +1,8 @@
+PortSwigger cheat sheet:
+https://portswigger.net/web-security/sql-injection/cheat-sheet
+
+--------
+
 Payloads:
 ```
 --> Numero COLUMNAS en la tabla (cambiando el numero)
@@ -91,8 +96,8 @@ Bypass con XML en SQLi:
 
 ![[Pasted image 20260620205150.png]]
 
-PortSwigger cheat sheet:
-https://portswigger.net/web-security/sql-injection/cheat-sheet
+
+--------------------------------------------------------------------------
 
 Oracle :
 ```

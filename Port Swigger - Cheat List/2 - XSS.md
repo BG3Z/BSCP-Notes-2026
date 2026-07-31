@@ -1,5 +1,7 @@
+PortSwigger cheat sheet:
 https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
-PDF XSS : https://drive.google.com/file/d/1nsDVQufUY1KRxA6tGgSlp4infmuQEIfp/view
+
+---------------------------------------------------------
 
 Metodologia de Campos:
 ```

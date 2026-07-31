@@ -14,8 +14,6 @@ wget --no-cookies --header "Cookie: session=$sessTWO" --recursive --page-requisi
 diff -qr "$domainONE" "$domainTWO" | sort
 ```
 
-
-
 dump .mds to obsidian
 ```python
 #!/usr/bin/env python3

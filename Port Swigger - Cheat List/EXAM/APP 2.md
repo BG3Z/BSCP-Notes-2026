@@ -6,7 +6,7 @@ Acces_log:
 Creds & Data
 ```
 carlos:
-random_user:ranom_password
+random_user:random_password
 administrator:
 ```
 
