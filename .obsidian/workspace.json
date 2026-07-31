@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/19 - Business Logic Flaws.md",
+                "file": "Port Swigger - Cheat List/21 - OAuth Authentication.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "19 - Business Logic Flaws"
+              "title": "21 - OAuth Authentication"
             }
           }
         ]
@@ -188,21 +188,24 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
-    "Pasted image 20260730143603.png",
-    "Pasted image 20260730142953.png",
-    "Port Swigger - Cheat List/18 - Information Disclosure.md",
+    "Pasted image 20260731173856.png",
+    "Pasted image 20260731173742.png",
+    "Pasted image 20260731173735.png",
+    "Port Swigger - Cheat List/20 - HTTP Host Header Attacks.md",
+    "Pasted image 20260731172716.png",
+    "Pasted image 20260731172705.png",
+    "Pasted image 20260731172652.png",
+    "Pasted image 20260731172623.png",
+    "Pasted image 20260731172612.png",
+    "Pasted image 20260731172548.png",
+    "Pasted image 20260731172533.png",
+    "Pasted image 20260731171654.png",
     "Port Swigger - Cheat List/19 - Business Logic Flaws.md",
-    "Pasted image 20260728164724.png",
     "Port Swigger - Cheat List/17 - Insecure Deserialization.md",
-    "Pasted image 20260727142904.png",
-    "Pasted image 20260727142901.png",
-    "Pasted image 20260727142858.png",
-    "Pasted image 20260727142855.png",
-    "Pasted image 20260727134811.png",
+    "Port Swigger - Cheat List/18 - Information Disclosure.md",
+    "Port Swigger - Cheat List/21 - OAuth Authentication.md",
+    "Port Swigger - Cheat List/23 - JWT.md",
     "Port Swigger - Cheat List/16 - Web Cache poisoning.md",
-    "Pasted image 20260726141912.png",
-    "Pasted image 20260726141707.png",
-    "Pasted image 20260726140137.png",
     "Port Swigger - Cheat List/8 - SSRF.md",
     "Port Swigger - Cheat List/2 - XSS.md",
     "Port Swigger - Cheat List/RESOURCES/CheatsSheets & Add-Ons.md",

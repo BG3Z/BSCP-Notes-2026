@@ -1,17 +1,23 @@
-```
-Change Host Header to your exploit server to exfiltrate password reset token
 
-Bypass authorization by setting Host: localhost
+1. Change Host Header to your exploit server to exfiltrate password reset token
 
-Second Host Header reflected in response -> cache poison
+2. Bypass authorization by setting Host: localhost
 
-SSRF to access admin panel somewhere in 192.168.1.0/24
--> confirm you can change host to your collaborator
--> deselect in intruder update host header to match target
--> Host: 192.168.0.§1§
+3. Add a Second 'Host' Header reflected in response -> Cache Poisoning
+![[Pasted image 20260731165731.png]]
 
-You can add full URL as GET https://lab/ and then set arbitrary Host header
--> you can exploit again SSRF to admin in 192.168.1.0/24
+4. SSRF to access admin panel somewhere in 192.168.1.0/24:
+	* Uncheck 'Update Host Header to match target' on Intruder:
+	* Host: 192.168.0.§1§
+	* Bruteforce 1 to 255 and access admin panel
 
-Duplicate request with GET /admin and Host 192.168.0.1, in the first one restore it to normal GET / Host: lab, connection=keep-alive and send in sequence (in the exam it would be probably localhost:6566)
-```
+5. You can add full URL as GET https://lab/ and then set arbitrary 'Host' header:
+![[Pasted image 20260731171654.png]]
+
+6. Duplicate request with GET /admin and Host 192.168.0.1 and send in **SEQUENCE** (in the exam it would be probably localhost:6566):
+![[Pasted image 20260731172533.png|299]]
+* First Request:
+![[Pasted image 20260731172548.png]]
+* Second Request:
+![[Pasted image 20260731172716.png]]
+

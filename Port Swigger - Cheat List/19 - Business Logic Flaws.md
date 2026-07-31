@@ -13,17 +13,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 - Introduciendo otro producto al carrito, y mandando de nuevo esta solicitud de confirmacion de pedido, nos saltamos el pago
 9. La maquina de estados era : 1. Credenciales, 2. Eleccion de Rol, 3. Login Exitoso. Si vamos capturando cada solicitud y dropeamos la de `rol select`, se aplica el valor default por detras (que en este caso es `administrator`)
 10. Oracle Encryption Bypass (fumada):
-- Cookie codificada de (_stay-logged-in_).
+	- Cookie codificada de (_stay-logged-in_).
 	
-* Publicar un comentario con un correo 'invalid' establece una cookie de notificación que se cifra y luego se descifra en la siguiente petición utilizando un oráculo de cifrado.
+	* Publicar un comentario con un correo 'invalid' establece una cookie de notificación que se cifra y luego se descifra en la siguiente petición utilizando un oráculo de cifrado.
     
-- Si copias tu cookie de _stay-logged-in_ y la pegas en la cookie de notificación, verás `wiener:1711060443422`, por lo que sabemos que el formato de la cookie es usuario + marca de tiempo (_timestamp_).
+	- Si copias tu cookie de _stay-logged-in_ y la pegas en la cookie de notificación, verás `wiener:1711060443422`, por lo que sabemos que el formato de la cookie es usuario + marca de tiempo (_timestamp_).
     
-- A `administrator:1711060443422` se le añade como prefijo "Invalid email address: " al ponerlo como email invalido, por lo que en el decodificador borramos los 23 bytes correspondientes a ese texto.
+	- A `administrator:1711060443422` se le añade como prefijo "Invalid email address: " al ponerlo como email invalido, por lo que en el decodificador borramos los 23 bytes correspondientes a ese texto.
     
-- Obtenemos un error indicando que necesitamos tener un múltiplo de 16, así que le aplicamos un relleno (_padding_) de 9 bytes para que quede como: `xxxxxxxxxadministrator:1711060443422` y eliminamos 32 bytes en el codificador.
+	- Obtenemos un error indicando que necesitamos tener un múltiplo de 16, así que le aplicamos un relleno (_padding_) de 9 bytes para que quede como: `xxxxxxxxxadministrator:1711060443422` y eliminamos 32 bytes en el codificador.
     
-- Una vez que obtengas correctamente la notificación como `administrator:timestamp`, cópiala en la cookie de _stay-logged-in_.
+	- Una vez que obtengas correctamente la notificación como `administrator:timestamp`, cópiala en la cookie de _stay-logged-in_.
 
 --------------------------------------------------------------------------
 
