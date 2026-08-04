@@ -7,6 +7,7 @@
 🡆 HackVertor
 🡆 ParamMiner
 🡆 Http Smuggler
+🡆 JWT Editor
 🡆 InQL
 
 ---
