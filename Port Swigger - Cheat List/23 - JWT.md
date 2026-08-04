@@ -20,7 +20,7 @@
 	- La codificamos en Base64 y la sustituimos por la k (clave) en wl JWT Editor:![[Pasted image 20260804151611.png|165]]![[Pasted image 20260804151644.png|357]]
 	- Y ahora firmamos el JWT creado con 'administrator' con nuestra key del paso anterior:![[Pasted image 20260804151949.png|250]]![[Pasted image 20260804152019.png|341]]
 
-4. JWK Header Injection:
+4. JWK (Clave Publica) Header Injection:
 	- Se puede introducir una JWK (Json Web Key) embebida en la solicitud creando una private key propia en la que nuestro servidor confía:![[Pasted image 20260804162851.png|373]]![[Pasted image 20260804162618.png|238]]
 
 
