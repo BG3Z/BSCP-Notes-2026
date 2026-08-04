@@ -30,10 +30,11 @@
 	- Al enviar la petición, la aplicación lee la cabecera `jku` y hace una consulta a nuestro exploit server para descargar la clave pública (buscando el `kid` que coincida). Como el servidor es vulnerable y confía en esa URL externa, utiliza nuestra clave pública para VERIFICAR la firma del JWT. Como nosotros previamente firmamos el JWT con nuestra propia clave privada, la verificación es exitosa y el servidor acepta nuestro token falsificado.
 
 
-6. 
-
-Byte Nulo (`AA==`)
-![[Pasted image 20260804165501.png]]
+6. KID Header Path Traversal:
+	- El laboratorio usa algo asi para leer las claves:![[Pasted image 20260804165955.png|403]]
+	- Entonces, creamos una ``Symmetric Key`` (misma clave para firmar y verificar) cuya valor (k) sea un Byte Nulo en Base64 (`AA==`):
+	  ![[Pasted image 20260804165501.png|402]]
+	-  Retrocedemos el KID hasta /dev/null, y como hemos firmado con un byte nulo, pasamos:![[Pasted image 20260804165720.png|453]]![[Pasted image 20260804165831.png|449]]
 
 
 ---
