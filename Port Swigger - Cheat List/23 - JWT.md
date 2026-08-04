@@ -1,3 +1,32 @@
+![[Pasted image 20260804145023.png]]
+- Cada parte de esa informacion va separada por puntos '.'
+
+- Los algoritmos de cifrado HS256, HS384 y HS512 son algoritmos **SIMÉTRICOS**, esto quiere decir que con la misma clave se puede tanto FIRMAR como VERIFICAR.
+- Algoritmos **ASIMÉTRICOS** como RS256 se FIRMA con la clave PRIVADA, y se VERIFICA con la clave PUBLICA.
+
+
+1. Cambiar el nombre del usuario en el JWT al del usuario deseado ya que no se valida con la firma:
+	- ENCABEZADO:![[Pasted image 20260804145234.png|642]]
+	- PAYLOAD:![[Pasted image 20260804145314.png]]
+	- FIRMA:![[Pasted image 20260804145336.png]]
+
+2. El servidor acepta JWT's sin firmar, por lo que eliminamos la parte 3 (firma) HASTA DESPUES DEL PUNTO!! y cambiamos en el Header el 'alg' a 'none':
+
+![[Pasted image 20260804150004.png|549]]
+
+3. Le hacemos fuerza bruta a la secret key con hashcat usando el diccionario de burpsuite:
+![[Pasted image 20260804151100.png]]
+	- Y nos sale que la clave en texto plano es 'secret1':![[Pasted image 20260804151151.png]]
+	- La codificamos en Base64 y la sustituimos por la k (clave) en wl JWT Editor:![[Pasted image 20260804151611.png|165]]![[Pasted image 20260804151644.png|357]]
+	- Y ahora firmamos el JWT creado con 'administrator' con nuestra key del paso anterior:![[Pasted image 20260804151949.png|250]]![[Pasted image 20260804152019.png|341]]
+
+4. .
+
+
+
+---
+
+
 ```
 Alg = None
 Take the first part and update alg to none, the second part update the admin, and delete the last block, leave the point:

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/22 - File Upload.md",
+                "file": "Port Swigger - Cheat List/23 - JWT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "22 - File Upload"
+              "title": "23 - JWT"
             }
           }
         ]
@@ -188,8 +188,20 @@
   },
   "active": "690b732336206e6e",
   "lastOpenFiles": [
-    "Pasted image 20260803204258.png",
-    "Pasted image 20260803204227.png",
+    "Pasted image 20260804152019.png",
+    "Pasted image 20260804151949.png",
+    "Pasted image 20260804151644.png",
+    "Pasted image 20260804151611.png",
+    "Pasted image 20260804151151.png",
+    "Pasted image 20260804151100.png",
+    "FILES/jwt",
+    "FILES/jwt.secrets.list",
+    "Pasted image 20260804150004.png",
+    "Pasted image 20260804145336.png",
+    "Pasted image 20260804145314.png",
+    "Pasted image 20260804145234.png",
+    "Pasted image 20260804145023.png",
+    "Port Swigger - Cheat List/22 - File Upload.md",
     "FILES/ysoserial-all.jar",
     "FILES/shell.php",
     "FILES/marshalled.rb",
@@ -198,21 +210,9 @@
     "FILES/phpggc/gadgetchains/WordPress/P/YoastSeo/FW/1/gadgets.php",
     "FILES/phpggc/gadgetchains/WordPress/P/YoastSeo/FW/1/chain.php",
     "FILES/phpggc/gadgetchains/WordPress/P/WooCommerce/RCE/2/gadgets.php",
-    "FILES/phpggc/gadgetchains/WordPress/P/WooCommerce/RCE/2/chain.php",
-    "FILES/phpggc/gadgetchains/WordPress/P/WooCommerce/RCE/1/chain.php",
     "FILES/phpggc/README.md",
     "FILES/CUSTOM LINUX (Kitty).md",
-    "Pasted image 20260803203550.png",
-    "Pasted image 20260803202932.png",
-    "Pasted image 20260803202834.png",
-    "Pasted image 20260803201332.png",
-    "Pasted image 20260803200646.png",
-    "Pasted image 20260803200614.png",
-    "Pasted image 20260803200611 1.png",
-    "Pasted image 20260803200611.png",
-    "Pasted image 20260803200610.png",
     "Port Swigger - Cheat List/21 - OAuth Authentication.md",
-    "Port Swigger - Cheat List/22 - File Upload.md",
     "Port Swigger - Cheat List/23 - JWT.md",
     "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
     "Port Swigger - Cheat List/RESOURCES/Real Exam.md",
