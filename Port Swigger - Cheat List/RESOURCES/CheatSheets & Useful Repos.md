@@ -6,7 +6,7 @@
 - **EXTENSIONES** Importantes!!!:
 🡆 HackVertor
 🡆 ParamMiner
-🡆 Http Smuggler
+🡆 Http Request Smuggler
 🡆 JWT Editor
 🡆 InQL
 
