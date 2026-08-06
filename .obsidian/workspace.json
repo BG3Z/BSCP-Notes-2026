@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
+                "file": "Port Swigger - Cheat List/27 - NoSQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CheatSheets & Useful Repos"
+              "title": "27 - NoSQL"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
+                "file": "Port Swigger - Cheat List/27 - NoSQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -188,6 +188,8 @@
   },
   "active": "230a25988d613a23",
   "lastOpenFiles": [
+    "Pasted image 20260806204031.png",
+    "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
     "Port Swigger - Cheat List/RESOURCES/BSCP Reviews & Roadmaps.md",
     "Port Swigger - Cheat List/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
     "Sin título.base",
@@ -202,7 +204,6 @@
     "Pasted image 20260804172420.png",
     "Pasted image 20260804172002.png",
     "Pasted image 20260804171950.png",
-    "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
     "Port Swigger - Cheat List/23 - JWT.md",
     "Port Swigger - Cheat List/ESSENTIAL SKILLS",
     "Pasted image 20260804165955.png",

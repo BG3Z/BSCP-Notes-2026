@@ -1,3 +1,6 @@
+
+![[Pasted image 20260806204031.png|571]]
+
 Identify payloads:
 ```
 '+'
