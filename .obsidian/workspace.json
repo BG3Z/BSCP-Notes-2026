@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/18 - Information Disclosure.md",
+                "file": "BSCP - Cheatsheet/20 - Host Header Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "18 - Information Disclosure"
+              "title": "20 - Host Header Attacks"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/18 - Information Disclosure.md",
+                "file": "BSCP - Cheatsheet/20 - Host Header Attacks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,6 +189,8 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
+    "BSCP - Cheatsheet/18 - Information Disclosure.md",
     "Pasted image 20260810213821.png",
     "Pasted image 20260810213813.png",
     "Pasted image 20260810213810.png",
@@ -199,7 +201,6 @@
     "Pasted image 20260810213749.png",
     "Pasted image 20260810213745.png",
     "Pasted image 20260810213742.png",
-    "Pasted image 20260810213739.png",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
@@ -234,7 +235,6 @@
     "BSCP - Cheatsheet/PAYLOADS/xss.md",
     "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/PAYLOADS/sqli.md",
-    "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
     "Sin título.canvas"
   ]
 }
