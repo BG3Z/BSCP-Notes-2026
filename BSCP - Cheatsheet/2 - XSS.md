@@ -1,4 +1,4 @@
-PortSwigger cheat sheet:
+ortSwigger cheat sheet:
 https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 
 ---------------------------------------------------------

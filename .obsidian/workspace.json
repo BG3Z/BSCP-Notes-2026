@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "03e3584dc675bfa4",
+        "id": "c02f005bd8508773",
         "type": "tabs",
         "children": [
           {
-            "id": "230a25988d613a23",
+            "id": "8f4d3f197fbdf39f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Port Swigger - Cheat List/19 - Business Logic Flaws.md",
+                "file": "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "19 - Business Logic Flaws"
+              "title": "Essential Skills - BSCP Path"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 249.5
   },
   "right": {
     "id": "71ffc2173e6a708f",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Port Swigger - Cheat List/19 - Business Logic Flaws.md",
+                "file": "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -172,7 +172,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.1666259765625
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,54 +187,54 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "230a25988d613a23",
+  "active": "2b0476300aead93d",
   "lastOpenFiles": [
-    "Port Swigger - Cheat List/18 - Information Disclosure.md",
-    "Port Swigger - Cheat List/24 - Prototype Pollution.md",
-    "Port Swigger - Cheat List/23 - JWT.md",
-    "Port Swigger - Cheat List/22 - File Upload.md",
-    "Port Swigger - Cheat List/21 - OAuth Authentication.md",
-    "Port Swigger - Cheat List/20 - HTTP Host Header Attacks.md",
-    "Port Swigger - Cheat List/19 - Business Logic Flaws.md",
-    "Port Swigger - Cheat List/28 - API Testing.md",
-    "Port Swigger - Cheat List/27 - NoSQL.md",
-    "Port Swigger - Cheat List/17 - Insecure Deserialization.md",
-    "Port Swigger - Cheat List/12 - Path Traversal.md",
-    "Port Swigger - Cheat List/13 - Access control.md",
-    "Port Swigger - Cheat List/25 - GraphQL.md",
-    "Pasted image 20260806204031.png",
-    "Port Swigger - Cheat List/RESOURCES/CheatSheets & Useful Repos.md",
-    "Port Swigger - Cheat List/RESOURCES/BSCP Reviews & Roadmaps.md",
-    "Port Swigger - Cheat List/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
-    "Sin título.base",
-    "Port Swigger - Cheat List/EXAM/APP 1.md",
-    "2026-08-05.md",
+    "BSCP - Cheatsheet/WORDLISTS/TXT/jwt.secrets.list",
+    "BSCP - Cheatsheet/WORDLISTS/TXT/burp-labs-wordlist.txt",
+    "BSCP - Cheatsheet/WORDLISTS/TXT/webCacheDeception.txt",
+    "BSCP - Cheatsheet/WORDLISTS/TXT/usernames.txt",
+    "BSCP - Cheatsheet/WORDLISTS/TXT/passwords.txt",
+    "BSCP - Cheatsheet/WORDLISTS/TXT",
+    "BSCP - Cheatsheet/WORDLISTS/Nueva carpeta",
+    "BSCP - Cheatsheet/WORDLISTS/passwords.txt",
+    "BSCP - Cheatsheet/WORDLISTS/usernames.txt",
+    "BSCP - Cheatsheet/WORDLISTS/webCacheDeception.txt",
+    "BSCP - Cheatsheet/WORDLISTS/burp-labs-wordlist.txt",
     "Sin título.canvas",
-    "Port Swigger - Cheat List/RESOURCES/Real Exam.md",
-    "Pasted image 20260805140848.png",
-    "Pasted image 20260805140829.png",
-    "Pasted image 20260805140340.png",
-    "Pasted image 20260804172835.png",
-    "Pasted image 20260804172420.png",
-    "Pasted image 20260804172002.png",
-    "Pasted image 20260804171950.png",
-    "Port Swigger - Cheat List/ESSENTIAL SKILLS",
-    "Pasted image 20260804165955.png",
-    "Pasted image 20260804165831.png",
-    "FILES/jwt",
-    "FILES/jwt.secrets.list",
-    "FILES/ysoserial-all.jar",
-    "FILES/shell.php",
-    "FILES/marshalled.rb",
-    "FILES/generate.php",
-    "FILES/phpggc/gadgetchains/WordPress/P/YetAnotherStarsRating/RCE/1/gadgets.php",
-    "FILES/phpggc/gadgetchains/WordPress/P/YoastSeo/FW/1/gadgets.php",
-    "FILES/phpggc/README.md",
-    "FILES/CUSTOM LINUX (Kitty).md",
-    "Port Swigger - Cheat List/6 - CORS Cross-origin resource sharing.md",
-    "Port Swigger - Cheat List/1 - SQL Injections Cheat List.md",
-    "Port Swigger - Cheat List/0 - Exam Tips.md",
     "CUSTOM LINUX (Kitty).md",
-    "Port Swigger - Cheat List/Mistery Labs.md"
+    "BSCP - Cheatsheet/22 - File Upload.md",
+    "BSCP - Cheatsheet/21 - OAuth Authentication.md",
+    "BSCP - Cheatsheet/23 - JWT.md",
+    "BSCP - Cheatsheet/10 - OS Command Injection.md",
+    "BSCP - Cheatsheet/12 - Path Traversal.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135334.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135344.png",
+    "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-usernames.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-discover.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-passwords.md",
+    "2026-08-05.md",
+    "BSCP - Cheatsheet/Mistery Labs.md",
+    "BSCP - Cheatsheet/PAYLOADS/xxe.md",
+    "BSCP - Cheatsheet/PAYLOADS/insecure-deserialization.md",
+    "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
+    "BSCP - Cheatsheet/PAYLOADS/remote-code-execution.md",
+    "BSCP - Cheatsheet/PAYLOADS/sqli.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssrf.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssti.md",
+    "BSCP - Cheatsheet/RESOURCES/XSS Mindmap.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
+    "BSCP - Cheatsheet/30 - Web Cache Deception.md",
+    "BSCP - Cheatsheet/29 - LLM.md",
+    "BSCP - Cheatsheet/RESOURCES/CookieStealer XSS Payloads.md",
+    "BSCP - Cheatsheet/RESOURCES/CheatSheets & Useful Repos.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810190142.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260806204031.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140848.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140829.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140340.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260804172835.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260804172420.png"
   ]
 }
