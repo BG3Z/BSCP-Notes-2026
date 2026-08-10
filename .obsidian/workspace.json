@@ -11,14 +11,12 @@
             "id": "8f4d3f197fbdf39f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "BSCP - Cheatsheet/25 - GraphQL.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20260810210927.png"
               },
-              "icon": "lucide-file",
-              "title": "25 - GraphQL"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260810210927"
             }
           }
         ]
@@ -187,8 +185,12 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "8f4d3f197fbdf39f",
+  "active": "2b0476300aead93d",
   "lastOpenFiles": [
+    "Pasted image 20260810211659.png",
+    "Pasted image 20260810211713.png",
+    "Pasted image 20260810210927.png",
+    "BSCP - Cheatsheet/25 - GraphQL.md",
     "Pasted image 20260810220027.png",
     "Pasted image 20260810220023.png",
     "Pasted image 20260810220019.png",
@@ -198,9 +200,6 @@
     "Pasted image 20260810215459.png",
     "BSCP - Cheatsheet/24 - Prototype Pollution.md",
     "Pasted image 20260810215405.png",
-    "Pasted image 20260810215359.png",
-    "Pasted image 20260810215356.png",
-    "Pasted image 20260810215315.png",
     "BSCP - Cheatsheet/23 - JWT.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
@@ -234,7 +233,6 @@
     "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/8 - SSRF.md",
     "BSCP - Cheatsheet/7 - XXE Injection.md",
-    "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "Sin título.canvas"
   ]
 }
