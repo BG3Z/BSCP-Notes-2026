@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/13 - Access control.md",
+                "file": "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13 - Access control"
+              "title": "15 - CSWSH (WebSockets)"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/13 - Access control.md",
+                "file": "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,10 +189,11 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
+    "Pasted image 20260810212342.png",
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/13 - Access control.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
-    "BSCP - Cheatsheet/15 - CWSH (WebSockets).md",
+    "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "Pasted image 20260810211844.png",
     "Pasted image 20260810211836.png",
     "Pasted image 20260810211818.png",
@@ -234,7 +235,6 @@
     "BSCP - Cheatsheet/0 - Exam Tips.md",
     "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
     "Sin título.canvas",
-    "CUSTOM LINUX (Kitty).md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png"
   ]
 }
