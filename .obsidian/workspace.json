@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
+                "file": "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "15 - CSWSH (WebSockets)"
+              "title": "16 - Web Cache poisoning"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
+                "file": "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,22 +189,23 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
-    "Pasted image 20260810212342.png",
+    "Pasted image 20260810213104.png",
+    "Pasted image 20260810213058.png",
+    "Pasted image 20260810213054.png",
+    "Pasted image 20260810213049.png",
+    "Pasted image 20260810213040.png",
+    "Pasted image 20260810213032.png",
+    "Pasted image 20260810213027.png",
+    "Pasted image 20260810213020.png",
+    "Pasted image 20260810213016.png",
+    "Pasted image 20260810213011.png",
+    "Pasted image 20260810213003.png",
+    "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/13 - Access control.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
-    "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
-    "Pasted image 20260810211844.png",
-    "Pasted image 20260810211836.png",
-    "Pasted image 20260810211818.png",
-    "Pasted image 20260810211806.png",
-    "Pasted image 20260810211753.png",
-    "Pasted image 20260810211713.png",
-    "Pasted image 20260810211659.png",
-    "Pasted image 20260810211309.png",
     "BSCP - Cheatsheet/PAYLOADS/ssti.md",
     "BSCP - Cheatsheet/11 - SSTI.md",
-    "Pasted image 20260810210927.png",
     "FILES/SSTImap-master/utils/__init__.py",
     "FILES/SSTImap-master/utils/strings.py",
     "FILES/SSTImap-master/utils/random_agent.py",
@@ -234,7 +235,6 @@
     "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
     "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
-    "Sin título.canvas",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png"
+    "Sin título.canvas"
   ]
 }

