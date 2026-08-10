@@ -11,12 +11,14 @@
             "id": "8f4d3f197fbdf39f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20260810210927.png"
+                "file": "BSCP - Cheatsheet/24 - Prototype Pollution.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260810210927"
+              "icon": "lucide-file",
+              "title": "24 - Prototype Pollution"
             }
           }
         ]
@@ -185,21 +187,22 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "2b0476300aead93d",
+  "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
-    "Pasted image 20260810211659.png",
-    "Pasted image 20260810211713.png",
-    "Pasted image 20260810210927.png",
+    "BSCP - Cheatsheet/27 - NoSQL.md",
+    "BSCP - Cheatsheet/28 - API Testing.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211659.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810210927.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211713.png",
     "BSCP - Cheatsheet/25 - GraphQL.md",
-    "Pasted image 20260810220027.png",
-    "Pasted image 20260810220023.png",
-    "Pasted image 20260810220019.png",
-    "Pasted image 20260810220012.png",
-    "Pasted image 20260810220009.png",
-    "Pasted image 20260810215841.png",
-    "Pasted image 20260810215459.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220023.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220019.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220012.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220009.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810215841.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810215459.png",
     "BSCP - Cheatsheet/24 - Prototype Pollution.md",
-    "Pasted image 20260810215405.png",
     "BSCP - Cheatsheet/23 - JWT.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
@@ -232,7 +235,6 @@
     "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/8 - SSRF.md",
-    "BSCP - Cheatsheet/7 - XXE Injection.md",
     "Sin título.canvas"
   ]
 }
