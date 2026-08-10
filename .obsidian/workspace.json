@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
+                "file": "BSCP - Cheatsheet/11 - SSTI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9 - HTTP Request Smuggling"
+              "title": "11 - SSTI"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
+                "file": "BSCP - Cheatsheet/11 - SSTI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,8 +189,24 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
-    "BSCP - Cheatsheet/1 - SQLi.md",
+    "FILES/SSTImap-master/utils/__init__.py",
+    "FILES/SSTImap-master/utils/strings.py",
+    "FILES/SSTImap-master/utils/random_agent.py",
+    "FILES/SSTImap-master/utils/rand.py",
+    "FILES/SSTImap-master/utils/loggers.py",
+    "FILES/SSTImap-master/utils/crawler.py",
+    "FILES/SSTImap-master/utils/config.py",
+    "FILES/SSTImap-master/utils/closures.py",
+    "FILES/SSTImap-master/utils/cliparser.py",
+    "FILES/SSTImap-master/utils",
+    "FILES/SSTImap-master/plugins/ruby/__init__.py",
+    "FILES/SSTImap-master/README.md",
+    "FILES/SSTImap-master/LICENSE.md",
+    "FILES/SSTImap-master/SSTImap-master/README.md",
+    "FILES/SSTImap-master/SSTImap-master/LICENSE.md",
+    "BSCP - Cheatsheet/10 - OS Command Injection.md",
     "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
+    "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/8 - SSRF.md",
     "BSCP - Cheatsheet/7 - XXE Injection.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
@@ -203,32 +219,16 @@
     "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
     "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
-    "BSCP - Cheatsheet/WORDLISTS/TXT/jwt.secrets.list",
-    "BSCP - Cheatsheet/WORDLISTS/TXT/burp-labs-wordlist.txt",
-    "BSCP - Cheatsheet/WORDLISTS/TXT/webCacheDeception.txt",
-    "BSCP - Cheatsheet/WORDLISTS/TXT/usernames.txt",
-    "BSCP - Cheatsheet/WORDLISTS/TXT/passwords.txt",
-    "BSCP - Cheatsheet/WORDLISTS/TXT",
-    "BSCP - Cheatsheet/WORDLISTS/Nueva carpeta",
-    "BSCP - Cheatsheet/WORDLISTS/passwords.txt",
-    "BSCP - Cheatsheet/WORDLISTS/usernames.txt",
-    "BSCP - Cheatsheet/WORDLISTS/webCacheDeception.txt",
     "Sin título.canvas",
     "CUSTOM LINUX (Kitty).md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/21 - OAuth Authentication.md",
     "BSCP - Cheatsheet/23 - JWT.md",
-    "BSCP - Cheatsheet/10 - OS Command Injection.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135334.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135344.png",
     "BSCP - Cheatsheet/WORDLISTS/burp-usernames.md",
-    "BSCP - Cheatsheet/WORDLISTS/burp-discover.md",
-    "BSCP - Cheatsheet/WORDLISTS/burp-passwords.md",
-    "2026-08-05.md",
-    "BSCP - Cheatsheet/Mistery Labs.md",
-    "BSCP - Cheatsheet/PAYLOADS/xxe.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810190142.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260806204031.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140848.png",

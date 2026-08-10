@@ -2,9 +2,18 @@
 - Siempre intentaremos causar un error escribiendo cualquier cosa en la zona de la plantilla o similares para ver si el error nos devuelve la version / engine que se utiliza en la plantilla, y luego ya...
 
 --> PAYLOADS:
-[https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection]
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#twig---code-execution
 --> URL-ENCODER:
 [https://www.urlencoder.org/]
+## Polyglot SSTi !!!
+
+In most cases, this polyglot payload will trigger an error in presence of a SSTI vulnerability:
+
+```powershell
+${{<%[%'"}}%\.
+```
+
+---
 
 Simple:
 ```

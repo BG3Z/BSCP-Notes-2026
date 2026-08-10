@@ -1,0 +1,73 @@
+# SSTImap custom plugins and data types
+data_types/*
+!data_types/auto
+!data_types/http
+!data_types/object
+!data_types/raw
+!data_types/custom
+data_types/custom/*
+plugins/*
+!plugins/generic
+!plugins/java
+!plugins/javascript
+!plugins/languages
+!plugins/php
+!plugins/python
+!plugins/ruby
+!plugins/custom
+plugins/custom/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# OsX
+.DS_Store
+
+# Npm local modules
+node_modules
+
+# Jython
+*.class
+
+# Vim
+# swap
+.sw[a-p]
+.*.sw[a-p]
+# tags
+tags
+.idea/

