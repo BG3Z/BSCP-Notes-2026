@@ -1,3 +1,9 @@
+### Para el caso de URL's Impredecibles
+
+Siempre revisar los DOM de la aplicación, en los <script></script> siempre se pueden encontrar los endpoints a puntos ciegos que se suponen que son impredecibles pero el desarrollador no los sanitizó correctamente.
+
+![[Pasted image 20260810211309.png]]
+
 Checks:
 ```
 robots.txt

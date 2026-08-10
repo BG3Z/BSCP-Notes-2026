@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/11 - SSTI.md",
+                "file": "BSCP - Cheatsheet/14 - Authorization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - SSTI"
+              "title": "14 - Authorization"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/11 - SSTI.md",
+                "file": "BSCP - Cheatsheet/14 - Authorization.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,6 +189,19 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
+    "Pasted image 20260810211844.png",
+    "Pasted image 20260810211836.png",
+    "Pasted image 20260810211818.png",
+    "Pasted image 20260810211806.png",
+    "Pasted image 20260810211753.png",
+    "Pasted image 20260810211713.png",
+    "Pasted image 20260810211659.png",
+    "BSCP - Cheatsheet/13 - Access control.md",
+    "Pasted image 20260810211309.png",
+    "BSCP - Cheatsheet/12 - Path Traversal.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssti.md",
+    "BSCP - Cheatsheet/11 - SSTI.md",
+    "Pasted image 20260810210927.png",
     "FILES/SSTImap-master/utils/__init__.py",
     "FILES/SSTImap-master/utils/strings.py",
     "FILES/SSTImap-master/utils/random_agent.py",
@@ -199,7 +212,6 @@
     "FILES/SSTImap-master/utils/closures.py",
     "FILES/SSTImap-master/utils/cliparser.py",
     "FILES/SSTImap-master/utils",
-    "FILES/SSTImap-master/plugins/ruby/__init__.py",
     "FILES/SSTImap-master/README.md",
     "FILES/SSTImap-master/LICENSE.md",
     "FILES/SSTImap-master/SSTImap-master/README.md",
@@ -222,19 +234,7 @@
     "Sin título.canvas",
     "CUSTOM LINUX (Kitty).md",
     "BSCP - Cheatsheet/22 - File Upload.md",
-    "BSCP - Cheatsheet/21 - OAuth Authentication.md",
-    "BSCP - Cheatsheet/23 - JWT.md",
-    "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135334.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135344.png",
-    "BSCP - Cheatsheet/WORDLISTS/burp-usernames.md",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810190142.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260806204031.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140848.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140829.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140340.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260804172835.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260804172420.png"
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135334.png"
   ]
 }
