@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/14 - Authorization.md",
+                "file": "BSCP - Cheatsheet/13 - Access control.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14 - Authorization"
+              "title": "13 - Access control"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/14 - Authorization.md",
+                "file": "BSCP - Cheatsheet/13 - Access control.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,6 +189,10 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/14 - Authorization.md",
+    "BSCP - Cheatsheet/13 - Access control.md",
+    "BSCP - Cheatsheet/12 - Path Traversal.md",
+    "BSCP - Cheatsheet/15 - CWSH (WebSockets).md",
     "Pasted image 20260810211844.png",
     "Pasted image 20260810211836.png",
     "Pasted image 20260810211818.png",
@@ -196,9 +200,7 @@
     "Pasted image 20260810211753.png",
     "Pasted image 20260810211713.png",
     "Pasted image 20260810211659.png",
-    "BSCP - Cheatsheet/13 - Access control.md",
     "Pasted image 20260810211309.png",
-    "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/PAYLOADS/ssti.md",
     "BSCP - Cheatsheet/11 - SSTI.md",
     "Pasted image 20260810210927.png",
@@ -233,8 +235,6 @@
     "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
     "Sin título.canvas",
     "CUSTOM LINUX (Kitty).md",
-    "BSCP - Cheatsheet/22 - File Upload.md",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135334.png"
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png"
   ]
 }

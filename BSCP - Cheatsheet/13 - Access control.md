@@ -4,42 +4,59 @@ Siempre revisar los DOM de la aplicación, en los <script></script> siempre se p
 
 ![[Pasted image 20260810211309.png]]
 
-Checks:
-```
-robots.txt
+### Checks a tener en cuenta: 
 
-/admin route in javascript source code ctr+shift+C
+```js
+1. Find /robots.txt
+	//Nos aparece el Disallow: /administrator-panel ahora es tan simple como navegar a la interfaz desde la url principal y ver que podemos hacer.
 
-cookie modification to become admin
+2. /admin route in javascript source code ctr+shift+i
+	//es un nombre de interfaz impredecible, pero basta con buscarla en el source code. 
 
-4 - roleid can be modified in some request to become admin role (ex: {"email":"wiener@admin-user.net","roleid":2})
+3. cookie modification to become admin (ex: cookie-> Admin:False->Admin:True)
+	//El rol de un usuario se puede modificar desde la cookie `admin` 
 
-5 - userid can be controlled by a request parameter (ex: /my-account?id=carlos)
-(Cambiando el id del usuario en la url)
+4. roleid can be modified in some request to become admin role (ex: {"email":"wiener@admin-user.net","roleid":2})
+	//Cambiando el #del roleId podemos pasar de user normal a admin user.
+	//{"roleId":1 en la POST lo podemos modificar para otro Id.} para be admin
 
-6 - Hovering para descubrir el # unpredictable id de carlos mediante un post suyo
+5. Use X-Original-URL to bypass /admin acces denied:
+	// GET / HTTP/1.1 OR GET /my-account HTTP/1.1
+	// X-Original-URL: /admin 
+	//Y así de facil podemos tener acceso a admin. 
 
-7 - Contraseña en placeholder con tipo 'password'
+6. userid can be controlled by a request parameter (ex: /my-account?id=carlos)
+	//Podemos modificarlo por cualquier user, ex:admin
 
-8 - Descargar el transcript de un live chat, lo mandamos en repeater, follow redirect y vemos que descarga el archivo X.txt, empezando en 2 (asi que descargamos el 1.txt que será el de carlos)
-
-9 - Use X-Original-URL to bypass /admin acces denied:
-GET / HTTP 1.1
-X-Original-URL: /admin
-
-10 - Take admin req, wiener cookie and change request method to POST or GET with parameters to upgrade users with wiener session
-
-11 - Lo mismo pero con una confirmacion entre medias (la confirmacion te dejaba hacerlo con la cookie de wiener)
-
-12 - Referer token validated being present
-
-unpredictable user Id exposed somewhere (ex: comment href=https://0a5500a803cc582c811df86a00d40076.web-security-academy.net/blogs?userId=9cbae210-99d3-49ea-97c5-4887f8d9b73f)
+7. unpredictable user Id exposed somewhere - en los post se divulgan los ID's
+	//ex: comment href=https://ID-LAB.web-security-academy.net/blogs?userId=9cbae210-99d3-49ea-97c5-4887f8d9b73f)
+	//Osea basicamente en los post encontramos ids que podemos probar en el endpoint: 
+	//GET /my-account?id=ID-FOUNDED
 
 Information disclosure in a redirection when changing parameters of a request (ex: ?id=carlos = 302)
 
-Directo Object references (ex: /download-transcript/X.txt)
+8. Direct Object references (ex: /download-transcript/X.txt) //Cambiamos el numero del file.txt pa' ver a cual podemos llegar y si se nos revela password.
 
+9. GET /admin-roles?username=VictimUser&action=upgrade HTTP/1.1 
+	//Simplemente cambiando el method POST,PUT,DELETE,diferente a GET.
+	//este lo podemos modificar para subirle los privilegios a un user victim que es el que queremos aumentarle los privilegios.
+
+10. Password disclosure <hidden> se puede ver en el DOM, con la request GET /my-account?id=wiener se puede cambiar a /my-account?id=administrator
+	//Y se actualiza la password hidden por la del nuevo user que se puso en el id. 
+
+11. Change request method to POSTX or GET with parameters ?
+Referer token validated being present
+
+12. Si llega a haber un endpoint POST /admin-roles HTTP/2 : Automaticamente tener en cuenta el body, por ejm: 
+	//action=upgrade&confirmed=true&username=wiener 
+	//para poder subirle los privilegios a un user normal. 
+
+13. Referer Based Access Control
+	 GET /admin-roles?username=wiener&action=upgrade con el header
+	 Referer:https://ID-LAB.com/admin 
+	//y así podemos subirle los privilegios a un user normal. 
 ```
+
 
 4:
 ![[Pasted image 20260721190704.png]]
@@ -75,14 +92,12 @@ To delete carlos, add ?username=carlos to the real query string, and change the 
 
 ```
 
-
 ##### Username Enumeration via response timing
 If username correct time response will increase every time we increase the password lenght, such as a password of 100 chars.
 
 If blocked attempts, you can bypass it if X-Forwarded-For header is available
 Select PitchFork attack, X-Forwarded-For with a number payload and username with a wordlist simple payload. Select columns send and recieve time to show the one that was made in more time than the others
 
-
+!!!!!!!!!!!!!!!!
 Another thing to take into consideration is the resource pool tab, maybe you need to set it to 1 because 10 is to much speed to fetch a correct response.
-
-
+!!!!!!!!!!!!!!!!!
