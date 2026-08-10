@@ -4,6 +4,10 @@
 - Los algoritmos de cifrado HS256, HS384 y HS512 son algoritmos **SIMÉTRICOS**, esto quiere decir que con la misma clave se puede tanto FIRMAR como VERIFICAR.
 - Algoritmos **ASIMÉTRICOS** como RS256 se FIRMA con la clave PRIVADA, y se VERIFICA con la clave PUBLICA.
 
+### Previsualizador de JWT: 
+
+* [JWT](https://jwt.io/)
+
 
 1. Cambiar el nombre del usuario en el JWT al del usuario deseado ya que no se valida con la firma:
 	- ENCABEZADO:![[Pasted image 20260804145234.png|642]]
