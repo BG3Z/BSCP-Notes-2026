@@ -165,6 +165,10 @@ Evasion de CSRF con XSS:
 ```
 
 
+
+
+---
+
 ```js
 <script>
 	var req = new XMLHttpRequest();

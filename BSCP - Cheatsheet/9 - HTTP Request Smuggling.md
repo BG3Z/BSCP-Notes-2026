@@ -1,3 +1,25 @@
+
+> Imagina un restaurante con un solo camarero y un chef. Si el camarero interpreta tu pedido de una forma y el chef de otra totalmente diferente, es seguro que habrá problemas, ¿cierto? Pues bien, eso es, en esencia, la vulnerabilidad HTTP Request Smuggling.
+> El server frontend interpreta de una manera y el backend server de otra, esto debido a problemas de librerías entre ambos servers que no siguen los estándares de la RFC correctamente y da lugar a las discrepancias, mientras que uno procesa CL el otro procesa es TE, claro en este ataque siempre ambos deben estar en la req, y ya dependiendo del procesamiento se interpretará o uno o el otro. 
+#### Content-Length
+El encabezado Content-Length **es una de las formas de indicar la longitud del mensaje (en bytes) en una solicitud o respuesta HTTP**. Además del encabezado Content-Length, también puede especificar la longitud del mensaje mediante una de las siguientes formas: Codificación fragmentada.
+#### Transfer Encoding
+Transfer-Encoding es una **cabecera salto por salto, que se aplica a un mensaje entre dos nodos, no a un recurso en sí mismo**. Cada segmento de una conexión de múltiples nodos puede usar diferentes valores de Transfer-Encoding.
+
+- CL.TE: el servidor frontend utiliza el `Content-Length`la cabecera y el servidor de back-end utiliza el `Transfer-Encoding`cabecera.
+- TE.CL: el servidor front-end utiliza el `Transfer-Encoding`la cabecera y el servidor de back-end utiliza el `Content-Length`cabecera.
+- TE.TE: los servidores front-end y back-end ambos soportan el `Transfer-Encoding`cabeza de cabeza, pero uno de los servidores pueden ser inducidos a no procesarlo ofuscando la cabecera de alguna manera.
+#### Métodología paso a paso:
+
+1. Tomar la petición GET / de la raíz de la aplicación
+2. Modificar el GET por POST
+3. Cambiar desde el inspector el HTTP/2 → HTTP/1.1
+4. Desactivar el content length automatico
+5. Empezar a testear los posibles C.L-T.E, T.E-C.L, T.E-T.E
+#### La extension de HTTP Request Smuggler Scanner: `la puedo usar para identificar estos puntos`
+
+---
+
  #CL -> Content-Length 
  #TE -> Transfer-Encoding
 
@@ -6,8 +28,8 @@
  1. **CL.TE** -> Front-end usa #CL y Backe-nd usa #TE
  2. **TE.CL** -> Front-end usa #TE (chunked) y Back-end usa #CL
  3. **TE.TE** -> Ambos admiten #TE pero se puede inducir a uno de ellos a no procesarlo obfuscando el header de alguna forma
-PRUEBA
 
+PRUEBA
 ![[Pasted image 20260703184001.png]]
 
 ![[Pasted image 20260703184101.png]]

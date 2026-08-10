@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
+                "file": "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Essential Skills - BSCP Path"
+              "title": "9 - HTTP Request Smuggling"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
+                "file": "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -187,8 +187,22 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "2b0476300aead93d",
+  "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/1 - SQLi.md",
+    "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
+    "BSCP - Cheatsheet/8 - SSRF.md",
+    "BSCP - Cheatsheet/7 - XXE Injection.md",
+    "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
+    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
+    "BSCP - Cheatsheet/4 - Click-Jacking.md",
+    "BSCP - Cheatsheet/3 - CSRF.md",
+    "BSCP - Cheatsheet/PAYLOADS/xss.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
+    "BSCP - Cheatsheet/PAYLOADS/sqli.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
+    "BSCP - Cheatsheet/0 - Exam Tips.md",
+    "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
     "BSCP - Cheatsheet/WORDLISTS/TXT/jwt.secrets.list",
     "BSCP - Cheatsheet/WORDLISTS/TXT/burp-labs-wordlist.txt",
     "BSCP - Cheatsheet/WORDLISTS/TXT/webCacheDeception.txt",
@@ -199,7 +213,6 @@
     "BSCP - Cheatsheet/WORDLISTS/passwords.txt",
     "BSCP - Cheatsheet/WORDLISTS/usernames.txt",
     "BSCP - Cheatsheet/WORDLISTS/webCacheDeception.txt",
-    "BSCP - Cheatsheet/WORDLISTS/burp-labs-wordlist.txt",
     "Sin título.canvas",
     "CUSTOM LINUX (Kitty).md",
     "BSCP - Cheatsheet/22 - File Upload.md",
@@ -210,25 +223,12 @@
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810191157.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135334.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260618135344.png",
-    "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
     "BSCP - Cheatsheet/WORDLISTS/burp-usernames.md",
     "BSCP - Cheatsheet/WORDLISTS/burp-discover.md",
     "BSCP - Cheatsheet/WORDLISTS/burp-passwords.md",
     "2026-08-05.md",
     "BSCP - Cheatsheet/Mistery Labs.md",
     "BSCP - Cheatsheet/PAYLOADS/xxe.md",
-    "BSCP - Cheatsheet/PAYLOADS/insecure-deserialization.md",
-    "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
-    "BSCP - Cheatsheet/PAYLOADS/remote-code-execution.md",
-    "BSCP - Cheatsheet/PAYLOADS/sqli.md",
-    "BSCP - Cheatsheet/PAYLOADS/ssrf.md",
-    "BSCP - Cheatsheet/PAYLOADS/ssti.md",
-    "BSCP - Cheatsheet/RESOURCES/XSS Mindmap.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
-    "BSCP - Cheatsheet/30 - Web Cache Deception.md",
-    "BSCP - Cheatsheet/29 - LLM.md",
-    "BSCP - Cheatsheet/RESOURCES/CookieStealer XSS Payloads.md",
-    "BSCP - Cheatsheet/RESOURCES/CheatSheets & Useful Repos.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810190142.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260806204031.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260805140848.png",

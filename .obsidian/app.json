@@ -1,4 +1,6 @@
 {
   "spellcheck": false,
-  "useMarkdownLinks": false
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "/"
 }
