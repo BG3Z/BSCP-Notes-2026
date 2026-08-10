@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/24 - Prototype Pollution.md",
+                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "24 - Prototype Pollution"
+              "title": "0 - MISTERY LABS"
             }
           }
         ]
@@ -187,22 +187,28 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "8f4d3f197fbdf39f",
+  "active": "2b0476300aead93d",
   "lastOpenFiles": [
-    "BSCP - Cheatsheet/27 - NoSQL.md",
+    "BSCP - Cheatsheet/0 - Exam Tips.md",
+    "BSCP - Cheatsheet/0 - MISTERY LABS.md",
+    "BSCP - Cheatsheet/30 - Web Cache Deception.md",
+    "BSCP - Cheatsheet/PAYLOADS/web-cache-deception.md",
+    "BSCP - Cheatsheet/29 - LLM.md",
     "BSCP - Cheatsheet/28 - API Testing.md",
+    "Pasted image 20260810235457.png",
+    "BSCP - Cheatsheet/27 - NoSQLi.md",
+    "BSCP - Cheatsheet/26 - Race Conditions.md",
+    "BSCP - Cheatsheet/25 - GraphQL.md",
+    "BSCP - Cheatsheet/24 - Prototype Pollution.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211659.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810210927.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211713.png",
-    "BSCP - Cheatsheet/25 - GraphQL.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220023.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220019.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220012.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220009.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810215841.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810215459.png",
-    "BSCP - Cheatsheet/24 - Prototype Pollution.md",
     "BSCP - Cheatsheet/23 - JWT.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
@@ -229,12 +235,6 @@
     "FILES/SSTImap-master/utils",
     "FILES/SSTImap-master/README.md",
     "FILES/SSTImap-master/LICENSE.md",
-    "FILES/SSTImap-master/SSTImap-master/README.md",
-    "FILES/SSTImap-master/SSTImap-master/LICENSE.md",
-    "BSCP - Cheatsheet/10 - OS Command Injection.md",
-    "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
-    "BSCP - Cheatsheet/1 - SQLi.md",
-    "BSCP - Cheatsheet/8 - SSRF.md",
     "Sin título.canvas"
   ]
 }
