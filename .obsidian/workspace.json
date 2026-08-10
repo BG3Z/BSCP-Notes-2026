@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
+                "file": "BSCP - Cheatsheet/18 - Information Disclosure.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "17 - Insecure Deserialization"
+              "title": "18 - Information Disclosure"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
+                "file": "BSCP - Cheatsheet/18 - Information Disclosure.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,18 +189,19 @@
   },
   "active": "8f4d3f197fbdf39f",
   "lastOpenFiles": [
-    "Pasted image 20260810213426.png",
+    "Pasted image 20260810213821.png",
+    "Pasted image 20260810213813.png",
+    "Pasted image 20260810213810.png",
+    "Pasted image 20260810213807.png",
+    "Pasted image 20260810213803.png",
+    "Pasted image 20260810213756.png",
+    "Pasted image 20260810213753.png",
+    "Pasted image 20260810213749.png",
+    "Pasted image 20260810213745.png",
+    "Pasted image 20260810213742.png",
+    "Pasted image 20260810213739.png",
+    "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
-    "Pasted image 20260810213104.png",
-    "Pasted image 20260810213058.png",
-    "Pasted image 20260810213054.png",
-    "Pasted image 20260810213049.png",
-    "Pasted image 20260810213040.png",
-    "Pasted image 20260810213032.png",
-    "Pasted image 20260810213027.png",
-    "Pasted image 20260810213020.png",
-    "Pasted image 20260810213016.png",
-    "Pasted image 20260810213011.png",
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/13 - Access control.md",
@@ -234,7 +235,6 @@
     "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/PAYLOADS/sqli.md",
     "BSCP - Cheatsheet/WORDLISTS/burp-jwt-secrets.md",
-    "BSCP - Cheatsheet/0 - Exam Tips.md",
     "Sin título.canvas"
   ]
 }
