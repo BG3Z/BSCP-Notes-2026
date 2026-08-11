@@ -1,0 +1,570 @@
+{
+  "model": {
+    "columns": [
+      {
+        "id": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "59px",
+        "type": "number",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "Nº",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "275px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "NOMBRE",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "145px",
+        "type": "checkbox",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "GUESS VULN",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "9991510c-6a6c-4704-8565-3a0095bd2395",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "checkbox",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "SIN PISTA",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "650px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "ANOTACIONES",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      }
+    ],
+    "rows": [
+      {
+        "id": "35f4bd47-3ed0-4c47-8d3f-c20fd826598d",
+        "index": 0,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:21:33.283Z",
+        "lastEditedDateTime": "2026-08-11T16:32:57.654Z",
+        "cells": [
+          {
+            "id": "406c380b-52cd-4a87-8a1f-c8ef1b066e2e",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 1,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7cacaa94-4c9e-4934-a591-450f0c27d693",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Reflected DOM XSS en JSON",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e71af726-4f51-4d50-ae8b-a7b9d99355b4",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d7d4675f-2a00-4390-ba96-b1446fa34bfc",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7c71819e-2963-43bc-840e-676d6f8327fa",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Usaba un 'eval()', te escapabas del JSON y pista",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "23767e8b-e2be-4cb8-8308-79e3314ee85d",
+        "index": 1,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:21:41.299Z",
+        "lastEditedDateTime": "2026-08-11T16:33:12.223Z",
+        "cells": [
+          {
+            "id": "3c9b455f-1359-45f2-ab8c-abb76bb73549",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 2,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ea54665e-6f2a-4fd5-85e0-1a404e5d0d09",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Path traversal en imagen",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "61af6232-c318-42e9-b03b-87c0afe1c148",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "fe7bdf90-2aba-4397-85bf-b034477a80b4",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3d4c85ff-519e-42c1-8743-acaba756bf24",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Pillé que era un pah traversal pero no era en el producto si no en la imagen",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "f7e58270-95d0-47bd-9b5b-dffeff153f33",
+        "index": 2,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:22:34.744Z",
+        "lastEditedDateTime": "2026-08-11T16:33:37.448Z",
+        "cells": [
+          {
+            "id": "0558a2bf-8810-4d8d-a0b8-eb3ab3a2fc4f",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 3,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d082e55c-79da-4c79-92a3-313a7407bbd0",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "SQLi non-Oracle DB",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d11f5a6e-d6bd-4e48-a3aa-b86451493f47",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9eba93fd-7b9e-4a3d-9ce6-0ed0671290e5",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "78c22f28-ebb9-4385-b6fc-9a310894e001",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Filtro de busqueda avanzado --> SQLi claro, refrescando payloads se sacaba easy",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "ab629013-91fd-49de-bd8f-c5693b6fffb7",
+        "index": 3,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:26:39.402Z",
+        "lastEditedDateTime": "2026-08-11T16:50:21.937Z",
+        "cells": [
+          {
+            "id": "8e01360e-ef52-4047-b124-46ec5f08d099",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 4,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "63215368-4b49-40fd-add6-1bdf9a2f19d8",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "SQL injection UNION attack, retrieving data from other tables",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d239d976-113c-46fa-873b-7194efd5dfd8",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5d2c1bf0-8a3f-44ab-914e-7a70c1125d85",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ac2619a5-8def-4ad6-a75a-41658ed84f80",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Filtro Avanzado --> SLQi. Me falló el payload pero lo mismo que antes practicamente",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "60b1ed12-b063-4bf4-97c6-82fbcf23e41c",
+        "index": 4,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:31:26.709Z",
+        "lastEditedDateTime": "2026-08-11T16:57:56.033Z",
+        "cells": [
+          {
+            "id": "426023d7-7cf6-4840-8583-8625429b3035",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 5,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "73fdc845-c9be-4d3b-90d9-895c2abdd899",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Insufficient workflow validation",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "993e312d-8b4d-480a-9813-92f17dc01aa2",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d9054bca-22bb-4ddd-846f-5d10fe110ea6",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "73bd41ea-945b-4dc1-a6f7-a916297a6d46",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Al ver la chaqueta me fui directamente a Bussines Flaws (buen scope). Probé todos menos el de la confirmacion de pedido (y era ese me cago en la puta)",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "143b9e02-9a23-403d-9cd8-e4da1a4648b6",
+        "index": 5,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:31:30.003Z",
+        "lastEditedDateTime": "2026-08-11T17:01:02.934Z",
+        "cells": [
+          {
+            "id": "a3acdf37-475f-4326-a269-12b31a1a3be6",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 6,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a5b7880c-a140-41c9-8af9-59f8086b7c2c",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": " File path traversal, traversal sequences stripped with superfluous URL-decode",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3cc0f3b2-572e-4a4c-8878-59316eda6835",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d5c8057a-1cf6-4917-8966-a555a29b0c4d",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7e5436fa-464e-4b89-bfd5-f170ef33f84a",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "No habia lit nada para tocar, abro imagen y me voy a probar payloads. Era uno normal con URL encode",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "95386399-9fe9-4ef5-a557-4224eb25bb9c",
+        "index": 6,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:31:30.582Z",
+        "lastEditedDateTime": "2026-08-11T17:11:32.361Z",
+        "cells": [
+          {
+            "id": "92aa4039-b053-48c1-88b0-583456549982",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 7,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "04a37c2f-b5fd-459a-9b48-5b0be59ab614",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Basic server-side template injection (code context)",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "8e87657a-6adf-48d6-8edb-ba60c8e391c6",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "64ef0e36-2496-4fdc-81a3-5ee76f02a454",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b3e4d404-7f2e-43f8-a6b3-974c791b3681",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "SSTI Tornado. Era el de cambiar el nickname de los posts, pero aun con el payload correcto se me olvidó cerrar el contexto y por tanto tuve que mirar la solucion",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "39589119-941b-498e-9b49-6c1fedc0ace6",
+        "index": 7,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:31:31.074Z",
+        "lastEditedDateTime": "2026-08-11T16:50:31.186Z",
+        "cells": [
+          {
+            "id": "25079e43-59cc-41af-9d27-0c9fe949df8c",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 8,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "6cc149b7-ccf0-46c6-bbf1-08fe76ca72b8",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "938c99b1-3a96-4862-9a06-fa01c7d1b40d",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f36210cd-eb4d-4009-9956-a92f4d8331fc",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "76625ff0-7d1a-481e-8007-ed6318651813",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "99a80e1c-c395-4668-b3e1-9c1bd62d465b",
+        "index": 8,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:31:31.579Z",
+        "lastEditedDateTime": "2026-08-11T16:50:32.423Z",
+        "cells": [
+          {
+            "id": "ad46cdc9-6745-4e78-9897-b5f2cb9667a1",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 9,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "87e5dde9-50e5-4c42-993d-dd48b8937d19",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e107c1c8-be57-40b2-a826-cc7e1e275398",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "be0d29cd-9c25-4cab-a43b-f81596b0afa8",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c8d30ee7-27a9-4a32-8f25-b433ecbc85bf",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "8f01b55a-229e-424d-a9ff-71d0351495b9",
+        "index": 9,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:31:32.031Z",
+        "lastEditedDateTime": "2026-08-11T16:50:32.043Z",
+        "cells": [
+          {
+            "id": "94fa690f-1478-4dbd-be74-f2bcfe05e061",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": 10,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ee065156-5fe1-4d2f-9b07-84e0c8b413ae",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "982c6b36-82ee-42eb-9621-3e6ee7ab7de4",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "4089fd88-74ce-4c38-8ab0-26f033f47585",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "53b6f938-6c1e-4df9-abda-36f2754a265d",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "7dda9b2d-48fc-499f-9a35-cf89b45a4f54",
+        "index": 10,
+        "sourceId": null,
+        "creationDateTime": "2026-08-11T16:32:05.292Z",
+        "lastEditedDateTime": "2026-08-11T16:32:25.218Z",
+        "cells": [
+          {
+            "id": "454655f3-bdd0-4fb1-adba-17a1afc9c81f",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "value": null,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "4d30d437-5172-45e5-b35f-61fa6afc0bb3",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "========================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e03899b1-26dd-475b-9233-a75775419886",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "98b221b7-dcc0-442e-9aa3-943b17ceca21",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "fd4048c1-cb1c-482a-a1ab-9020366eff7d",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "===============================",
+            "hasValidFrontmatter": null
+          }
+        ]
+      }
+    ],
+    "filters": [],
+    "sources": [],
+    "settings": {
+      "numFrozenColumns": 1,
+      "showCalculationRow": true
+    },
+    "externalRowOrder": []
+  },
+  "pluginVersion": "8.16.17"
+}

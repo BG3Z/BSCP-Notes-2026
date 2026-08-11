@@ -1,4 +1,4 @@
-ortSwigger cheat sheet:
+PortSwigger cheat sheet:
 https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 
 ---------------------------------------------------------
@@ -558,7 +558,7 @@ https://0af900d104ce4be181fd6b6e003b00fe.web-security-academy.net/product?produc
 
 ##### JSON strings escape XSS on eval javascript function with double quotes html encoded
 ```
-\"+alert(1)}//
+\"-alert(1)}//
 ```
 Note that we need to comment the rest of the JSON query
 

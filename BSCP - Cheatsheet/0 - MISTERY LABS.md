@@ -1,6 +1,9 @@
-- **0**/100
+- **0**/100                                                            ☑️SCOPE                ❌SIN PISTA
 ---
-
+Reflected DOM XSS en JSON                                 ☑️                              ❌
+Path traversal en imagen                                       ☑️                              ❌
+SQLi non-Oracle DB                                               ☑️                              ☑️
+()
 ----10----
 
 ----20----
@@ -22,6 +25,8 @@
 ----100----
 
 
+
+/loom
 
 
 
