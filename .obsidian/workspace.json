@@ -4,39 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c02f005bd8508773",
+        "id": "f021efd151bfea2a",
         "type": "tabs",
         "children": [
           {
-            "id": "dcabc0af4dd6fe17",
+            "id": "0a8c75a8a5ca4e1e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "dataloom",
               "state": {
-                "file": "BSCP - Cheatsheet/2 - XSS.md",
-                "mode": "source",
-                "source": false
+                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
               },
               "icon": "lucide-file",
-              "title": "2 - XSS"
-            }
-          },
-          {
-            "id": "7b5217be4e616034",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "6 - CORS Cross-origin resource sharing"
+              "title": "0 - MISTERY LABS"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -203,18 +186,20 @@
       "obisidian-dataloom:Create loom": false
     }
   },
-  "active": "7b5217be4e616034",
+  "active": "0a8c75a8a5ca4e1e",
   "lastOpenFiles": [
-    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
+    "BSCP - Cheatsheet/0 - NOTES to IMPROVE.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
-    "BSCP - Cheatsheet/2 - XSS.md",
-    "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/11 - SSTI.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
+    "BSCP - Cheatsheet/23 - JWT.md",
+    "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
+    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
+    "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
     "BSCP - Cheatsheet/PAYLOADS/ssti.md",
     "BSCP - Cheatsheet/18 - Information Disclosure.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
-    "BSCP - Cheatsheet/0 - MISTERY LABS.md",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
     "BSCP - Cheatsheet/30 - Web Cache Deception.md",
     "BSCP - Cheatsheet/PAYLOADS/web-cache-deception.md",
@@ -234,14 +219,11 @@
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220012.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220009.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810215841.png",
-    "BSCP - Cheatsheet/23 - JWT.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
     "BSCP - Cheatsheet/20 - Host Header Attacks.md",
     "BSCP - Cheatsheet/21 - OAuth Authentication.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
-    "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
-    "BSCP - Cheatsheet/14 - Authorization.md",
     "FILES/SSTImap-master/utils/__init__.py",
     "FILES/SSTImap-master/utils/strings.py",
     "FILES/SSTImap-master/utils/random_agent.py",
