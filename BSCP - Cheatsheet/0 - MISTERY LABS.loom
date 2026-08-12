@@ -55,7 +55,7 @@
         "id": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
         "sortDir": "default",
         "isVisible": true,
-        "width": "145px",
+        "width": "129px",
         "type": "checkbox",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -80,7 +80,7 @@
         "id": "9991510c-6a6c-4704-8565-3a0095bd2395",
         "sortDir": "default",
         "isVisible": true,
-        "width": "140px",
+        "width": "109px",
         "type": "checkbox",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -105,12 +105,37 @@
         "id": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
         "sortDir": "default",
         "isVisible": true,
-        "width": "650px",
+        "width": "550px",
         "type": "text",
         "numberPrefix": "",
         "numberSuffix": "",
         "numberSeparator": "",
         "content": "ANOTACIONES",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "216px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "IMPORTANTE",
         "numberFormat": "number",
         "currencyType": "USD",
         "dateFormat": "mmddyyyy",
@@ -164,6 +189,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "Usaba un 'eval()', te escapabas del JSON y pista",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "2969e2af-f048-49a1-930d-ed921908a912",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -202,6 +233,12 @@
             "id": "3d4c85ff-519e-42c1-8743-acaba756bf24",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "Pillé que era un pah traversal pero no era en el producto si no en la imagen",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "86cfcb9e-5833-4954-8a03-fad50bdf47d8",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
             "hasValidFrontmatter": null
           }
         ]
@@ -242,6 +279,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "Filtro de busqueda avanzado --> SQLi claro, refrescando payloads se sacaba easy",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "31ce5034-66cb-4fd1-8d35-0ddafd64f265",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -280,6 +323,12 @@
             "id": "ac2619a5-8def-4ad6-a75a-41658ed84f80",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "Filtro Avanzado --> SLQi. Me falló el payload pero lo mismo que antes practicamente",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "321eaca6-0da9-4eff-bcb2-e22f1850ba1d",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
             "hasValidFrontmatter": null
           }
         ]
@@ -320,6 +369,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "Al ver la chaqueta me fui directamente a Bussines Flaws (buen scope). Probé todos menos el de la confirmacion de pedido (y era ese me cago en la puta)",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "00873f16-5f8b-4bbb-9790-59d4149efd32",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -358,6 +413,12 @@
             "id": "7e5436fa-464e-4b89-bfd5-f170ef33f84a",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "No habia lit nada para tocar, abro imagen y me voy a probar payloads. Era uno normal con URL encode",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "582e2cbc-87e7-46b8-a1e9-11a05e020eec",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
             "hasValidFrontmatter": null
           }
         ]
@@ -398,6 +459,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "SSTI Tornado. Era el de cambiar el nickname de los posts, pero aun con el payload correcto se me olvidó cerrar el contexto y por tanto tuve que mirar la solucion",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "fa7cffc7-6f2f-4568-aa56-123f06ae4480",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -436,6 +503,12 @@
             "id": "76625ff0-7d1a-481e-8007-ed6318651813",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "Tenia CORS bastante olvidado, me estuve pegando con el payload y me faltaba una cosa en la URL para mandarme su api key (era el de Stock XSS + CORS)",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9d711dc7-102e-438f-a5b5-7a97ee2ee46d",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
             "hasValidFrontmatter": null
           }
         ]
@@ -476,6 +549,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "El JWT era obvio pero no sabia bien que probar y cuando. Me di cuenta eso si que justo en este JWT no se veia la informacion a simple vista !!!!",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "29a450b1-0323-46a1-80ae-eb82c2003008",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -515,6 +594,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "SSTI de ERB (Ruby), estaba perdido y el POLYGLOT NO ME DABA NI UN JODIDO ERROR, pero me dio la venada y acabe adivinando el payload a la segunda (estaba en el mensaje de error de la URL)",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "2c3929c7-4204-47b8-a507-0482199a668a",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -523,7 +608,7 @@
         "index": 10,
         "sourceId": null,
         "creationDateTime": "2026-08-11T16:32:05.292Z",
-        "lastEditedDateTime": "2026-08-11T18:25:38.872Z",
+        "lastEditedDateTime": "2026-08-12T09:35:07.430Z",
         "cells": [
           {
             "id": "8b2729ab-86e4-4c37-9274-743912360c18",
@@ -554,6 +639,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "===============================",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "4f8917d2-f862-4890-889d-ce4c826c4075",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -562,7 +653,7 @@
         "index": 11,
         "sourceId": null,
         "creationDateTime": "2026-08-11T18:24:07.363Z",
-        "lastEditedDateTime": "2026-08-11T18:24:14.745Z",
+        "lastEditedDateTime": "2026-08-12T09:44:19.572Z",
         "cells": [
           {
             "id": "817a5c8f-c1bc-4bb0-ae33-5821fae8b7ac",
@@ -573,7 +664,7 @@
           {
             "id": "74c45057-8f2b-407b-919d-172b9e00552d",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Web cache poisoning via a fat GET request",
             "hasValidFrontmatter": null
           },
           {
@@ -591,7 +682,13 @@
           {
             "id": "d1623320-2188-415c-ae1b-7c235240a4ca",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Soy retrasado. SIEMPRE debo mirar antes que nada que en la raiz no halla caché (y luego seguir mirando otras cosas).",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b3c870db-6f64-4d3d-822f-12482b5df461",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "Quitar el fiiltro del jodido HTTP History (si no no veia el 'callback' de este lab)",
             "hasValidFrontmatter": null
           }
         ]
@@ -601,7 +698,7 @@
         "index": 12,
         "sourceId": null,
         "creationDateTime": "2026-08-11T18:24:09.337Z",
-        "lastEditedDateTime": "2026-08-11T18:24:16.811Z",
+        "lastEditedDateTime": "2026-08-12T09:49:56.013Z",
         "cells": [
           {
             "id": "81b28a68-8209-4a5a-88c1-9bcfab71df35",
@@ -612,25 +709,31 @@
           {
             "id": "c37e24ff-1f41-4a87-92a8-32bcef3d8d95",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Parameter cloaking",
             "hasValidFrontmatter": null
           },
           {
             "id": "56bbd889-e404-41c5-a153-c4909bc11481",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "dfd59ddd-793a-41f6-b30e-a5bb7ef0dd35",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "38878bc5-9e8d-48b7-acb8-e473e3f931ac",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Otro Cache Poisoning, lo pillé rapido pero el payload era un poco raro y no me acordaba. Debo revisar ese LAB. Al menos no pedí pista",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ebc90f7d-9464-49ff-8c79-0148ea2efd0d",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "Revisar de donde se sacaba el parametro 'utm_content'",
             "hasValidFrontmatter": null
           }
         ]
@@ -640,7 +743,7 @@
         "index": 13,
         "sourceId": null,
         "creationDateTime": "2026-08-11T18:24:09.773Z",
-        "lastEditedDateTime": "2026-08-11T18:24:18.753Z",
+        "lastEditedDateTime": "2026-08-12T10:02:31.971Z",
         "cells": [
           {
             "id": "02ecfe48-ca47-4361-a1cf-2bf6c3cf72cf",
@@ -651,25 +754,31 @@
           {
             "id": "be65ab85-2a6c-4dc9-b8eb-424b1601f39c",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Arbitrary object injection in PHP",
             "hasValidFrontmatter": null
           },
           {
             "id": "27a8cafe-feda-4d6c-aef5-08c3163a0ee0",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "78a35b6f-a52f-4094-8ca3-9537ce1117af",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "67d3991f-f2b7-4bb5-97c5-31a8bda557b5",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Era el de mirar la /libs/CustomTemplate.php~, no tuve que mirar pista pero el payload era rarillo. CHEKEAR CON UN ERROR SI SE TRATA DE PHP",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ec28ef65-3d65-4a76-ab27-7371a93a1ab2",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "En 'Insecure Serialization' siempre mirar si existe /libs/CustomTemplate.php~",
             "hasValidFrontmatter": null
           }
         ]
@@ -710,6 +819,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "f2e37158-2f6e-4276-ba75-8b48e49a1486",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -718,7 +833,7 @@
         "index": 15,
         "sourceId": null,
         "creationDateTime": "2026-08-11T18:24:10.453Z",
-        "lastEditedDateTime": "2026-08-11T18:24:48.564Z",
+        "lastEditedDateTime": "2026-08-12T09:23:51.459Z",
         "cells": [
           {
             "id": "e9b4780c-52f2-4a60-b098-380b093e7226",
@@ -735,7 +850,7 @@
           {
             "id": "b5b34ec5-6f06-4c92-b115-95b4e15020d2",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": true,
+            "value": false,
             "hasValidFrontmatter": null
           },
           {
@@ -747,6 +862,12 @@
           {
             "id": "631996d9-997a-4e17-b522-b92f45c4d049",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "22798991-9057-44bd-8b69-ae3bed0d57a7",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
             "content": "",
             "hasValidFrontmatter": null
           }
@@ -788,6 +909,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "6ea236f6-92a2-4aaf-8b95-ef04d9bda014",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -825,6 +952,12 @@
           {
             "id": "2ee54180-3756-44db-8976-5d0a6646271e",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "70b90432-07d1-49a8-adb3-57059bbb7974",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
             "content": "",
             "hasValidFrontmatter": null
           }
@@ -866,6 +999,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "da62ed95-829d-4aa9-a6a5-470c46c12bf2",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -905,6 +1044,12 @@
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
             "content": "",
             "hasValidFrontmatter": null
+          },
+          {
+            "id": "461c83e5-2f70-4179-912d-d4da2af555c6",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
           }
         ]
       },
@@ -942,6 +1087,12 @@
           {
             "id": "e02d258e-a55b-4445-a3de-345658d428c1",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a3ed6c55-0591-456d-b145-b1ab50652e91",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
             "content": "",
             "hasValidFrontmatter": null
           }
