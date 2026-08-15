@@ -1148,7 +1148,7 @@
         "index": 22,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:22:29.397Z",
-        "lastEditedDateTime": "2026-08-13T16:24:10.901Z",
+        "lastEditedDateTime": "2026-08-15T11:25:51.842Z",
         "cells": [
           {
             "id": "ff701ddb-79a1-4059-bc55-bb8a4a063d4c",
@@ -1159,7 +1159,7 @@
           {
             "id": "3832fe9c-4f97-474a-a731-55c88e193bd9",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Oracle Encrypt Bypass (fumadón)",
             "hasValidFrontmatter": null
           },
           {
@@ -1177,7 +1177,7 @@
           {
             "id": "3b39bba1-d0d3-4a6e-a4b1-dad9f1756254",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Ni lo he intentado, es imposible xd",
             "hasValidFrontmatter": null
           },
           {
@@ -1193,7 +1193,7 @@
         "index": 23,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:11.478Z",
-        "lastEditedDateTime": "2026-08-13T16:24:17.203Z",
+        "lastEditedDateTime": "2026-08-15T11:27:38.269Z",
         "cells": [
           {
             "id": "15c6606b-dc17-456c-99d5-a1cadb2ba702",
@@ -1204,13 +1204,13 @@
           {
             "id": "38fba0b0-51fe-420a-b48d-8f41cf8ce8a7",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Username enumeration via account lock",
             "hasValidFrontmatter": null
           },
           {
             "id": "d004350a-b2ef-4c62-9830-e16cbfa0e3ad",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -1222,13 +1222,13 @@
           {
             "id": "660a4180-98d5-469d-8647-07ccb32ed4e2",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "No me funcionó de primeras, mejor probar cluster bomb attack. eeeeeh pero el scope estaba bien definido",
             "hasValidFrontmatter": null
           },
           {
             "id": "ea4d46ed-f884-42f9-86db-f34993cb584b",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "El grep extract está chetado (no  lo usé esta vez pero es la polla)",
             "hasValidFrontmatter": null
           }
         ]
@@ -1238,7 +1238,7 @@
         "index": 24,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:12.047Z",
-        "lastEditedDateTime": "2026-08-13T16:24:18.796Z",
+        "lastEditedDateTime": "2026-08-15T11:32:25.561Z",
         "cells": [
           {
             "id": "71336312-f54a-48a8-9531-5ed852526486",
@@ -1249,13 +1249,13 @@
           {
             "id": "31a94790-5fd8-4d8d-aa97-0c2378512e84",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "File path traversal, traversal sequences blocked with absolute path bypass",
             "hasValidFrontmatter": null
           },
           {
             "id": "b9faa014-13e3-4f38-86c7-df4917df04e0",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -1267,7 +1267,7 @@
           {
             "id": "f87e4a8f-acbe-497f-a8c6-aaa3e138a74c",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Buen scope, era path traversal muy obvio pero no probé el payload mas basico xd. Minguitada",
             "hasValidFrontmatter": null
           },
           {
@@ -1283,7 +1283,7 @@
         "index": 25,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:12.564Z",
-        "lastEditedDateTime": "2026-08-13T16:24:20.412Z",
+        "lastEditedDateTime": "2026-08-15T11:44:40.264Z",
         "cells": [
           {
             "id": "7b7ff115-623b-4473-996d-0da47bd47104",
@@ -1294,7 +1294,7 @@
           {
             "id": "db13231d-356a-47f9-a527-ba0c0ae80245",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Offline password cracking",
             "hasValidFrontmatter": null
           },
           {
@@ -1312,13 +1312,13 @@
           {
             "id": "cf991b78-65ea-4196-8aac-56ce16ecf5d7",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Solo tengo que decir esto ------------------>",
             "hasValidFrontmatter": null
           },
           {
             "id": "20e0ad00-23fd-4fea-9e9c-61625c7c619f",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "EL JODIDO BOTON DEL 'STAY LOGGED-IN'",
             "hasValidFrontmatter": null
           }
         ]
@@ -1373,7 +1373,7 @@
         "index": 27,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:13.505Z",
-        "lastEditedDateTime": "2026-08-13T16:24:24.601Z",
+        "lastEditedDateTime": "2026-08-15T11:44:42.313Z",
         "cells": [
           {
             "id": "2984e36e-fe27-47dd-8bf8-3add0aa2b5e7",

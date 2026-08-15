@@ -11,12 +11,12 @@
             "id": "0a8c75a8a5ca4e1e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "dataloom",
               "state": {
-                "file": "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png"
+                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260810235457"
+              "icon": "lucide-file",
+              "title": "0 - MISTERY LABS"
             }
           }
         ]
@@ -188,35 +188,34 @@
   },
   "active": "2b0476300aead93d",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/14 - Authorization.md",
+    "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
+    "BSCP - Cheatsheet/0 - NOTES to IMPROVE.md",
+    "BSCP - Cheatsheet/12 - Path Traversal.md",
+    "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
     "BSCP - Cheatsheet/4 - Click-Jacking.md",
     "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
-    "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/23 - JWT.md",
     "BSCP - Cheatsheet/WORDLISTS/TXT/jwt1",
     "BSCP - Cheatsheet/7 - XXE Injection.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
-    "BSCP - Cheatsheet/0 - NOTES to IMPROVE.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
     "BSCP - Cheatsheet/21 - OAuth Authentication.md",
     "BSCP - Cheatsheet/25 - GraphQL.md",
     "BSCP - Cheatsheet/24 - Prototype Pollution.md",
     "BSCP - Cheatsheet/13 - Access control.md",
-    "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "BSCP - Cheatsheet/11 - SSTI.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
-    "BSCP - Cheatsheet/12 - Path Traversal.md",
-    "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
     "BSCP - Cheatsheet/PAYLOADS/ssti.md",
     "BSCP - Cheatsheet/18 - Information Disclosure.md",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
     "BSCP - Cheatsheet/30 - Web Cache Deception.md",
     "BSCP - Cheatsheet/PAYLOADS/web-cache-deception.md",
-    "BSCP - Cheatsheet/29 - LLM.md",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211659.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810210927.png",
