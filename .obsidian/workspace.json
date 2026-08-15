@@ -11,12 +11,12 @@
             "id": "0a8c75a8a5ca4e1e",
             "type": "leaf",
             "state": {
-              "type": "dataloom",
+              "type": "image",
               "state": {
-                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
+                "file": "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png"
               },
-              "icon": "lucide-file",
-              "title": "0 - MISTERY LABS"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260810235457"
             }
           }
         ]
@@ -186,8 +186,11 @@
       "obisidian-dataloom:Create loom": false
     }
   },
-  "active": "0a8c75a8a5ca4e1e",
+  "active": "2b0476300aead93d",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/4 - Click-Jacking.md",
+    "BSCP - Cheatsheet/3 - CSRF.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/23 - JWT.md",
@@ -195,7 +198,6 @@
     "BSCP - Cheatsheet/7 - XXE Injection.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/0 - NOTES to IMPROVE.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
     "BSCP - Cheatsheet/21 - OAuth Authentication.md",
     "BSCP - Cheatsheet/25 - GraphQL.md",
@@ -214,8 +216,7 @@
     "BSCP - Cheatsheet/30 - Web Cache Deception.md",
     "BSCP - Cheatsheet/PAYLOADS/web-cache-deception.md",
     "BSCP - Cheatsheet/29 - LLM.md",
-    "BSCP - Cheatsheet/28 - API Testing.md",
-    "Pasted image 20260810235457.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211659.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810210927.png",
