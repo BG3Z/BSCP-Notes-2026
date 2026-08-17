@@ -1103,7 +1103,7 @@
         "index": 21,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:21:11.644Z",
-        "lastEditedDateTime": "2026-08-13T16:24:04.182Z",
+        "lastEditedDateTime": "2026-08-17T16:33:20.144Z",
         "cells": [
           {
             "id": "fd405bd1-2188-4b29-8b77-198780ab949f",
@@ -1138,7 +1138,7 @@
           {
             "id": "76cf3718-83d2-43c9-afff-d0e9bc035c7a",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "=================?",
+            "content": "=================",
             "hasValidFrontmatter": null
           }
         ]
@@ -1508,7 +1508,7 @@
         "index": 30,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:15.018Z",
-        "lastEditedDateTime": "2026-08-13T16:24:38.082Z",
+        "lastEditedDateTime": "2026-08-17T16:14:47.008Z",
         "cells": [
           {
             "id": "45481a73-e53d-4907-ab57-92bd8acb040c",
@@ -1519,13 +1519,13 @@
           {
             "id": "948df3a0-4e1c-47e4-8c35-b2f9a19e6873",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Blind SQL injection with time delays and information retrieval",
             "hasValidFrontmatter": null
           },
           {
             "id": "85735ca9-b66b-4042-bb72-70fb5fa16063",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -1537,13 +1537,13 @@
           {
             "id": "77d22e9e-3f27-4b9b-8fc9-6068fffa4288",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Necesito una forma de automatizar eso, se tarda mucho",
             "hasValidFrontmatter": null
           },
           {
             "id": "d3e87400-2007-4592-b0a9-6c31c7e72945",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Si pruebas y no sacas errores visibles, prueba TIME BASED ",
             "hasValidFrontmatter": null
           }
         ]
@@ -1553,7 +1553,7 @@
         "index": 31,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:43.205Z",
-        "lastEditedDateTime": "2026-08-13T16:24:46.370Z",
+        "lastEditedDateTime": "2026-08-17T16:32:27.238Z",
         "cells": [
           {
             "id": "6e371e62-d1a9-4368-80a2-0cd9fb3c3b5c",
@@ -1564,7 +1564,7 @@
           {
             "id": "fce10f42-ba8a-43b5-87c4-df12556ac6cd",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF where token is not tied to user session",
             "hasValidFrontmatter": null
           },
           {
@@ -1582,11 +1582,506 @@
           {
             "id": "1f15c5b1-311d-4aa2-a0a0-2da873a22076",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Estaba bastante perdido",
             "hasValidFrontmatter": null
           },
           {
             "id": "a75bbe33-01ad-4908-aabd-1c033730ef69",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "Update Mail --> Posible CSRF si no hay nada mas claro",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "72945676-95a7-45d8-9cf3-2757eb7b6281",
+        "index": 32,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:32:37.738Z",
+        "lastEditedDateTime": "2026-08-17T16:33:17.265Z",
+        "cells": [
+          {
+            "id": "31e6a8c1-d77c-492c-b14c-6109cc95e1b3",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "**2/10**",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "341d55b3-ae21-43ac-aa8c-44aada4cee17",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "========================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7f8ee263-ef5e-45d8-b4e9-2f2bddc55da8",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "cd21f091-3d6a-4546-aa68-4134c01d5bbf",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a71d8fe6-c962-45e8-b0be-520e4c8321d9",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "=======================================================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "4c622339-4da3-454e-a23c-1420f584b8fc",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "==================",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "485f7787-9c9c-4833-b203-15d79e10a81f",
+        "index": 33,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:51.039Z",
+        "lastEditedDateTime": "2026-08-17T17:04:08.518Z",
+        "cells": [
+          {
+            "id": "fea7ce06-b9a8-49f0-bd4d-2421b9a575cf",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "31",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "db98b3df-911d-4f1f-a3ab-82bc497053ec",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "File path traversal, traversal sequences stripped with superfluous URL-decode",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d6145ce6-b408-445c-b32c-916173544422",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "704bcca4-c457-47ad-a3f5-fe752eb0f99e",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b1b765eb-f325-4737-bf83-f4bf5f32545e",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "EZ",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ccdb4fc9-b8b0-49e1-8076-a36793846383",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "'-'",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "1f74431d-5722-4bef-82b2-58ac1f44afc1",
+        "index": 34,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:52.120Z",
+        "lastEditedDateTime": "2026-08-17T17:04:18.295Z",
+        "cells": [
+          {
+            "id": "067fdc8d-35e9-4037-bb0f-24b2c7dc4b78",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "32",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "529a2605-5bfd-42f9-bb2e-7f36a2f7807c",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Modifying serialized data types",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "95b2c0f2-8113-4b89-83ec-b47719a7537d",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d2dd7610-e172-4c15-aedd-3f0dfffd7d24",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b0e62478-091e-484b-ae47-0e8eeaee246c",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "EZ",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "60b0d85a-db6d-4c0e-85af-a7b67ad3d9f1",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "'-'",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "08ff48b4-9633-4be2-aaef-e92882543836",
+        "index": 35,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:52.644Z",
+        "lastEditedDateTime": "2026-08-17T17:30:50.467Z",
+        "cells": [
+          {
+            "id": "2b58fdf4-f99e-42c6-8147-b992b59280b4",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "33",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ce7b8088-be25-4569-8c0a-43555143564a",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "SSRF with filter bypass via open redirection vulnerability",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ebfa7a9a-c445-486f-a796-d03ec1473522",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ff6f1c61-d93d-4142-8274-2a1879167b7d",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "cf59ca58-374d-4a1f-ab8e-19e701106792",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Conviene bien repasarlo, pero se ve que siempre que tienes algo de Stock con la API, tienes un SSRF",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d5693292-0589-4d5e-bd8f-bd66c9e0b2a6",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "Si ves un 'NextProduct' / StockAPI casi 100% que es SSRF",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "946061fd-5611-467f-bd29-83bb636a3c26",
+        "index": 36,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:53.123Z",
+        "lastEditedDateTime": "2026-08-17T17:42:21.417Z",
+        "cells": [
+          {
+            "id": "3276c63b-4a80-4ec2-9838-2a76c6faf597",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "34",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9f7e12e7-ab29-42b7-943b-fdf6cbfe7667",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Authentication bypass via flawed state machine",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "4aa3bf04-7aa9-49cf-b5dc-2d6e2e64b92e",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "29d9e060-f510-4430-8d8f-67349bfea7a3",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "488d812a-a3c6-47f8-80e8-063501f19d1a",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Habia probado lo que era pero lo hice mal ya que no dropeé la solicitud cuando tocaba",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "2367e7a3-aecf-42a9-a1ae-bbeea3c6cbde",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "'-'",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "606becc4-c3ba-4f1d-b2f2-fd28504a19be",
+        "index": 37,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:53.555Z",
+        "lastEditedDateTime": "2026-08-17T17:50:59.539Z",
+        "cells": [
+          {
+            "id": "d0d04016-b18c-441f-9c31-15ae723bab09",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "35",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9ba01ec6-84af-4744-86a2-3044945eddca",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "Reflected DOM XSS",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ea69f1d0-4eca-44be-b480-b0de373438e8",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7d6e1430-a55c-40d2-8ebb-910c8d2eb344",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e94fc9a4-998d-4b5a-b078-118aefdebcf2",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Acerté el payload mirando el 'searchResults.js' que tiene un 'eval()' pero me sigue costando entender el porque del eval",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "27ba533f-7a77-4db4-bc3a-61083059814c",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "QUITAR EL FILTRO DEL HTTP HISTORY (x2)",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "5b9ff35b-8e0f-4bcc-8ac8-7c3dcd50e009",
+        "index": 38,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:53.993Z",
+        "lastEditedDateTime": "2026-08-17T17:54:12.850Z",
+        "cells": [
+          {
+            "id": "5bf7bdb3-3748-44c7-b2ca-dc842293a39c",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "36",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "8ea1ef8a-dda2-4930-9e58-cac0fdc0bc59",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "File path traversal, traversal sequences stripped with superfluous URL-decode",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "8e5d8fd9-a95f-4b7a-9208-47936f704fd0",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c5e49bb9-ffbe-4567-830c-14d620a77125",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3d3651c9-3bce-4a83-adaf-b5f151ee3b3f",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Tercera vez que me sale este lab y ni 1 vez HTTP Request Smuggling (no entiendo nada xd)",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "2e978c3e-0b2b-4c57-8991-d0acd0a6d586",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "'-'",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "c2c593c1-e1e1-475a-a7b4-873f4abc3b90",
+        "index": 39,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:54.406Z",
+        "lastEditedDateTime": "2026-08-17T18:06:16.825Z",
+        "cells": [
+          {
+            "id": "9e2121e5-d393-483a-a1b1-6fd935cb8ddf",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "37",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ab0ffcef-658a-401d-8c8a-532a53efd629",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "CSRF where token is tied to non-session cookie",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3e8c1ddb-1b4a-45ea-98c8-c3beb1a15c47",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": true,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ef7cc3a6-2084-4aa9-b6d9-5ad4264e0a25",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "46459260-050c-4818-af7c-1b31169bd957",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "Era obvio por el 'csrfKey' pero no consegui hacerlo sin pista",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "608e4c59-ff96-4e99-8bc5-27395ccea4ec",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "Si hay CSRF, siempre chequear el 'UpdateEmail' aunque haya mas cosas (igual necesitas ambas)",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "f3847fdf-f836-4748-8ff4-634b5238ef67",
+        "index": 40,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:54.827Z",
+        "lastEditedDateTime": "2026-08-17T17:53:18.157Z",
+        "cells": [
+          {
+            "id": "b1e95eeb-d81b-4a86-8b1b-b609c6fecce4",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "38",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d9b0eb54-583b-4df5-b1b4-6303e63575e1",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9323aceb-d642-469b-8ce3-5259d09d5677",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "758a307c-5217-4a5e-8692-f8bff39d1e1e",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "dd43b4e3-9d89-4abd-85ab-aa4ca0ddf7ce",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "798fcc23-3e28-41d4-8f04-52cf7a0b444c",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "b0652619-10c0-4927-9072-faace410dd7f",
+        "index": 41,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:55.282Z",
+        "lastEditedDateTime": "2026-08-17T16:34:32.606Z",
+        "cells": [
+          {
+            "id": "08257764-3f69-40f8-b442-9ef8e29273bc",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "39",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "02cfc462-d4c6-4499-abca-dc18cdc50d10",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "21a5c075-94b0-4353-8d7f-20e7095757ca",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "394f5884-ff1b-43b6-8bd9-62932d87870f",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "898e9ba6-4da4-43a9-b40c-cbc8a0b7ebe9",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "17dffa4d-ae4f-43ef-971c-50e07db9f026",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "0b971f92-a2ef-421f-95cf-1c23b5a5a1de",
+        "index": 42,
+        "sourceId": null,
+        "creationDateTime": "2026-08-17T16:33:55.683Z",
+        "lastEditedDateTime": "2026-08-17T16:34:35.551Z",
+        "cells": [
+          {
+            "id": "bd953a1d-8dcd-4e20-a001-75bf18b857b2",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "40",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "0661ae02-75d0-4bbf-bace-5ed7868d7a5c",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "81608248-9d11-44cd-86cc-4c596792ddee",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5b6a15e6-7270-496f-9958-19598b336158",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3b3d02c3-563e-4c27-8c4d-5946342ddc53",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c35dec59-6fc4-43d2-92e3-4bde0d18339f",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
             "content": "",
             "hasValidFrontmatter": null

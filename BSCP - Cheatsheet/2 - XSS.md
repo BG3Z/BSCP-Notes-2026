@@ -59,7 +59,7 @@ AngularJS siempre comienza con `<body ng-app>`:
 Reflected DOM XSS:
 ```
 --> Teniamos la funcion 'eval()' de JS:
-probando\"*alert(0)}//
+probando \"*alert(0)}//
 ```
 
 Stored DOM XSS:

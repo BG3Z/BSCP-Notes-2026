@@ -8,8 +8,8 @@
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@dontwannacry.com.exploit-0a3d0072041095fa82402d7d01b2005b.exploit-server.net
 ```
 7. En el apartado de cambiar contraseña, si borramos el argumento de `current_password`, no lo valida por detras y podemos cambiar la de cualquier usuario
-![[Pasted image 20260730142953.png]]
-8. Al comprar un producto te encuentras :![[Pasted image 20260730143603.png]]
+![[Pasted image 20260730142953.png|439]]
+8. Al comprar un producto te encuentras :![[Pasted image 20260730143603.png|507]]
 - Introduciendo otro producto al carrito, y mandando de nuevo esta solicitud de confirmacion de pedido, nos saltamos el pago
 9. La maquina de estados era : 1. Credenciales, 2. Eleccion de Rol, 3. Login Exitoso. Si vamos capturando cada solicitud y dropeamos la de `rol select`, se aplica el valor default por detras (que en este caso es `administrator`)
 10. Oracle Encryption Bypass (fumada):
