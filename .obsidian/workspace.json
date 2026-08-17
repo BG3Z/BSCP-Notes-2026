@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "f021efd151bfea2a",
+        "id": "1c2c2910e4707a9e",
         "type": "tabs",
         "children": [
           {
-            "id": "0a8c75a8a5ca4e1e",
+            "id": "24f7f652c0d03a19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BSCP - Cheatsheet/1 - SQLi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1 - SQLi"
+            }
+          },
+          {
+            "id": "230052ba2787a76b",
             "type": "leaf",
             "state": {
               "type": "dataloom",
@@ -39,9 +53,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -78,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.16668701171875
+    "width": 230.5
   },
   "right": {
     "id": "71ffc2173e6a708f",
@@ -88,25 +100,6 @@
         "id": "fa6e804b0648f486",
         "type": "tabs",
         "children": [
-          {
-            "id": "5987ddec30b541ee",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Port Swigger - Cheat List/0 - Exam Tips.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 0 - Exam Tips"
-            }
-          },
           {
             "id": "c07edd6bca7cfb61",
             "type": "leaf",
@@ -137,6 +130,40 @@
             }
           },
           {
+            "id": "aaf8776c458e0857",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Port Swigger - Cheat List/14 - Authorization.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 14 - Authorization"
+            }
+          },
+          {
+            "id": "5987ddec30b541ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Port Swigger - Cheat List/14 - Authorization.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 14 - Authorization"
+            }
+          },
+          {
             "id": "5200f3283a75ad51",
             "type": "leaf",
             "state": {
@@ -151,30 +178,26 @@
             }
           },
           {
-            "id": "aaf8776c458e0857",
+            "id": "fc37bb94c7370536",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "BSCP - Cheatsheet/25 - GraphQL.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Esquema"
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obisidian-dataloom:Create loom": false,
       "obsidian-git:Open Git source control": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
@@ -182,57 +205,56 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false,
-      "obisidian-dataloom:Create loom": false
+      "bases:Crear nueva base": false
     }
   },
-  "active": "2b0476300aead93d",
+  "active": "24f7f652c0d03a19",
   "lastOpenFiles": [
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
-    "BSCP - Cheatsheet/0 - NOTES to IMPROVE.md",
-    "BSCP - Cheatsheet/12 - Path Traversal.md",
-    "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
-    "BSCP - Cheatsheet/4 - Click-Jacking.md",
-    "BSCP - Cheatsheet/3 - CSRF.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
-    "BSCP - Cheatsheet/1 - SQLi.md",
-    "BSCP - Cheatsheet/23 - JWT.md",
-    "BSCP - Cheatsheet/WORDLISTS/TXT/jwt1",
-    "BSCP - Cheatsheet/7 - XXE Injection.md",
-    "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
-    "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
-    "BSCP - Cheatsheet/21 - OAuth Authentication.md",
-    "BSCP - Cheatsheet/25 - GraphQL.md",
-    "BSCP - Cheatsheet/24 - Prototype Pollution.md",
+    "Pasted image 20260817172758.png",
     "BSCP - Cheatsheet/13 - Access control.md",
-    "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
-    "BSCP - Cheatsheet/11 - SSTI.md",
-    "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
-    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
-    "BSCP - Cheatsheet/PAYLOADS/ssti.md",
-    "BSCP - Cheatsheet/18 - Information Disclosure.md",
-    "BSCP - Cheatsheet/0 - Exam Tips.md",
-    "BSCP - Cheatsheet/30 - Web Cache Deception.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211309.png",
+    "BSCP - Cheatsheet/2 - XSS.md",
+    "BSCP - Cheatsheet/12 - Path Traversal.md",
+    "BSCP - Cheatsheet/23 - JWT.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260804145234.png",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260804151151.png",
+    "BSCP - Cheatsheet/0 - NOTES to IMPROVE.md",
+    "Sin título.canvas",
+    "Sin título.base",
+    "FILES/SSTImap-master/plugins/python/templite.py",
+    "FILES/SSTImap-master/plugins/ruby/__init__.py",
+    "FILES/SSTImap-master/plugins/ruby/slim.py",
+    "FILES/SSTImap-master/plugins/python/mako.py",
+    "FILES/SSTImap-master/plugins/ruby/erb.py",
+    "FILES/SSTImap-master/plugins/python/__init__.py",
+    "FILES/SSTImap-master/plugins/python/tornado.py",
+    "FILES/SSTImap-master/plugins/python/jinja2.py",
+    "FILES/SSTImap-master/README.md",
+    "FILES/SSTImap-master/LICENSE.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-usernames.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-passwords.md",
+    "BSCP - Cheatsheet/WORDLISTS/burp-discover.md",
+    "BSCP - Cheatsheet/RESOURCES/XSS Mindmap.md",
+    "BSCP - Cheatsheet/RESOURCES/Mock Exam.md",
+    "BSCP - Cheatsheet/RESOURCES/CookieStealer XSS Payloads.md",
+    "BSCP - Cheatsheet/RESOURCES/CheatSheets & Useful Repos.md",
+    "BSCP - Cheatsheet/RESOURCES/BSCP Reviews & Roadmaps.md",
+    "BSCP - Cheatsheet/PAYLOADS/xxe.md",
+    "BSCP - Cheatsheet/PAYLOADS/xss.md",
     "BSCP - Cheatsheet/PAYLOADS/web-cache-deception.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssti.md",
+    "BSCP - Cheatsheet/PAYLOADS/sqli.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssrf.md",
+    "BSCP - Cheatsheet/PAYLOADS/remote-code-execution.md",
+    "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
+    "BSCP - Cheatsheet/PAYLOADS/insecure-deserialization.md",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211659.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810210927.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211713.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220023.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220019.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220012.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220009.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810215841.png",
-    "FILES/SSTImap-master/utils/__init__.py",
-    "FILES/SSTImap-master/utils/strings.py",
-    "FILES/SSTImap-master/utils/random_agent.py",
-    "FILES/SSTImap-master/utils/rand.py",
-    "FILES/SSTImap-master/utils/loggers.py",
-    "FILES/SSTImap-master/utils/crawler.py",
-    "FILES/SSTImap-master/utils/config.py",
-    "FILES/SSTImap-master/utils/closures.py",
-    "Sin título.canvas"
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220009.png"
   ]
 }

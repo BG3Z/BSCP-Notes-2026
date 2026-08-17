@@ -30,7 +30,7 @@ for line in lines:
 ```
 
 7. Bruteforce del 2FA von ?verify=carlos y un ataque Sniper de 0000 a 9999, y robando su cookie
-8. La cookie de sesion ('stay-loged-in') se crafteaba haciendo 'username:pass' siendo la pass un hash md5 y luego encodeada en base 64, entonces definimos lo siguiente y probamos cada contraseña:
+8. La cookie de sesion ('stay-logged-in') se crafteaba haciendo 'username:pass' siendo la pass un hash md5 y luego encodeada en base 64, entonces definimos lo siguiente y probamos cada contraseña:
 ![[Pasted image 20260723142532.png]]
 ![[Pasted image 20260723143117.png]]
 9. Lo mismo que antes con la cookie pero la passwd no está en la wordlist. Pero tenemos un XSS en un comentario, cogemos la cookie de 'stay-logged-in' con ese XSS mandandonoslo al exploit-server, pillamos la cookie del Access-Log y hacemos decrypt :)
@@ -44,6 +44,9 @@ for line in lines:
 ![[Pasted image 20260723202257.png|177]]
 ![[Pasted image 20260723202340.png]]
 ![[Pasted image 20260723202330.png]]
+
+12. Borras por completo el campo 'current_password':
+![[Pasted image 20260817172758.png]]
 
 --------------------------------------------------------------------------
 ### Cookie Stay-Logged In

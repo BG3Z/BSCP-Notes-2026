@@ -164,9 +164,6 @@ Evasion de CSRF con XSS:
 </script>
 ```
 
-
-
-
 ---
 
 ```js

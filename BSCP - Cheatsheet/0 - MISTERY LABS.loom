@@ -30,7 +30,7 @@
         "id": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
         "sortDir": "default",
         "isVisible": true,
-        "width": "275px",
+        "width": "152px",
         "type": "text",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -55,7 +55,7 @@
         "id": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
         "sortDir": "default",
         "isVisible": true,
-        "width": "129px",
+        "width": "90px",
         "type": "checkbox",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -80,7 +80,7 @@
         "id": "9991510c-6a6c-4704-8565-3a0095bd2395",
         "sortDir": "default",
         "isVisible": true,
-        "width": "115px",
+        "width": "85px",
         "type": "checkbox",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -105,7 +105,7 @@
         "id": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
         "sortDir": "default",
         "isVisible": true,
-        "width": "550px",
+        "width": "318px",
         "type": "text",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -1148,7 +1148,7 @@
         "index": 22,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:22:29.397Z",
-        "lastEditedDateTime": "2026-08-15T11:25:51.842Z",
+        "lastEditedDateTime": "2026-08-17T15:01:43.461Z",
         "cells": [
           {
             "id": "ff701ddb-79a1-4059-bc55-bb8a4a063d4c",
@@ -1183,7 +1183,7 @@
           {
             "id": "ec3eae7b-4dfa-4dbf-a46d-27778894bbdc",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -1238,7 +1238,7 @@
         "index": 24,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:12.047Z",
-        "lastEditedDateTime": "2026-08-15T11:32:25.561Z",
+        "lastEditedDateTime": "2026-08-17T15:01:39.958Z",
         "cells": [
           {
             "id": "71336312-f54a-48a8-9531-5ed852526486",
@@ -1273,7 +1273,7 @@
           {
             "id": "d9a0674b-0d72-445d-82b7-c6aecc0bfe67",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -1328,7 +1328,7 @@
         "index": 26,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:13.061Z",
-        "lastEditedDateTime": "2026-08-13T16:24:21.892Z",
+        "lastEditedDateTime": "2026-08-17T15:01:47.315Z",
         "cells": [
           {
             "id": "13484477-edf4-4b57-97af-602bd7336fac",
@@ -1339,31 +1339,31 @@
           {
             "id": "5fe3b9a0-cb51-4509-bdb3-1d586ba61143",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "JWT authentication bypass via jwk header injection",
             "hasValidFrontmatter": null
           },
           {
             "id": "5e4b6742-d73c-4685-8e8b-766268e54f66",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "fa4eb799-7cee-493d-ac99-a3da8879f3b5",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "7b858e13-c1bb-4d2d-b62f-801423134e2b",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Adiviné la vuln que era pero la explote mal, a la segunda ya me funcionó",
             "hasValidFrontmatter": null
           },
           {
             "id": "1bde2828-97a8-4c5e-9e4c-7e61b6c6aa72",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -1373,7 +1373,7 @@
         "index": 27,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:13.505Z",
-        "lastEditedDateTime": "2026-08-15T11:44:42.313Z",
+        "lastEditedDateTime": "2026-08-17T15:06:22.841Z",
         "cells": [
           {
             "id": "2984e36e-fe27-47dd-8bf8-3add0aa2b5e7",
@@ -1384,31 +1384,31 @@
           {
             "id": "a81ea861-2362-4834-9031-b370221a223f",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "File path traversal, traversal sequences stripped with superfluous URL-decode",
             "hasValidFrontmatter": null
           },
           {
             "id": "8789ea3b-f3f3-44e1-be7e-e6224b65554d",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "00c4a545-6bfd-44ae-80ed-68fb8cefbf68",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "e5a0fdec-a200-4adc-b4c8-cb3b9b45ccd7",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Bastante obvio, probando payloads sale solo",
             "hasValidFrontmatter": null
           },
           {
             "id": "0bbbc391-1f96-4c7d-a6c1-8f0d9ba68b9c",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -1418,7 +1418,7 @@
         "index": 28,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:13.974Z",
-        "lastEditedDateTime": "2026-08-13T16:24:28.584Z",
+        "lastEditedDateTime": "2026-08-17T15:16:41.308Z",
         "cells": [
           {
             "id": "0e3671b4-47fc-44c3-89fd-a466f7088bce",
@@ -1429,7 +1429,7 @@
           {
             "id": "990bd6b5-2dc2-4e08-b4ad-1b5fc4481e12",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Password reset poisoning via middleware",
             "hasValidFrontmatter": null
           },
           {
@@ -1447,13 +1447,13 @@
           {
             "id": "3a91b34d-4db4-42aa-a602-cf5f7b48ba05",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "La verdad que ni idea, me cerré en que tenia que ser un XSS por cojones y no lo fue. Le quité importancia demasiado rapido al reset passwd",
             "hasValidFrontmatter": null
           },
           {
             "id": "33258e01-6d4b-4559-8349-b4c10e50736d",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Si hay 'reset passwd' es POR ALGO :)",
             "hasValidFrontmatter": null
           }
         ]
@@ -1463,7 +1463,7 @@
         "index": 29,
         "sourceId": null,
         "creationDateTime": "2026-08-13T16:24:14.472Z",
-        "lastEditedDateTime": "2026-08-13T16:24:35.343Z",
+        "lastEditedDateTime": "2026-08-17T15:29:48.508Z",
         "cells": [
           {
             "id": "096d7dae-30d9-4966-93e9-e3c478bb5e72",
@@ -1474,13 +1474,13 @@
           {
             "id": "d8cf9a4d-5184-4010-8606-9ff45ec12504",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Weak isolation on dual-use endpoint",
             "hasValidFrontmatter": null
           },
           {
             "id": "3e5a274f-74d9-40a6-aa0c-979739d3fa65",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -1492,13 +1492,13 @@
           {
             "id": "b686be2b-cfca-433f-b06d-8fd821c3ccb1",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Me faltaba de apuntar este tipo y era el mas facil, habia provado otros mas complejos",
             "hasValidFrontmatter": null
           },
           {
             "id": "3cdddd48-c3ea-409f-96bc-dce82f0902a0",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -1597,7 +1597,7 @@
     "filters": [],
     "sources": [],
     "settings": {
-      "numFrozenColumns": 4,
+      "numFrozenColumns": 1,
       "showCalculationRow": true
     },
     "externalRowOrder": []
