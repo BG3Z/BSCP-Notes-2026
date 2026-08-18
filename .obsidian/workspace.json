@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "46a7d6f3fed78242",
+            "id": "24f7f652c0d03a19",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "24f7f652c0d03a19",
+            "id": "dad7bc8b9490d747",
             "type": "leaf",
             "state": {
               "type": "dataloom",
@@ -32,21 +32,8 @@
               "icon": "lucide-file",
               "title": "0 - MISTERY LABS"
             }
-          },
-          {
-            "id": "c892c9830d739c1a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Registro de cambios 1.13.7"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -223,11 +210,12 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "c892c9830d739c1a",
+  "active": "24f7f652c0d03a19",
   "lastOpenFiles": [
-    "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
-    "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
+    "BSCP - Cheatsheet/3 - CSRF.md",
+    "BSCP - Cheatsheet/22 - File Upload.md",
+    "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
     "BSCP - Cheatsheet/PAYLOADS/xss.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/2 - XSS.md",
@@ -264,7 +252,6 @@
     "FILES/SSTImap-master/README.md",
     "FILES/SSTImap-master/LICENSE.md",
     "BSCP - Cheatsheet/WORDLISTS/burp-usernames.md",
-    "BSCP - Cheatsheet/WORDLISTS/burp-passwords.md",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220023.png",

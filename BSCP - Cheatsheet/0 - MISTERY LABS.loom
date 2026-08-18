@@ -130,7 +130,7 @@
         "id": "cc98d48c-dadd-4820-a12f-a64133dbd594",
         "sortDir": "default",
         "isVisible": true,
-        "width": "216px",
+        "width": "223px",
         "type": "text",
         "numberPrefix": "",
         "numberSuffix": "",
@@ -1958,7 +1958,7 @@
         "index": 40,
         "sourceId": null,
         "creationDateTime": "2026-08-17T16:33:54.827Z",
-        "lastEditedDateTime": "2026-08-17T17:53:18.157Z",
+        "lastEditedDateTime": "2026-08-18T10:02:20.721Z",
         "cells": [
           {
             "id": "b1e95eeb-d81b-4a86-8b1b-b609c6fecce4",
@@ -1969,31 +1969,31 @@
           {
             "id": "d9b0eb54-583b-4df5-b1b4-6303e63575e1",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Web shell upload via path traversal",
             "hasValidFrontmatter": null
           },
           {
             "id": "9323aceb-d642-469b-8ce3-5259d09d5677",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "758a307c-5217-4a5e-8692-f8bff39d1e1e",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "dd43b4e3-9d89-4abd-85ab-aa4ca0ddf7ce",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Muy obvio, fallé una cosilla y no  me funcionó a la primera pero facil",
             "hasValidFrontmatter": null
           },
           {
             "id": "798fcc23-3e28-41d4-8f04-52cf7a0b444c",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Upload Avatar --> File Upload",
             "hasValidFrontmatter": null
           }
         ]
@@ -2003,7 +2003,7 @@
         "index": 41,
         "sourceId": null,
         "creationDateTime": "2026-08-17T16:33:55.282Z",
-        "lastEditedDateTime": "2026-08-17T16:34:32.606Z",
+        "lastEditedDateTime": "2026-08-18T10:10:17.660Z",
         "cells": [
           {
             "id": "08257764-3f69-40f8-b442-9ef8e29273bc",
@@ -2014,25 +2014,25 @@
           {
             "id": "02cfc462-d4c6-4499-abca-dc18cdc50d10",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF where token is tied to non-session cookie",
             "hasValidFrontmatter": null
           },
           {
             "id": "21a5c075-94b0-4353-8d7f-20e7095757ca",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "394f5884-ff1b-43b6-8bd9-62932d87870f",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "898e9ba6-4da4-43a9-b40c-cbc8a0b7ebe9",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Me volvió a salir y lo hice a la primera esta vez. Debo revisar la linea del <img...",
             "hasValidFrontmatter": null
           },
           {

