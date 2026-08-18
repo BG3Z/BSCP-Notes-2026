@@ -32,9 +32,21 @@
               "icon": "lucide-file",
               "title": "0 - MISTERY LABS"
             }
+          },
+          {
+            "id": "c892c9830d739c1a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Registro de cambios 1.13.7"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -54,7 +66,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -209,7 +223,7 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "2b0476300aead93d",
+  "active": "c892c9830d739c1a",
   "lastOpenFiles": [
     "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
     "BSCP - Cheatsheet/3 - CSRF.md",
