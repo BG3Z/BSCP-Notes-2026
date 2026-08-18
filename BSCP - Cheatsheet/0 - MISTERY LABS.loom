@@ -2138,7 +2138,7 @@
         "index": 44,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:38:49.978Z",
-        "lastEditedDateTime": "2026-08-18T10:38:56.397Z",
+        "lastEditedDateTime": "2026-08-18T15:13:42.925Z",
         "cells": [
           {
             "id": "e325f87d-2f13-466e-8d58-ff03323fd836",
@@ -2149,31 +2149,31 @@
           {
             "id": "546b0629-d374-4769-9219-8599472f110e",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Offline password cracking",
             "hasValidFrontmatter": null
           },
           {
             "id": "3f88d585-7690-48cb-b70a-66ff6c5cf0fd",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "eb02b56b-215e-4f53-a8c6-e2e59ad3673f",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "eecaad25-d1a5-4962-8587-338137c48af7",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Era igual que uno que ya hice, solo que en vez de estar en el diccionario la passwd, habia un XSS en la seccion de comentarios",
             "hasValidFrontmatter": null
           },
           {
             "id": "0cba64ad-83bb-4e0c-ae7e-9b2ffbbe6df4",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -2183,7 +2183,7 @@
         "index": 45,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:38:59.377Z",
-        "lastEditedDateTime": "2026-08-18T10:39:05.634Z",
+        "lastEditedDateTime": "2026-08-18T15:21:44.506Z",
         "cells": [
           {
             "id": "50b9f1e3-2e6c-4b87-8bbc-f4af3365bbcd",
@@ -2194,31 +2194,31 @@
           {
             "id": "6f47803a-c872-43e4-8deb-56b94b9aaab6",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF where token is not tied to user session",
             "hasValidFrontmatter": null
           },
           {
             "id": "01ae0179-e861-4005-9d13-a38e6ed5ed30",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "310e14a4-3f5c-47a4-8b57-56f64a6c1aa7",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "503760bb-92ff-422b-9ce5-ed415bb8d065",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Probabas el change email varias veces y te dejaba usar el token en otra solicitud dropeada",
             "hasValidFrontmatter": null
           },
           {
             "id": "a1b61939-4467-40f1-850a-946baef5dbdb",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -2228,7 +2228,7 @@
         "index": 46,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:00.077Z",
-        "lastEditedDateTime": "2026-08-18T10:39:07.483Z",
+        "lastEditedDateTime": "2026-08-18T15:48:55.648Z",
         "cells": [
           {
             "id": "9ecaab5d-751c-4754-a657-d00c75425bf3",
@@ -2239,13 +2239,13 @@
           {
             "id": "64cbebde-1cf1-4209-920d-e5b1904d8e59",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Inconsistent handling of exceptional input",
             "hasValidFrontmatter": null
           },
           {
             "id": "e69aacf2-2b19-4ea7-8bd0-4fbe634d2da7",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -2257,13 +2257,13 @@
           {
             "id": "7724c386-bb39-4e24-bde0-bd72cf744aec",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Lo podria haber sacado pero tuve poca paciencia",
             "hasValidFrontmatter": null
           },
           {
             "id": "362ab5e7-644a-480f-823a-abd82ea6df7f",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -2273,7 +2273,7 @@
         "index": 47,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:00.566Z",
-        "lastEditedDateTime": "2026-08-18T10:39:09.126Z",
+        "lastEditedDateTime": "2026-08-18T16:18:17.736Z",
         "cells": [
           {
             "id": "d152246c-e5d5-4f01-b604-c7c2edfe9a80",
@@ -2284,7 +2284,7 @@
           {
             "id": "1e54533a-6aef-4950-8721-290a34212dcf",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "HTTP/2 request smuggling via CRLF injection",
             "hasValidFrontmatter": null
           },
           {
@@ -2302,13 +2302,13 @@
           {
             "id": "aa8d9f8e-8a97-4dc9-b771-94407f11ecce",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "He trolleado",
             "hasValidFrontmatter": null
           },
           {
             "id": "f2595b70-ff6f-4b5b-9200-8a50e2930ddb",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Barra de busqueda puede ser Smuggling con CRLF",
             "hasValidFrontmatter": null
           }
         ]
@@ -2318,7 +2318,7 @@
         "index": 48,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:01.040Z",
-        "lastEditedDateTime": "2026-08-18T10:39:12.039Z",
+        "lastEditedDateTime": "2026-08-18T16:32:08.890Z",
         "cells": [
           {
             "id": "b02f7079-d3d6-47c6-b259-0905d7c58c9f",
@@ -2329,31 +2329,31 @@
           {
             "id": "71592db0-a9b6-4fb6-bf43-03d609e03476",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "JWT authentication bypass via weak signing key",
             "hasValidFrontmatter": null
           },
           {
             "id": "d5f219c3-6dc0-4023-ab66-f63875b9b5c4",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "575aaae1-c8ab-4e56-966d-2534543f42b8",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "06db1c49-4a12-4e99-92d5-904f365c5a66",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Debo recordar (que se me suele olvidar) que siempre hay que cambiar el 'kid' a 'administrator', sea el tipo de vuln de JWT que sea",
             "hasValidFrontmatter": null
           },
           {
             "id": "119f1648-8f6c-4b49-91d3-10eb26745daf",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -2363,7 +2363,7 @@
         "index": 49,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:01.472Z",
-        "lastEditedDateTime": "2026-08-18T10:39:14.730Z",
+        "lastEditedDateTime": "2026-08-18T16:32:16.874Z",
         "cells": [
           {
             "id": "5c382996-1261-4270-94d6-a73e5c9fa0d1",
@@ -2374,7 +2374,7 @@
           {
             "id": "cc97a19c-e14a-4f52-93b2-f055fe140a04",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Server-side template injection in an unknown language with a documented exploit",
             "hasValidFrontmatter": null
           },
           {
@@ -2386,19 +2386,19 @@
           {
             "id": "1ce948d0-0803-4199-b369-26b0ea4a37d9",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "af0dc60f-ec52-4df8-855d-50fe60c8fc66",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Soy puto retrasado te lo juro, como no pruebo SSTI.",
             "hasValidFrontmatter": null
           },
           {
             "id": "5978310f-cd7d-4069-b912-42bfd608a64b",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Si hay un reflejo de algo que pones en un parametro en la pagina, PROBAR SSTI BOBO",
             "hasValidFrontmatter": null
           }
         ]
@@ -2408,7 +2408,7 @@
         "index": 50,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:01.928Z",
-        "lastEditedDateTime": "2026-08-18T10:39:17.826Z",
+        "lastEditedDateTime": "2026-08-18T16:36:26.321Z",
         "cells": [
           {
             "id": "f4dac19f-a43c-49ba-a0d0-d6c2982b21c9",
@@ -2419,31 +2419,31 @@
           {
             "id": "5fa07f0a-88cf-4482-a5e0-78fc971eb900",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Basic server-side template injection",
             "hasValidFrontmatter": null
           },
           {
             "id": "ac186199-bb00-42b8-bdd5-cd116cd30532",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "1d4867e6-18c0-4ada-846e-1db4b45fa007",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "5035df8f-e8c7-4560-be96-cf0b1cf68aa3",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "240b27f8-1fbb-49fb-8230-d211592a7f36",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "NO TE FIES DEL POLYGLOT",
             "hasValidFrontmatter": null
           }
         ]
@@ -2453,7 +2453,7 @@
         "index": 51,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:02.351Z",
-        "lastEditedDateTime": "2026-08-18T10:39:20.582Z",
+        "lastEditedDateTime": "2026-08-18T16:42:15.672Z",
         "cells": [
           {
             "id": "07958104-b0a0-41d7-b96a-156415cafcce",
@@ -2464,31 +2464,31 @@
           {
             "id": "046c3007-ea30-441e-8bd3-472b1183a6ed",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "SSRF with blacklist-based input filter",
             "hasValidFrontmatter": null
           },
           {
             "id": "397773c9-809d-4856-b851-194469c447b4",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "1248421a-1e13-4aa2-9c6f-40af49c6722b",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "43d159b0-c79a-4f06-ba04-073278a7f588",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Probar payloads y ya",
             "hasValidFrontmatter": null
           },
           {
             "id": "2304dddf-6c99-4738-b6ab-f8b93aadade9",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'stockAPI' --> Check SSRF",
             "hasValidFrontmatter": null
           }
         ]
@@ -2498,7 +2498,7 @@
         "index": 52,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:02.779Z",
-        "lastEditedDateTime": "2026-08-18T10:39:23.109Z",
+        "lastEditedDateTime": "2026-08-18T16:47:44.341Z",
         "cells": [
           {
             "id": "12a62d3b-d632-4ffb-aee9-477c2b2aca98",
@@ -2509,31 +2509,31 @@
           {
             "id": "f764a2bf-db96-48ce-be1f-105af892a69e",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "JWT authentication bypass via kid header path traversal",
             "hasValidFrontmatter": null
           },
           {
             "id": "e789e54d-a995-4639-99f5-77c5bb37cd59",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "3896c9e0-cbb1-45d6-befd-636f0b978067",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "ef3a19b4-0998-4708-bb33-66d3eabacede",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ (hay que cambiar el 'kid' por el tuyo al crear la RSA key)",
             "hasValidFrontmatter": null
           },
           {
             "id": "0bd3d285-586b-46e3-8ce3-63e7f0aacfa2",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -2543,7 +2543,7 @@
         "index": 53,
         "sourceId": null,
         "creationDateTime": "2026-08-18T10:39:03.219Z",
-        "lastEditedDateTime": "2026-08-18T10:39:25.594Z",
+        "lastEditedDateTime": "2026-08-18T17:17:08.381Z",
         "cells": [
           {
             "id": "7653afc0-62ab-4c51-aa0f-aaabe769f6a7",
@@ -2554,13 +2554,13 @@
           {
             "id": "df586602-32af-4a48-b282-52a663680826",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Web cache poisoning via an unkeyed query parameter",
             "hasValidFrontmatter": null
           },
           {
             "id": "e84c7779-8d26-4259-8729-11b1852c1588",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -2572,11 +2572,506 @@
           {
             "id": "00ece85a-2fc8-43e4-b514-2268081bb5d6",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Habia un problema con el lab y no funcionaba",
             "hasValidFrontmatter": null
           },
           {
             "id": "11c79cc8-4afe-4fe3-8840-1ff9b425f41f",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "En cache poisoning, mirar siempre con ParamMiner tanto Headers como Params",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "26d589a3-fcbd-4d50-9679-72300f7a37f4",
+        "index": 54,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:17:12.496Z",
+        "lastEditedDateTime": "2026-08-18T17:18:05.383Z",
+        "cells": [
+          {
+            "id": "f232181e-f4b6-4634-9a74-98d6fb202773",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "**6/10**",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "8b2449df-21fd-4bd9-bdb9-9bd8050d54b8",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "========================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c1eff281-e96d-4717-84b4-d6552edac5ba",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e0f1e876-6244-445a-a536-57bf0ca6877d",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "61c31010-0352-48d0-8307-66b34b48237b",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "=======================================================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "cb57e394-9098-4efc-bc4b-5557f80f9a18",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "===================",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "e091f647-429a-43c5-b695-7954e914363c",
+        "index": 55,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:07.087Z",
+        "lastEditedDateTime": "2026-08-18T17:18:13.629Z",
+        "cells": [
+          {
+            "id": "73a96253-d824-41af-b3ca-1c71517e9e51",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "51",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "506b5a9d-04a7-49c8-b60e-43ddf631c62c",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "938f528c-2a25-4638-9486-0b2bd35a9f83",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f142bac5-c495-46d2-8c06-03f7f1bc0f18",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c262e9bd-e421-44b1-9240-3a6867433b7d",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c15b954a-7565-48a3-ae6b-a136993bc48a",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "b54e1515-3c70-4d79-84ed-6c843cfd026d",
+        "index": 56,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:08.141Z",
+        "lastEditedDateTime": "2026-08-18T17:18:16.192Z",
+        "cells": [
+          {
+            "id": "53a9db25-d25c-4700-9092-5d5d487e4b64",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "52",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "03bd4422-ee73-4ea8-a059-ce7480dcf691",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ff9684c3-d91d-48aa-b320-b175df970568",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "4b9c239d-4c41-462d-bc32-9a2ace5666d3",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e3bc0c99-c73b-4d4f-b2da-14cb3c961505",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "63459437-429f-4c28-9776-54dfac776307",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "a576d892-2cde-4f7e-aaae-9a2f092f41a6",
+        "index": 57,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:08.584Z",
+        "lastEditedDateTime": "2026-08-18T17:18:18.370Z",
+        "cells": [
+          {
+            "id": "7ad48bc6-737e-4f10-b100-37cc927657ad",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "53",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f90bbcbe-0989-4050-a5a6-498cfcb7e308",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9630323d-442e-42dc-918e-a449a7246ec7",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "72b627e4-aa47-4ac0-b671-46f81602d62c",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "84507998-3799-4bd0-85df-6a02f13e609d",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "425bf5a1-eb84-4a83-984e-924824216445",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "31524b79-a43c-4470-be4c-c6360fa10233",
+        "index": 58,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:08.956Z",
+        "lastEditedDateTime": "2026-08-18T17:18:20.508Z",
+        "cells": [
+          {
+            "id": "0b3690b2-9bfd-4b7c-9574-96c9464e6944",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "54",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a4a60451-daf9-41f9-b190-069794020e7f",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "109c942f-a9e1-4fd0-869e-4a9a2591b692",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "8cbe29e4-7ce9-4f81-aaf2-7a1fca1c984a",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f99b514f-9933-4283-bab9-eb9fb3f2099b",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f50ca8b4-4a8f-406b-ab57-8784be373c05",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "009082de-8e09-440a-a3dd-30c57af525e9",
+        "index": 59,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:09.301Z",
+        "lastEditedDateTime": "2026-08-18T17:18:23.270Z",
+        "cells": [
+          {
+            "id": "0b563406-d5c1-494d-a147-ea7a8adce975",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "55",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "6e45bde5-0d0d-427d-b42c-af751e4f8e7d",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "eabf908d-556e-4418-b68f-06f280647db6",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "12322346-d728-4595-a377-90323c117126",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "774a9015-1e40-4c72-900a-6c3ad32db013",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "037c885c-1f5b-48f5-a66b-244ce10025a5",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "53e68ac8-281b-4750-8591-82f9526c5304",
+        "index": 60,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:09.632Z",
+        "lastEditedDateTime": "2026-08-18T17:18:25.647Z",
+        "cells": [
+          {
+            "id": "2f26d006-3de8-4ca7-a95c-d10642c1737a",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "56",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5206e512-52ea-4909-b252-6fbd7c3dfd76",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ecc86b7b-ae8b-44bd-9ad0-36ef47ffdd52",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b46c474b-5ab8-4196-9311-c9c2d1a20b73",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f4011f86-ff2c-464d-8185-b07f484db467",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "6a6a0a3c-42c6-40ff-88ba-735d4f04c4ac",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "5e63dfc7-6f77-415d-8042-39e7de8f4f84",
+        "index": 61,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:10.009Z",
+        "lastEditedDateTime": "2026-08-18T17:18:27.856Z",
+        "cells": [
+          {
+            "id": "1b242c2b-9896-416d-9ea5-1f7b73a9db7e",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "57",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5cab3476-85fb-4894-8b08-4577a97b0c4b",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a3df2761-7cdf-45a5-b03b-a8770374269f",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "ae61544b-52bf-416e-8992-5a467c8b5970",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "acc42d37-edc4-4e50-a6f3-337f01a6c2e7",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d85d64fa-0f7f-4de0-b1f8-5621a503a2ea",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "b90a7d93-1add-4a4c-9cd7-d35e208ae585",
+        "index": 62,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:10.354Z",
+        "lastEditedDateTime": "2026-08-18T17:18:30.009Z",
+        "cells": [
+          {
+            "id": "b69e4f99-8896-4fd7-829f-824bd4e3f8d9",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "58",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "443b4d6c-af75-4c21-8bad-9a602bb58202",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3a9f9c45-9c7d-4c68-8609-8bc93f4810ee",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "58dcd0ff-f9b4-4582-8305-584ee6378995",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5d5726c8-af23-4610-afb8-f71093d0bb1c",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "f76cd957-f46f-45af-ac37-241bdff63a94",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "738b39c4-e91d-4ead-8351-a45761bde2dd",
+        "index": 63,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:10.717Z",
+        "lastEditedDateTime": "2026-08-18T17:18:32.565Z",
+        "cells": [
+          {
+            "id": "f09fb60c-bd8d-4e22-a549-47e667bae5b3",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "59",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7672e91a-3d1a-44cd-8a94-051f2a9505cc",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "54413b43-c403-4768-a05f-17d51d9a5491",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9f668f0a-8ec0-4310-af63-a4bd4d29a4e2",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "0f8da463-f1c9-44ec-8222-0cfac6bc566e",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "bbdaa08c-2514-4d93-8748-894c13d07e86",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "ee76d36b-2cdb-4828-8779-5a1b23ecf578",
+        "index": 64,
+        "sourceId": null,
+        "creationDateTime": "2026-08-18T17:18:11.041Z",
+        "lastEditedDateTime": "2026-08-18T17:18:37.046Z",
+        "cells": [
+          {
+            "id": "25082159-d758-4ff0-8a53-02e982a8d52d",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "60",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "fb3bca74-4201-4c09-a4c8-9d5890ea17ec",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "67966ff8-284c-4393-a790-f17edea1ee95",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "37b349d7-ad45-4da2-a52e-b3d059df26eb",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "0c6e9ccb-0aaa-4f6b-88ea-10b64bfa55c6",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "036dce98-48fa-4528-9f77-d14e4a805538",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
             "content": "",
             "hasValidFrontmatter": null

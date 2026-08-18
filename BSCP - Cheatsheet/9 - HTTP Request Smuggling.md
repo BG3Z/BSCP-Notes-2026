@@ -59,7 +59,7 @@ H2.TE:
 CRLF Injection: 
 - CR -> \r 
 - LF ->\n    
-- La peticion debe ser la de buscar (la que tiene el parametro 'search'), que es donde se inyecta la informacion de la solciitud de la victima
+- La peticion debe ser la de buscar (la que tiene el parametro 'search'), que es donde se inyecta la informacion de la solicitud de la victima
 ![[Pasted image 20260720173438.png]]
 ![[Pasted image 20260720175003.png]]
 ![[Pasted image 20260720175054.png]]
