@@ -1,3 +1,10 @@
+
+## IMPORTANTE: 
+
+**Cuando encuentre en un lab o en el BSCP una APP que no devuelve /admin, no tiene scripts curiosos que podamos explotar, no tiene una funcionalidad que podamos analizar para explotar, el brute force attack del LOGIN por el rate limit tampoco funciona, tampoco podemos ingresar como wiener y tras de eso el FFUF no encuentra enpoints ocultos, el ataque va directamente en modificar algo de la request principal de la app, su host header, un nuevo param body, un web cache (si devuelve reglas de caché, etc)**
+
+---
+
 ![imagen](https://github.com/KrakenEU/BSCP/assets/80364768/9c626c18-770c-4d0d-a758-322c823c51d4)
 
 Stage 1 - Get access to a low privileged user account.

