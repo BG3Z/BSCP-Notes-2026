@@ -1,4 +1,11 @@
 
+Cosas que hacer antes del examen:
+- Hacer una sesion de mistery labs solo de HTTP Request Smuggling
+- Revisar a mano (o los apuntes) de OS Command Injection
+- Revisar la tabla de que vulns caen en que Stage
+- ....
+
+
 Notes to improve:
 ```
 Launch Less Scans at the same time, you can fuck the server x3

@@ -31,8 +31,10 @@
 
 
 5. JKU Header Injection:
-	- JWK Set URL --> https://.....(JWK Set). Nos creamos una clave RSA y copiamos la Public Key en nuestro exploit server en una lista de 'keys[]":![[Pasted image 20260804163638.png|524]]![[Pasted image 20260804164354.png|642]]
+	- JWK Set URL --> https://.....(JWK Set). Nos creamos una clave RSA y copiamos la Public Key en nuestro exploit server en una lista de 'keys[]":![[Pasted image 20260804163638.png|524]]
+	 ![[Pasted image 20260804164354.png|642]]
 	- Añadimos el JKU en la cabecera del JWT:![[Pasted image 20260804164429.png]]
+	- ANTES DE ENVIAR la peticion, FIRMAMOS con nuestra clave RSA.
 	- Al enviar la petición, la aplicación lee la cabecera `jku` y hace una consulta a nuestro exploit server para descargar la clave pública (buscando el `kid` que coincida). Como el servidor es vulnerable y confía en esa URL externa, utiliza nuestra clave pública para VERIFICAR la firma del JWT. Como nosotros previamente firmamos el JWT con nuestra propia clave privada, la verificación es exitosa y el servidor acepta nuestro token falsificado.
 
 
