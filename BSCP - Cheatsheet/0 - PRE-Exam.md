@@ -8,6 +8,8 @@ Cosas que hacer antes del examen:
 
 Notes to improve:
 ```
+HTTP Filter x21523576
+
 Launch Less Scans at the same time, you can fuck the server x3
 
 CORS identification and/or exploitation with XSS

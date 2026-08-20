@@ -3623,7 +3623,7 @@
         "index": 77,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:46.047Z",
-        "lastEditedDateTime": "2026-08-20T10:35:53.777Z",
+        "lastEditedDateTime": "2026-08-20T17:34:15.544Z",
         "cells": [
           {
             "id": "228ee1eb-218a-49a1-9365-cfb18f160f98",
@@ -3634,7 +3634,7 @@
           {
             "id": "cfe63412-0155-4410-bdae-df8a3f7830a6",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability",
             "hasValidFrontmatter": null
           },
           {
@@ -3652,13 +3652,13 @@
           {
             "id": "caa6e304-b545-44fc-8c60-e3332c6386c1",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Tengo que hacer labs de HTTP Request Smuggling",
             "hasValidFrontmatter": null
           },
           {
             "id": "06ade244-bb8f-4d89-9733-b762591e3137",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "HTTP Request Smuggler:\n1. Cambiar a POST, HTTP/1.1 y Content Length\n2. Extensions > ... > Smuggle Probe ;)",
             "hasValidFrontmatter": null
           }
         ]
@@ -3668,7 +3668,7 @@
         "index": 78,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:47.100Z",
-        "lastEditedDateTime": "2026-08-20T10:35:56.407Z",
+        "lastEditedDateTime": "2026-08-20T17:37:48.963Z",
         "cells": [
           {
             "id": "5e698db2-fd58-4493-8b6c-10e536be2931",
@@ -3679,31 +3679,31 @@
           {
             "id": "a5d50d53-d2b6-42c0-a40b-fb799790c64a",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Basic server-side template injection (code context)",
             "hasValidFrontmatter": null
           },
           {
             "id": "2816de0e-47e1-4cbf-b27d-e61cd14948db",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "97c69cf1-6f34-4ec9-abb1-184b91867d6b",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "a60eb48b-2604-43a7-a3ed-eace5d4b7fb0",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Bastante EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "a0457960-6335-4749-89ed-5308a4302def",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -3713,7 +3713,7 @@
         "index": 79,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:47.600Z",
-        "lastEditedDateTime": "2026-08-20T10:35:58.765Z",
+        "lastEditedDateTime": "2026-08-20T17:37:53.796Z",
         "cells": [
           {
             "id": "da091d13-0d8f-4029-a7e7-efeece576251",
@@ -3724,31 +3724,31 @@
           {
             "id": "bd80e17b-594a-4f95-ba30-239241f1aacb",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Username enumeration via subtly different responses",
             "hasValidFrontmatter": null
           },
           {
             "id": "c0cbfa15-e76f-4d12-ae83-567422a9e424",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "2a347ba7-84f6-4682-9d8c-7dc0fdf458a6",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "03650092-b953-431c-ae09-a769e084fcf9",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "5a145788-e3b3-479e-9819-2484c19995db",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -3758,7 +3758,7 @@
         "index": 80,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:48.050Z",
-        "lastEditedDateTime": "2026-08-20T10:36:00.819Z",
+        "lastEditedDateTime": "2026-08-20T17:44:05.421Z",
         "cells": [
           {
             "id": "7d7268db-788a-4847-a1ef-daed60c6e6fa",
@@ -3769,31 +3769,31 @@
           {
             "id": "d0a6529f-e79a-47e8-a976-93be916c794d",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "SQL injection attack, listing the database contents on Oracle",
             "hasValidFrontmatter": null
           },
           {
             "id": "dadfb1a2-ac43-4c15-a72c-55dcade480f0",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "10ccbec8-0c6a-4f5f-9b38-9b0cf4541b1d",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "ff657a9f-636c-425a-8d4e-ac290d5e7110",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "a8e67df5-fd1e-488f-bf69-c9d69a2f9670",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -3803,7 +3803,7 @@
         "index": 81,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:48.507Z",
-        "lastEditedDateTime": "2026-08-20T10:36:02.859Z",
+        "lastEditedDateTime": "2026-08-20T18:05:23.818Z",
         "cells": [
           {
             "id": "89abc85f-993b-42c5-81a6-4732565f13a5",
@@ -3814,31 +3814,31 @@
           {
             "id": "d9289fc9-8e54-4b91-ac5f-a42fa42914e3",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Web cache poisoning with multiple headers",
             "hasValidFrontmatter": null
           },
           {
             "id": "a7770c4b-0e49-49cc-8f8c-0951c426e0f0",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "c8c9de67-9b22-4821-8393-c35506ac6b7f",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "33015daf-c977-46f5-a38e-d4d274eeee0d",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Tenso. Pero con paciencia estamos iiiiiiiiin",
             "hasValidFrontmatter": null
           },
           {
             "id": "9553aacf-b8ad-4736-b23a-f2391aa20541",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "HTTP FILTER con CACHE",
             "hasValidFrontmatter": null
           }
         ]
