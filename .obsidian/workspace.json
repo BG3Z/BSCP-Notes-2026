@@ -39,14 +39,12 @@
             "id": "694ea6c37f48574d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "dataloom",
               "state": {
-                "file": "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
-                "mode": "source",
-                "source": false
+                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
               },
               "icon": "lucide-file",
-              "title": "16 - Web Cache poisoning"
+              "title": "0 - MISTERY LABS"
             }
           },
           {
@@ -64,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -241,16 +239,16 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "7aba067524a7c6f2",
+  "active": "694ea6c37f48574d",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
+    "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/8 - SSRF.md",
     "BSCP - Cheatsheet/20 - Host Header Attacks.md",
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/13 - Access control.md",
-    "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
-    "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/0 - PRE-Exam.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",

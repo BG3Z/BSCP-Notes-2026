@@ -3848,7 +3848,7 @@
         "index": 82,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:48.966Z",
-        "lastEditedDateTime": "2026-08-20T10:36:04.771Z",
+        "lastEditedDateTime": "2026-08-20T18:19:26.337Z",
         "cells": [
           {
             "id": "fdd8b0fb-d2c6-47e6-9096-edb790464349",
@@ -3859,13 +3859,13 @@
           {
             "id": "516f762e-788d-441d-8168-33bfc3275947",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF with broken Referer validation",
             "hasValidFrontmatter": null
           },
           {
             "id": "fdcae27b-ca52-4343-8773-8a797351ec6c",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
@@ -3877,7 +3877,7 @@
           {
             "id": "5b48ed37-83f5-4c17-8194-d9ca4d299419",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Hay que revisarlo",
             "hasValidFrontmatter": null
           },
           {
