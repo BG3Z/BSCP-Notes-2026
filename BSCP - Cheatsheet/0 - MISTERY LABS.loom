@@ -3848,7 +3848,7 @@
         "index": 82,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:48.966Z",
-        "lastEditedDateTime": "2026-08-20T18:19:26.337Z",
+        "lastEditedDateTime": "2026-08-21T09:18:28.070Z",
         "cells": [
           {
             "id": "fdd8b0fb-d2c6-47e6-9096-edb790464349",
@@ -3883,7 +3883,7 @@
           {
             "id": "99e78b96-e728-4be8-a2c3-8fe6d2b74f7a",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "CSRF de 'unsafe-url' si hay update email y no se me ocurre nada mas",
             "hasValidFrontmatter": null
           }
         ]

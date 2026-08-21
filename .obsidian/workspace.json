@@ -39,12 +39,14 @@
             "id": "694ea6c37f48574d",
             "type": "leaf",
             "state": {
-              "type": "dataloom",
+              "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
+                "file": "BSCP - Cheatsheet/1 - SQLi.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "0 - MISTERY LABS"
+              "title": "1 - SQLi"
             }
           },
           {
@@ -241,6 +243,7 @@
   },
   "active": "694ea6c37f48574d",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
@@ -248,7 +251,6 @@
     "BSCP - Cheatsheet/20 - Host Header Attacks.md",
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/13 - Access control.md",
-    "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/0 - PRE-Exam.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
@@ -267,7 +269,6 @@
     "BSCP - Cheatsheet/EXAM/differences.md",
     "BSCP - Cheatsheet/EXAM/APP 2.md",
     "BSCP - Cheatsheet/EXAM/APP 1.md",
-    "BSCP - Cheatsheet/ESSENTIAL SKILLS/Essential Skills - BSCP Path.md",
     "Pasted image 20260817172758.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260810211309.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260804145234.png",
