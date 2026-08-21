@@ -118,6 +118,10 @@ Con caracteres Unicode escapados:
 ${alert(0)}
 ```
 
+
+...
+
+
 Robo de cookies por XSS:
 - Hacemos una peticion GET con fetch y concatenamos el valor de la cookie del usuario en base64 con 'btoa':
 ```
