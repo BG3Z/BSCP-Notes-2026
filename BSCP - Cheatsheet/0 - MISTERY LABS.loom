@@ -3893,7 +3893,7 @@
         "index": 83,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:49.455Z",
-        "lastEditedDateTime": "2026-08-20T10:36:06.703Z",
+        "lastEditedDateTime": "2026-08-21T09:49:28.093Z",
         "cells": [
           {
             "id": "47e9efea-d7fd-45a9-a238-08eed19e9c1a",
@@ -3904,31 +3904,31 @@
           {
             "id": "39895a92-fad3-42af-88d5-4df9bf092d09",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "SQL injection UNION attack, retrieving data from other tables",
             "hasValidFrontmatter": null
           },
           {
             "id": "dd77f523-891d-4f91-927f-3a09ab878f5d",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "36a7d3a9-35c9-4b5c-b040-8220421d37e4",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "540a8810-84e5-4f96-b03e-2f4b848bf07e",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Bastante EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "99902b30-be0b-4bc9-8ba6-b18eaa52b8b4",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
