@@ -3938,7 +3938,7 @@
         "index": 84,
         "sourceId": null,
         "creationDateTime": "2026-08-20T10:35:49.944Z",
-        "lastEditedDateTime": "2026-08-20T10:36:09.151Z",
+        "lastEditedDateTime": "2026-08-21T10:56:39.028Z",
         "cells": [
           {
             "id": "fadbb7a6-9db9-4f47-9413-73db4c10841d",
@@ -3949,31 +3949,31 @@
           {
             "id": "607ba84e-84e5-44f7-875a-a0eb987eb68c",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "SQL injection attack, listing the database contents on Oracle",
             "hasValidFrontmatter": null
           },
           {
             "id": "0d42552b-fbf2-4b91-b175-1ddcb4c570c1",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "ac7fea85-2ddc-407c-b7de-d1d05e28a522",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "be6cb715-7b18-4f00-9ae6-aef53475b16e",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "5f364741-3a4a-4143-9f05-4207cfc16362",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
