@@ -3,6 +3,10 @@ https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 --------
 
+
+
+---
+
 Payloads:
 ```
 --> Numero COLUMNAS en la tabla (cambiando el numero)
