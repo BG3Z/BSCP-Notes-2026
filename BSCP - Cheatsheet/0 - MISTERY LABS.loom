@@ -4118,7 +4118,7 @@
         "index": 88,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:11.383Z",
-        "lastEditedDateTime": "2026-08-21T11:08:18.676Z",
+        "lastEditedDateTime": "2026-08-24T15:26:43.134Z",
         "cells": [
           {
             "id": "41089365-5630-404d-b771-27d3b8049275",
@@ -4129,31 +4129,31 @@
           {
             "id": "347da50c-b46f-4b1c-a6b7-06e9031eb32c",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF where token is duplicated in cookie",
             "hasValidFrontmatter": null
           },
           {
             "id": "346b5c16-5920-44b0-a66f-0e26ba945b17",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "1685baf1-84b2-4ac6-aebd-654b12ba2d4e",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "d2a78eb8-ae88-42da-9e60-902f7f8002a7",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Bastante EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "dc8d74df-e570-4a26-bf53-e57230aedc80",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -4163,7 +4163,7 @@
         "index": 89,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:12.438Z",
-        "lastEditedDateTime": "2026-08-21T11:08:21.924Z",
+        "lastEditedDateTime": "2026-08-24T15:42:09.240Z",
         "cells": [
           {
             "id": "2260aaeb-0a61-4282-b3bc-fcb64277e752",
@@ -4174,31 +4174,31 @@
           {
             "id": "6440ab81-c12b-4fd8-87cd-e00dba58308a",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "File path traversal, traversal sequences stripped with superfluous URL-decode",
             "hasValidFrontmatter": null
           },
           {
             "id": "34d038aa-047a-4cb2-b6c7-d4f287205a82",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "9fae221a-7f88-40e0-8566-92e3cb8fbec6",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "75e9f4ca-7575-4dfd-8a9d-261ea9fecfdd",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "10febbbe-376a-4741-a672-c6e826b08a0b",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -4208,7 +4208,7 @@
         "index": 90,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:12.854Z",
-        "lastEditedDateTime": "2026-08-21T11:08:25.084Z",
+        "lastEditedDateTime": "2026-08-24T15:42:31.165Z",
         "cells": [
           {
             "id": "64420e7f-be26-4aa5-8723-b4d01038c4db",
@@ -4219,31 +4219,31 @@
           {
             "id": "414a807c-fd5e-43e5-afdd-89c24a94cb61",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Inconsistent handling of exceptional input",
             "hasValidFrontmatter": null
           },
           {
             "id": "6de69083-a5ef-41c3-9f44-0b4c2ed247a5",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "dce334c4-38dc-43c9-8dd5-8db08ce7ded6",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "1ab75e71-df46-4aed-a516-d5bf8a64442d",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Bastante EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "033b35c4-ac71-494c-aa9a-f68c4fc0b83c",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Opcion '-n' para no ver el salto de linea final con el WC",
             "hasValidFrontmatter": null
           }
         ]
@@ -4253,7 +4253,7 @@
         "index": 91,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:13.274Z",
-        "lastEditedDateTime": "2026-08-21T11:08:27.381Z",
+        "lastEditedDateTime": "2026-08-24T16:02:58.018Z",
         "cells": [
           {
             "id": "cc7d7a95-8652-4c9c-a57f-d788aeea8f21",
@@ -4264,31 +4264,31 @@
           {
             "id": "7e087c5e-1bfe-4d7e-bfe6-7625b3576793",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "OAuth account hijacking via redirect_uri",
             "hasValidFrontmatter": null
           },
           {
             "id": "719ca4f2-2b28-4018-992b-4b7e01b70663",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "1c6aac2e-0d59-43e0-94fe-ae17d9b88097",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "ddf26e2d-ba36-4109-a02b-f5216885c9fc",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Primero de OAuth que me sale, bastante guay",
             "hasValidFrontmatter": null
           },
           {
             "id": "89cb9b7c-0662-4ead-bbf4-a465dd20dc19",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -4298,7 +4298,7 @@
         "index": 92,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:13.675Z",
-        "lastEditedDateTime": "2026-08-21T11:08:29.776Z",
+        "lastEditedDateTime": "2026-08-24T16:07:25.958Z",
         "cells": [
           {
             "id": "b668234f-2bbc-459b-adca-55334bf841cc",
@@ -4309,31 +4309,31 @@
           {
             "id": "ee1c34c2-99cd-4b24-8bb8-bc07c10bbb02",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Web shell upload via extension blacklist bypass",
             "hasValidFrontmatter": null
           },
           {
             "id": "aa011828-5605-4588-baa4-ecc9e4d54539",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "17462bbd-7bbf-4bf8-89d1-61f3ea56cf8b",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "ac655832-d6e4-4939-b629-439743c47aca",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "292f6a0b-0a74-457c-ad1f-391a6a99c60b",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -4343,7 +4343,7 @@
         "index": 93,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:14.077Z",
-        "lastEditedDateTime": "2026-08-21T11:08:32.492Z",
+        "lastEditedDateTime": "2026-08-24T16:30:50.186Z",
         "cells": [
           {
             "id": "8385f06b-9187-440d-849e-f2b82bca9a0b",
@@ -4354,31 +4354,31 @@
           {
             "id": "4956a211-ad9e-4516-a6e8-11c7e12d8c84",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF with broken Referer validation",
             "hasValidFrontmatter": null
           },
           {
             "id": "e4f031ed-16db-454e-b94e-d3d012470ff7",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "5a55807d-7218-4eb1-98b0-df649864980e",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "af8fc42b-4554-419e-94d7-5e516d6c8868",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Me ha costado basto pero lo consegui sin mirar",
             "hasValidFrontmatter": null
           },
           {
             "id": "94ac7316-b10c-48ea-bc5e-aca2d8ca782e",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Si al mandar solicitud, hay problemas de REFERRER, estamos en este caso",
             "hasValidFrontmatter": null
           }
         ]
@@ -4388,7 +4388,7 @@
         "index": 94,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:14.460Z",
-        "lastEditedDateTime": "2026-08-21T11:08:34.744Z",
+        "lastEditedDateTime": "2026-08-24T16:47:03.374Z",
         "cells": [
           {
             "id": "8180e9bc-c8c7-49e7-94ad-2e0c35b651c0",
@@ -4399,31 +4399,31 @@
           {
             "id": "2a14a5fa-078c-4e47-a2d8-00dc5fb8eb67",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Reflected XSS with some SVG markup allowed",
             "hasValidFrontmatter": null
           },
           {
             "id": "94cf775a-f634-4a90-9ed0-5c4a8bbafd24",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "0cf667e2-2591-496e-bd47-ee218732dfac",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "67c56522-8606-419d-ba17-340274a97b6e",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "2e8ef76d-0c97-4955-96ff-fa5fb157e013",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Al hacer el Tag-Discover con el intruder, acordarse de poner los <>",
             "hasValidFrontmatter": null
           }
         ]
@@ -4433,7 +4433,7 @@
         "index": 95,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:14.860Z",
-        "lastEditedDateTime": "2026-08-21T11:08:37.148Z",
+        "lastEditedDateTime": "2026-08-24T16:51:49.795Z",
         "cells": [
           {
             "id": "e11e3e6c-df17-4314-92a1-f08397ffc30b",
@@ -4444,31 +4444,31 @@
           {
             "id": "d588ab42-dbc6-449c-8be2-f51d0143ad37",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Exploiting XInclude to retrieve files",
             "hasValidFrontmatter": null
           },
           {
             "id": "b82f4d5b-791c-419b-a7f5-5c522779b1d3",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "64665c52-01a8-43f9-b2f8-dd9aa4a7895d",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "d4acb7fd-1d24-4209-8846-ee2b5afda249",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "Facilito",
             "hasValidFrontmatter": null
           },
           {
             "id": "c6dc49a6-85e2-450b-90b4-84abe6d77846",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "Forzar errores. El productId devolvia un error de parseo XML (pista para XXE)",
             "hasValidFrontmatter": null
           }
         ]

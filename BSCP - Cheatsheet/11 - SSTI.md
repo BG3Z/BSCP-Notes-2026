@@ -7,7 +7,7 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20
 [https://www.urlencoder.org/]
 ## Polyglot SSTi !!!
 
-In most cases, this polyglot payload will trigger an error in presence of a SSTI vulnerability:
+In **most** (no siempre, bobo) cases, this polyglot payload will trigger an error in presence of a SSTI vulnerability:
 
 ```powershell
 ${{<%[%'"}}%\.
