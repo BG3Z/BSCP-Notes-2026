@@ -62,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -239,11 +239,11 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "7aba067524a7c6f2",
+  "active": "694ea6c37f48574d",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/11 - SSTI.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
