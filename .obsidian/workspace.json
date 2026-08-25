@@ -25,14 +25,12 @@
             "id": "5c757c3cbd675a95",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "dataloom",
               "state": {
-                "file": "BSCP - Cheatsheet/1 - SQLi.md",
-                "mode": "source",
-                "source": false
+                "file": "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom"
               },
               "icon": "lucide-file",
-              "title": "1 - SQLi"
+              "title": "0.1 - Step 2 (Complete the following labs)"
             }
           }
         ],
@@ -215,12 +213,13 @@
   },
   "active": "5c757c3cbd675a95",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/7 - XXE Injection.md",
+    "BSCP - Cheatsheet/8 - SSRF.md",
+    "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom",
     "BSCP - Cheatsheet/21 - OAuth Authentication.md",
-    "BSCP - Cheatsheet/8 - SSRF.md",
     "BSCP - Cheatsheet/9.1 - Smuggling GOD.md",
     "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
-    "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
@@ -235,7 +234,6 @@
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "BSCP - Cheatsheet/13 - Access control.md",
     "BSCP - Cheatsheet/20 - Host Header Attacks.md",
-    "BSCP - Cheatsheet/7 - XXE Injection.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/11 - SSTI.md",

@@ -245,24 +245,24 @@
         "index": 6,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:51.445Z",
-        "lastEditedDateTime": "2026-08-25T11:10:51.445Z",
+        "lastEditedDateTime": "2026-08-25T17:37:11.673Z",
         "cells": [
           {
             "id": "445b2536-bb94-48f5-84a0-822bef248550",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "SQL injection with filter bypass via XML encoding",
             "hasValidFrontmatter": null
           },
           {
             "id": "3bf17770-ac06-4e75-a1f4-7477e8dc6a21",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "Normalito",
             "hasValidFrontmatter": null
           },
           {
             "id": "512f8372-7576-4543-b961-349d7d4c1427",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -272,24 +272,24 @@
         "index": 7,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:51.910Z",
-        "lastEditedDateTime": "2026-08-25T11:10:51.910Z",
+        "lastEditedDateTime": "2026-08-25T17:37:01.452Z",
         "cells": [
           {
             "id": "0789afef-29c5-461a-9062-09fa69cec391",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "Discovering vulnerabilities quickly with targeted scanning",
             "hasValidFrontmatter": null
           },
           {
             "id": "a872c810-2e14-4f90-add3-13def241ca37",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "5f8874e6-0f26-4a52-9d62-3867a9b5cf91",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "Al hacer un escaneo de 'Insertion Point':\n- En Scan Type es Audit Selected Items\n- En Scan Details seleccionar el Item en la parte de abajo\n- En Scan Configuration seleccionar Lightweight (deberia sobrar)",
             "hasValidFrontmatter": null
           }
         ]
