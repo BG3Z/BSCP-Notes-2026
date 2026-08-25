@@ -150,7 +150,6 @@ Accept-Language: en-US,en;q=0.9
 
 ##### SSRF with blacklist-based input filter
 
-
 ```
 - Change the URL in the `stockApi` parameter to `http://127.0.0.1/` and observe that the request is blocked.
 - Bypass the block by changing the URL to: `http://127.1/`
