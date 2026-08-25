@@ -1,0 +1,307 @@
+{
+  "model": {
+    "columns": [
+      {
+        "id": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "233px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "NOMBRE",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "321px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "ANOTACIONES",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "291px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "IMPORTANTE",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      }
+    ],
+    "rows": [
+      {
+        "id": "0a4902af-cfdf-4b1c-8e91-1738c2ae872e",
+        "index": 0,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:08:49.607Z",
+        "lastEditedDateTime": "2026-08-25T11:11:34.345Z",
+        "cells": [
+          {
+            "id": "2c2e2a7c-57c6-4075-be29-317c21380fa9",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "Exploiting cross-site scripting to steal cookies",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "dcd41e9f-4c4d-40b2-9934-4fb867751010",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "Se puede usar fetch",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "9becee4a-0ed7-47a5-9228-53473e0dbdff",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "Usar el COLLABORATOR si no hubiera Exploit Server (de la misma forma)",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "6c77526d-15da-4668-be3a-1e7f5b581ba4",
+        "index": 1,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:48.790Z",
+        "lastEditedDateTime": "2026-08-25T11:10:48.790Z",
+        "cells": [
+          {
+            "id": "3e0ed7c0-7904-400d-b835-3ca113152383",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "0e7b7129-0b1c-4783-9480-b6efc66a2fef",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "71a4a37e-82af-476c-adac-a5e5b700089d",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "4dbc3165-accf-4893-9600-18029449316b",
+        "index": 2,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:49.605Z",
+        "lastEditedDateTime": "2026-08-25T11:10:49.605Z",
+        "cells": [
+          {
+            "id": "3c4c2a89-6530-4719-b1e6-1abb981efd64",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c9ea3165-c88f-4b09-bad7-5bd996a98057",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "cac63798-cf6d-47f2-9578-c9796939b513",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "abd2460e-5a58-4f78-8538-7e0b72d2fbec",
+        "index": 3,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:50.115Z",
+        "lastEditedDateTime": "2026-08-25T11:10:50.115Z",
+        "cells": [
+          {
+            "id": "80b6d4f3-8cbf-49e5-97d7-f64f934c1a59",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e836badd-93de-4957-b8d9-0ad13bb11d3d",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "4cf600f3-a3b9-4d5f-8f26-a13b2aad3270",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "666f3335-7537-44ed-8b59-b39f271c0efb",
+        "index": 4,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:50.545Z",
+        "lastEditedDateTime": "2026-08-25T11:10:50.545Z",
+        "cells": [
+          {
+            "id": "5aed48f1-37eb-47ec-ab30-100f251b2989",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "cf849f3c-eddb-4439-97f2-44ab02b393ae",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d2cbe0bb-fd28-40a2-95a0-8c47f8fa3b56",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "fd7f95ae-f45a-4ac1-ae79-8787ad18a04f",
+        "index": 5,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:50.988Z",
+        "lastEditedDateTime": "2026-08-25T11:10:50.988Z",
+        "cells": [
+          {
+            "id": "b5d19d08-c9d3-44a9-9a8e-a73b03c31a97",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7fea678b-afd7-4adf-91fc-a4f47b934c80",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c89ffd2a-b28c-4d32-bf45-8f7705f1d314",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "0441d9ff-f567-41dd-9ba1-32775e4e09b2",
+        "index": 6,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:51.445Z",
+        "lastEditedDateTime": "2026-08-25T11:10:51.445Z",
+        "cells": [
+          {
+            "id": "445b2536-bb94-48f5-84a0-822bef248550",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3bf17770-ac06-4e75-a1f4-7477e8dc6a21",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "512f8372-7576-4543-b961-349d7d4c1427",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "90eb940c-b1e7-4a65-b9b1-fbf5a8c8a258",
+        "index": 7,
+        "sourceId": null,
+        "creationDateTime": "2026-08-25T11:10:51.910Z",
+        "lastEditedDateTime": "2026-08-25T11:10:51.910Z",
+        "cells": [
+          {
+            "id": "0789afef-29c5-461a-9062-09fa69cec391",
+            "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a872c810-2e14-4f90-add3-13def241ca37",
+            "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
+            "content": "",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5f8874e6-0f26-4a52-9d62-3867a9b5cf91",
+            "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
+            "content": "",
+            "hasValidFrontmatter": null
+          }
+        ]
+      }
+    ],
+    "filters": [],
+    "sources": [],
+    "settings": {
+      "numFrozenColumns": 1,
+      "showCalculationRow": true
+    },
+    "externalRowOrder": []
+  },
+  "pluginVersion": "8.16.17"
+}
