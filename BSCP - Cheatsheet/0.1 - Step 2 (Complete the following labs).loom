@@ -191,7 +191,7 @@
         "index": 4,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:50.545Z",
-        "lastEditedDateTime": "2026-08-25T12:01:30.342Z",
+        "lastEditedDateTime": "2026-08-25T17:01:32.953Z",
         "cells": [
           {
             "id": "5aed48f1-37eb-47ec-ab30-100f251b2989",
@@ -202,7 +202,7 @@
           {
             "id": "cf849f3c-eddb-4439-97f2-44ab02b393ae",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "'-'",
+            "content": "Nada que comentar",
             "hasValidFrontmatter": null
           },
           {
@@ -218,24 +218,24 @@
         "index": 5,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:50.988Z",
-        "lastEditedDateTime": "2026-08-25T11:10:50.988Z",
+        "lastEditedDateTime": "2026-08-25T17:01:27.361Z",
         "cells": [
           {
             "id": "b5d19d08-c9d3-44a9-9a8e-a73b03c31a97",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "SSRF with blacklist-based input filter",
             "hasValidFrontmatter": null
           },
           {
             "id": "7fea678b-afd7-4adf-91fc-a4f47b934c80",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "Facilito",
             "hasValidFrontmatter": null
           },
           {
             "id": "c89ffd2a-b28c-4d32-bf45-8f7705f1d314",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "StockAPI (CheckStock) es SSRF directo",
             "hasValidFrontmatter": null
           }
         ]
