@@ -4478,7 +4478,7 @@
         "index": 96,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:15.220Z",
-        "lastEditedDateTime": "2026-08-21T11:08:39.275Z",
+        "lastEditedDateTime": "2026-08-24T16:57:52.447Z",
         "cells": [
           {
             "id": "e74415b5-e5fe-4ba5-867c-19207de0af77",
@@ -4489,31 +4489,31 @@
           {
             "id": "f5442e1a-9538-4b61-8ccf-3678d2f5d880",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "CSRF where token is duplicated in cookie",
             "hasValidFrontmatter": null
           },
           {
             "id": "6aec4ba9-9731-434d-894c-1c3be1fc3a6e",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "6a19f4b5-aea9-4c80-8117-8d8b9cb9a338",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "0392679e-6ba5-4c74-af07-f28b3db978c4",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "EZ",
             "hasValidFrontmatter": null
           },
           {
             "id": "d84c2653-93e5-4c49-bb27-bba802a940db",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -4523,7 +4523,7 @@
         "index": 97,
         "sourceId": null,
         "creationDateTime": "2026-08-21T11:08:15.584Z",
-        "lastEditedDateTime": "2026-08-21T11:08:41.996Z",
+        "lastEditedDateTime": "2026-08-24T17:23:04.358Z",
         "cells": [
           {
             "id": "175d6237-6db7-406d-a8b1-3056388b3c40",
@@ -4534,31 +4534,76 @@
           {
             "id": "598d2ef6-351a-4ba3-bf7e-dc61d6d29141",
             "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
-            "content": "",
+            "content": "Authentication bypass via encryption oracle",
             "hasValidFrontmatter": null
           },
           {
             "id": "78fdf4bc-d6f1-4806-8cfe-4b406131bd50",
             "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "17e9a686-3954-4b93-831e-23f670a6e0ec",
             "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
-            "value": false,
+            "value": true,
             "hasValidFrontmatter": null
           },
           {
             "id": "9778ab1a-b1e9-497a-b8da-8f8ddac056ef",
             "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
-            "content": "",
+            "content": "QUE SATISFACCION A MAMARLA JODER",
             "hasValidFrontmatter": null
           },
           {
             "id": "991044d5-b6c9-4f52-b4cd-1704729a1bd6",
             "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
-            "content": "",
+            "content": "'-'",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "46f05524-7050-4071-bb32-889b0a2f5970",
+        "index": 98,
+        "sourceId": null,
+        "creationDateTime": "2026-08-24T17:23:26.354Z",
+        "lastEditedDateTime": "2026-08-24T17:23:45.974Z",
+        "cells": [
+          {
+            "id": "8a7f0e1c-1a1a-44d7-8e6d-98af73d783bf",
+            "columnId": "b7f4b4fb-85cd-4414-bd40-1947c1009182",
+            "content": "**10/10**",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a818c91e-0a64-4966-8a0d-2062cd4aa04f",
+            "columnId": "9a5cb41c-b658-480f-b5c9-ba2a247a33d1",
+            "content": "=======================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a4ce3105-e88f-4851-b913-33859d8c84e3",
+            "columnId": "b8b7fd62-1a2b-4005-8a94-672e086cf44c",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "41f8ba14-02f8-47a1-a2c7-7708998a3177",
+            "columnId": "9991510c-6a6c-4704-8565-3a0095bd2395",
+            "value": false,
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "2f8e411d-c892-46f2-851c-9cae04c904cc",
+            "columnId": "4f4899ce-6d15-4a22-ab1b-e7873609b330",
+            "content": "=======================================================",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "1abe41f5-ddfc-4859-9fdc-3e61c4ab9a03",
+            "columnId": "cc98d48c-dadd-4820-a12f-a64133dbd594",
+            "content": "==================",
             "hasValidFrontmatter": null
           }
         ]
