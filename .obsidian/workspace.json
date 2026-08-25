@@ -8,85 +8,34 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c51073edf0e04d7d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BSCP - Cheatsheet/2 - XSS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 - XSS"
-            }
-          },
-          {
-            "id": "ae814ebd972781e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "5 - DOM Vulnerabilities"
-            }
-          },
-          {
-            "id": "7aba067524a7c6f2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "19 - Business Logic Flaws"
-            }
-          },
-          {
-            "id": "694ea6c37f48574d",
-            "type": "leaf",
-            "state": {
-              "type": "dataloom",
-              "state": {
-                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
-              },
-              "icon": "lucide-file",
-              "title": "0 - MISTERY LABS"
-            }
-          },
-          {
-            "id": "ddb77bda4336820e",
-            "type": "leaf",
-            "state": {
-              "type": "dataloom",
-              "state": {
-                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
-              },
-              "icon": "lucide-file",
-              "title": "0 - MISTERY LABS"
-            }
-          },
-          {
             "id": "b39c175a0b586704",
             "type": "leaf",
             "state": {
-              "type": "dataloom",
+              "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom"
+                "file": "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "0.1 - Step 2 (Complete the following labs)"
+              "title": "9 - HTTP Request Smuggling"
+            }
+          },
+          {
+            "id": "5c757c3cbd675a95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BSCP - Cheatsheet/21 - OAuth Authentication.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "21 - OAuth Authentication"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -265,27 +214,27 @@
   },
   "active": "b39c175a0b586704",
   "lastOpenFiles": [
-    "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom",
+    "BSCP - Cheatsheet/1 - SQLi.md",
+    "BSCP - Cheatsheet/21 - OAuth Authentication.md",
+    "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
+    "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
+    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).md",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
     "Untitled.loom",
     "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
-    "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/3 - CSRF.md",
-    "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
     "BSCP - Cheatsheet/18 - Information Disclosure.md",
     "BSCP - Cheatsheet/14 - Authorization.md",
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "BSCP - Cheatsheet/13 - Access control.md",
-    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
     "BSCP - Cheatsheet/20 - Host Header Attacks.md",
     "BSCP - Cheatsheet/7 - XXE Injection.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
     "BSCP - Cheatsheet/8 - SSRF.md",
-    "BSCP - Cheatsheet/21 - OAuth Authentication.md",
     "BSCP - Cheatsheet/11 - SSTI.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",

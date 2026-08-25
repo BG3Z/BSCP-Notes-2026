@@ -27,6 +27,8 @@ Send to Victim
 <iframe src="https://YOUR-LAB-ID.web-security-academy.net/oauth-linking?code=STOLEN-CODE"></iframe>
 ```
 
+6lgVZr4BMbOtPXNuhYtL3C2HVUEYYFfpB24akyp3McZ
+
 Now if you log out and log in using social media profile you are instantly logged as administrator
 
 4. Hijack Redirect URI:

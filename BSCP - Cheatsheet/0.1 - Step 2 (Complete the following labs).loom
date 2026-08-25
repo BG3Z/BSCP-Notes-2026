@@ -110,24 +110,24 @@
         "index": 1,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:48.790Z",
-        "lastEditedDateTime": "2026-08-25T11:10:48.790Z",
+        "lastEditedDateTime": "2026-08-25T11:30:11.074Z",
         "cells": [
           {
             "id": "3e0ed7c0-7904-400d-b835-3ca113152383",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "Blind SQL injection with out-of-band data exfiltration",
             "hasValidFrontmatter": null
           },
           {
             "id": "0e7b7129-0b1c-4783-9480-b6efc66a2fef",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "Si no funciona nada, probamos este tipo (OOB)",
             "hasValidFrontmatter": null
           },
           {
             "id": "71a4a37e-82af-476c-adac-a5e5b700089d",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -137,24 +137,24 @@
         "index": 2,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:49.605Z",
-        "lastEditedDateTime": "2026-08-25T11:10:49.605Z",
+        "lastEditedDateTime": "2026-08-25T11:30:14.930Z",
         "cells": [
           {
             "id": "3c4c2a89-6530-4719-b1e6-1abb981efd64",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "Forced OAuth profile linking",
             "hasValidFrontmatter": null
           },
           {
             "id": "c9ea3165-c88f-4b09-bad7-5bd996a98057",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "Se podia mandar tu token de OAuth a la victima para que linkease con tu cuenta",
             "hasValidFrontmatter": null
           },
           {
             "id": "cac63798-cf6d-47f2-9578-c9796939b513",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           }
         ]
@@ -164,24 +164,24 @@
         "index": 3,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:50.115Z",
-        "lastEditedDateTime": "2026-08-25T11:10:50.115Z",
+        "lastEditedDateTime": "2026-08-25T11:43:57.394Z",
         "cells": [
           {
             "id": "80b6d4f3-8cbf-49e5-97d7-f64f934c1a59",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "Brute-forcing a stay-logged-in cookie",
             "hasValidFrontmatter": null
           },
           {
             "id": "e836badd-93de-4957-b8d9-0ad13bb11d3d",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "Hay uno identico pero que no tiene la passwd en el diccionario y tienes que pasartela con un XSS en el blog",
             "hasValidFrontmatter": null
           },
           {
             "id": "4cf600f3-a3b9-4d5f-8f26-a13b2aad3270",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "Grep Match --> Update Email. Para bruteforces",
             "hasValidFrontmatter": null
           }
         ]
@@ -191,24 +191,24 @@
         "index": 4,
         "sourceId": null,
         "creationDateTime": "2026-08-25T11:10:50.545Z",
-        "lastEditedDateTime": "2026-08-25T11:10:50.545Z",
+        "lastEditedDateTime": "2026-08-25T12:01:30.342Z",
         "cells": [
           {
             "id": "5aed48f1-37eb-47ec-ab30-100f251b2989",
             "columnId": "404d8d23-9d8d-4403-a3b3-6d2fa4fd24d2",
-            "content": "",
+            "content": "Exploiting HTTP request smuggling to capture other users' requests",
             "hasValidFrontmatter": null
           },
           {
             "id": "cf849f3c-eddb-4439-97f2-44ab02b393ae",
             "columnId": "c86a490f-fd00-4eff-8042-9ea4bfe350d8",
-            "content": "",
+            "content": "'-'",
             "hasValidFrontmatter": null
           },
           {
             "id": "d2cbe0bb-fd28-40a2-95a0-8c47f8fa3b56",
             "columnId": "de5c9723-7545-4649-ae0d-e591f8beb2a6",
-            "content": "",
+            "content": "El RequestSmuggler lo pilla siempre pero tarda aprox unos 3-5 min (tirar el scan al principio de la Stage que toque)",
             "hasValidFrontmatter": null
           }
         ]
