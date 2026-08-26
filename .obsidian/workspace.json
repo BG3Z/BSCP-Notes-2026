@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
+                "file": "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.2 - PRE-Exam"
+              "title": "17 - Insecure Deserialization"
             }
           },
           {
@@ -214,11 +214,12 @@
   },
   "active": "b39c175a0b586704",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
+    "BSCP - Cheatsheet/1 - SQLi.md",
+    "Pasted image 20260826173213.png",
     "Pasted image 20260826173126.png",
     "Pasted image 20260826173117.png",
-    "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/2 - XSS.md",
-    "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
     "Pasted image 20260826172306.png",
     "Pasted image 20260826172300.png",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
@@ -258,8 +259,6 @@
     "FILES/SSTImap-master/plugins/python/mako.py",
     "FILES/SSTImap-master/plugins/ruby/erb.py",
     "FILES/SSTImap-master/plugins/python/__init__.py",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220027.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810220023.png"
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260810235457.png"
   ]
 }
