@@ -69,6 +69,7 @@ ${alert(0)}
 -- **_eval() Context Bypass_**
 ```javascript
 \"*alert(0)}//
+"*alert(0)}//
 ```
 
 ---
