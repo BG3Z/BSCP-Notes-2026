@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
+                "file": "BSCP - Cheatsheet/2 - XSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16 - Web Cache poisoning"
+              "title": "2 - XSS"
             }
           }
         ],
@@ -215,6 +215,7 @@
   },
   "active": "3ed763d6e71e5caa",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/10 - OS Command Injection.md",
     "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
@@ -236,7 +237,6 @@
     "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
     "Pasted image 20260828175405.png",
     "Pasted image 20260828175400.png",
-    "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
     "Pasted image 20260827174515.png",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
