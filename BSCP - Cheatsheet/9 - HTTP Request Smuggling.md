@@ -23,6 +23,8 @@ Transfer-Encoding es una **cabecera salto por salto, que se aplica a un mensaje 
  #CL -> Content-Length 
  #TE -> Transfer-Encoding
 
+# ⚠️⚠️⚠️TE.CL --> Se especifica en Hexadecimal el tamaño de la peticion 
+
 ![[Pasted image 20260703181030.png]]
 
  1. **CL.TE** -> Front-end usa #CL y Backe-nd usa #TE
@@ -40,8 +42,12 @@ TE.CL por respuestas diferenciales:
 CL.TE:
 ![[Pasted image 20260718185538.png]]
 
-TE.CL Frontend:
+TE.CL Frontend: --> Se especifica en Hexadecimal el tamaño de la peticion  (0x5f)
 ![[Pasted image 20260718193951.png]]
+
+![[Pasted image 20260828175400.png]]
+
+![[Pasted image 20260828175405.png]]
 
 CL.TE Custom Header:
 ![[Pasted image 20260718193941.png]]
