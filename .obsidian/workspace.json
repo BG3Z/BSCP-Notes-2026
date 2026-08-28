@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/RESOURCES/Mock Exam.md",
+                "file": "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mock Exam"
+              "title": "16 - Web Cache poisoning"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -212,12 +213,13 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "b39c175a0b586704",
+  "active": "3ed763d6e71e5caa",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/10 - OS Command Injection.md",
+    "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
+    "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/RESOURCES/Mock Exam.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
-    "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
-    "BSCP - Cheatsheet/10 - OS Command Injection.md",
     "BSCP - Cheatsheet/17 - Insecure Deserialization.md",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom",
     "BSCP - Cheatsheet/3 - CSRF.md",
@@ -252,7 +254,6 @@
     "Untitled.loom",
     "BSCP - Cheatsheet/18 - Information Disclosure.md",
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
-    "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "Sin título.canvas",
     "Sin título.base",
     "FILES/SSTImap-master/plugins/python/templite.py",
