@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
+                "file": "BSCP - Cheatsheet/20 - Host Header Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9 - HTTP Request Smuggling"
+              "title": "20 - Host Header Attacks"
             }
           }
         ],
@@ -215,11 +215,13 @@
   },
   "active": "3ed763d6e71e5caa",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/11 - SSTI.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
+    "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
     "Pasted image 20260828175405.png",
     "Pasted image 20260828175400.png",
     "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
     "BSCP - Cheatsheet/9.1 - Smuggling GOD.md",
-    "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
     "BSCP - Cheatsheet/10 - OS Command Injection.md",
     "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "BSCP - Cheatsheet/13 - Access control.md",
@@ -228,7 +230,6 @@
     "BSCP - Cheatsheet/8 - SSRF.md",
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
     "BSCP - Cheatsheet/1 - SQLi.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
     "Pasted image 20260827174515.png",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
@@ -252,8 +253,6 @@
     "BSCP - Cheatsheet/15 - CSWSH (WebSockets).md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/22 - File Upload.md",
-    "BSCP - Cheatsheet/11 - SSTI.md",
-    "Pasted image 20260817172758.png",
     "Sin título.canvas",
     "Sin título.base",
     "FILES/SSTImap-master/plugins/python/templite.py",
