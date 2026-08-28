@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
+                "file": "BSCP - Cheatsheet/2 - XSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.2 - PRE-Exam"
+              "title": "2 - XSS"
             }
           }
         ],
@@ -215,8 +215,8 @@
   },
   "active": "3ed763d6e71e5caa",
   "lastOpenFiles": [
-    "BSCP - Cheatsheet/2 - XSS.md",
     "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
     "Pasted image 20260827174515.png",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom",
     "BSCP - Cheatsheet/0 - Exam Tips.md",
