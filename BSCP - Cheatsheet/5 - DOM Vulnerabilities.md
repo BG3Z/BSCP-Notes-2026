@@ -1,3 +1,4 @@
+# ⚠️ URL-Encodear los Payloads (no el target) del Exploit Server
 
 - Check for DOM redirections (parameters hidden in source code)
 - Cookies containing URLs
