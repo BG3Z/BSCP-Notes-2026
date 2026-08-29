@@ -2,7 +2,7 @@ PortSwigger cheat sheet:
 https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 --------
-# ⚠️⚠️⚠️ Si no lo pilla el SQLMap, probar casi seguro un Blind OOB
+# ⚠️⚠️⚠️ Si no lo pilla el SQLMap, probar casi seguro un Blind OOB XXE de Oracle
 
 ###### Comando Final:
 ```sql

