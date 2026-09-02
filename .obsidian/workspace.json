@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/RESOURCES/Moc.md",
+                "file": "BSCP - Cheatsheet/11 - SSTI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Moc"
+              "title": "11 - SSTI"
             }
           }
         ]
@@ -200,11 +200,11 @@
   },
   "active": "1a97b3edee0439b1",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/RESOURCES/Moc.md",
     "BSCP - Cheatsheet/11 - SSTI.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
     "BSCP - Cheatsheet/7 - XXE Injection.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
-    "BSCP - Cheatsheet/RESOURCES/Moc.md",
     "BSCP - Cheatsheet/0.1 - Step 2 (Complete the following labs).loom",
     "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/10 - OS Command Injection.md",
