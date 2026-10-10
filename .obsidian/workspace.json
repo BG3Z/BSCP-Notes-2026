@@ -11,14 +11,12 @@
             "id": "1a97b3edee0439b1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "dataloom",
               "state": {
-                "file": "BSCP - Cheatsheet/8 - SSRF.md",
-                "mode": "source",
-                "source": false
+                "file": "BSCP - Cheatsheet/0 - MISTERY LABS.loom"
               },
               "icon": "lucide-file",
-              "title": "8 - SSRF"
+              "title": "0 - MISTERY LABS"
             }
           }
         ]
@@ -200,6 +198,20 @@
   },
   "active": "1a97b3edee0439b1",
   "lastOpenFiles": [
+    "BSCP - Cheatsheet/PAYLOADS/web-cache-deception.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssti.md",
+    "BSCP - Cheatsheet/PAYLOADS/ssrf.md",
+    "BSCP - Cheatsheet/PAYLOADS/sqli.md",
+    "BSCP - Cheatsheet/PAYLOADS/remote-code-execution.md",
+    "BSCP - Cheatsheet/PAYLOADS/path-traversal.md",
+    "BSCP - Cheatsheet/PAYLOADS/insecure-deserialization.md",
+    "BSCP - Cheatsheet/RESOURCES/XSS Mindmap.md",
+    "BSCP - Cheatsheet/RESOURCES/CookieStealer XSS Payloads.md",
+    "BSCP - Cheatsheet/RESOURCES/CheatSheets & Useful Repos.md",
+    "BSCP - Cheatsheet/RESOURCES/BSCP Reviews & Roadmaps.md",
+    "BSCP - Cheatsheet/2 - XSS.md",
+    "BSCP - Cheatsheet/1 - SQLi.md",
+    "BSCP - Cheatsheet/8 - SSRF.md",
     "BSCP - Cheatsheet/3 - CSRF.md",
     "BSCP - Cheatsheet/6 - CORS Cross-origin resource sharing.md",
     "BSCP - Cheatsheet/4 - Click-Jacking.md",
@@ -214,7 +226,6 @@
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826173117.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826172306.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826172300.png",
-    "BSCP - Cheatsheet/1 - SQLi.md",
     "BSCP - Cheatsheet/11 - SSTI.md",
     "BSCP - Cheatsheet/RESOURCES/Moc.md",
     "BSCP - Cheatsheet/12 - Path Traversal.md",
@@ -225,21 +236,8 @@
     "BSCP - Cheatsheet/0.2 - PRE-Exam.md",
     "BSCP - Cheatsheet/18 - Information Disclosure.md",
     "BSCP - Cheatsheet/19 - Business Logic Flaws.md",
-    "BSCP - Cheatsheet/21 - OAuth Authentication.md",
-    "BSCP - Cheatsheet/9.2 - Smuggling For Exam.md",
-    "BSCP - Cheatsheet/2 - XSS.md",
-    "BSCP - Cheatsheet/8 - SSRF.md",
-    "BSCP - Cheatsheet/14 - Authorization.md",
-    "BSCP - Cheatsheet/0 - Exam Tips.md",
-    "BSCP - Cheatsheet/9 - HTTP Request Smuggling.md",
-    "BSCP - Cheatsheet/16 - Web Cache poisoning.md",
     "FILES/usernames.txt",
     "FILES/passwords.txt",
-    "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
-    "BSCP - Cheatsheet/20 - Host Header Attacks.md",
-    "BSCP - Cheatsheet/22 - File Upload.md",
-    "BSCP - Cheatsheet/RESOURCES/XSS Mindmap.md",
-    "BSCP - Cheatsheet/9.1 - Smuggling GOD.md",
     "BSCP - Cheatsheet/0 - MISTERY LABS.loom",
     "Untitled.loom",
     "Sin título.canvas",
