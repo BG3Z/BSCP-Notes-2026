@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ccd5f9c688cc302d",
+        "id": "4e07d30755ae8955",
         "type": "tabs",
         "children": [
           {
-            "id": "ada2cfe9f608d779",
+            "id": "9d1eb8e9d68844f9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "BSCP - Cheatsheet/IMAGES/Pasted image 20260817172758.png"
+                "file": "BSCP - Cheatsheet/1 - SQLi.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260817172758"
+              "icon": "lucide-file",
+              "title": "1 - SQLi"
             }
           }
         ]
@@ -186,8 +188,12 @@
       "obisidian-dataloom:Create loom": false
     }
   },
-  "active": "2b0476300aead93d",
+  "active": "9d1eb8e9d68844f9",
   "lastOpenFiles": [
+    "CUSTOM LINUX (Kitty).md",
+    "Sin título.canvas",
+    "Sin título.base",
+    "BSCP - Cheatsheet/IMAGES/Pasted image 20260817172758.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826173117.png",
     "conflict-files-obsidian-git.md",
     "Nuevo Documento de texto.txt",
@@ -200,7 +206,6 @@
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826173213.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826173126.png",
     "BSCP - Cheatsheet/IMAGES/Pasted image 20260826172306.png",
-    "BSCP - Cheatsheet/IMAGES/Pasted image 20260826172300.png",
     "FILES/xmlPrueba.xml",
     "FILES/usernames.txt",
     "FILES/passwords.txt",
@@ -231,8 +236,6 @@
     "BSCP - Cheatsheet/5 - DOM Vulnerabilities.md",
     "BSCP - Cheatsheet/PAYLOADS/ssti.md",
     "FILES/SSTImap-master/utils/__init__.py",
-    "FILES/SSTImap-master/utils/strings.py",
-    "FILES/SSTImap-master/utils/random_agent.py",
-    "Sin título.canvas"
+    "FILES/SSTImap-master/utils/strings.py"
   ]
 }
